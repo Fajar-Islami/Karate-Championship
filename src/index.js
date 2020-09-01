@@ -4,11 +4,12 @@ import "./index.css";
 import App from "./pages/App";
 import * as serviceWorker from "./serviceWorker";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Container } from "react-bootstrap";
 
 ReactDOM.render(
-	<React.StrictMode>
+	<Container fluid>
 		<App />
-	</React.StrictMode>,
+	</Container>,
 	document.getElementById("root"),
 );
 

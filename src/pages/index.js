@@ -4,7 +4,7 @@ import Footer from "./Bracket";
 // import Gallery from "./Gallery";
 import Guidance from "./Guidance";
 import Home from "./Home";
-import Login from "./Login";
+import Login from "./Login/index";
 import Medals from "./Medals";
 import Registration from "./Registration";
 import SchedulesResult from "./SchedulesResult";

@@ -10,7 +10,7 @@ const Home = () => {
 
 	return (
 		<div>
-			<p>Halaman</p>
+			<p>Halaman Home</p>
 		</div>
 	);
 };
