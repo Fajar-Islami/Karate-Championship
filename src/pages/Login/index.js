@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import { MDBInput, MDBBtn, MDBCard, MDBRow, MDBCol, MDBCardBody, MDBModalFooter } from "mdbreact";
-import { LoginBg, ICFacebook, ICTwitter, ICGoogle } from "../../assets";
+import { ICFacebook, ICTwitter, ICGoogle } from "../../assets";
 import "./login.scss";
 
 const Icon = ({ img }) => {
@@ -18,7 +17,6 @@ const Login = () => {
 	// Lifecycle React Hooks
 	useEffect(() => {
 		document.title = `Login`;
-		document.body.background = LoginBg;
 	});
 
 	console.log(document.body);
