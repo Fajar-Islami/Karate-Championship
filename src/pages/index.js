@@ -10,5 +10,7 @@ import Medals from "./Medals";
 import SchedulesResult from "./SchedulesResult";
 import Statistic from "./Statistic";
 import Teams from "./Teams";
+import DetailDummy from "./detailDummy";
+import Dummy from "./Dummy";
 
-export { Bracket, Categories, Guidance, Home, Login, MainApp, Medals, SchedulesResult, Statistic, Teams };
+export { Bracket, Categories, Guidance, Home, Login, MainApp, Medals, SchedulesResult, Statistic, Teams, DetailDummy, Dummy };

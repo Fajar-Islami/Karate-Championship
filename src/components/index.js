@@ -4,5 +4,6 @@ import Header from "./Header";
 // import mdb from './mdbComponents'
 import Registration from "./Registration";
 import Sidebar from "./SideBar";
+import Card from "./Card";
 
-export { Footer, ForgetPw, Header, Registration, Sidebar };
+export { Footer, ForgetPw, Header, Registration, Sidebar, Card };

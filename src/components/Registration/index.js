@@ -2,11 +2,11 @@ import React, { useState, useEffect, Fragment } from "react";
 import { MDBModalHeader, MDBModalBody, MDBModalFooter, MDBBtn, MDBModal } from "mdbreact";
 
 const Registration = () => {
-	const [toggle, setToggle] = useState(false);
+	const [togglee, setToggle] = useState(true);
 
-	const handleToggle = () => {
+	var handleToggle = () => {
 		setToggle({
-			toggle: !toggle,
+			togglee: !togglee,
 		});
 	};
 
@@ -14,12 +14,13 @@ const Registration = () => {
 	useEffect(() => {
 		document.title = `Registration`;
 	});
+	console.log(togglee);
 	return (
 		<Fragment>
 			<MDBBtn onClick={handleToggle}>Modal</MDBBtn>
-			<MDBModal isOpen={toggle} toggle={handleToggle}>
+			<MDBModal isOpen={togglee} toggle={handleToggle}>
 				<MDBModalHeader toggle={handleToggle}>MDBModal title</MDBModalHeader>
-				<MDBModalBody>(...)</MDBModalBody>
+				<MDBModalBody>(...a)</MDBModalBody>
 				<MDBModalFooter>
 					<MDBBtn color="secondary" onClick={handleToggle}>
 						Close

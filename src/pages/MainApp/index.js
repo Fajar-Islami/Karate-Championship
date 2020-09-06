@@ -1,71 +1,64 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Bracket, Categories, Guidance, Medals, SchedulesResult, Statistic, Teams, Home, Login } from "../../pages";
-import { MDBNav, MDBNavItem, MDBNavLink } from "mdbreact";
-
+import { Bracket, Categories, Guidance, Medals, SchedulesResult, Statistic, Teams, Home, Login, DetailDummy, Dummy } from "../../pages";
+import { Footer, Header } from "../../components";
+import "./mainApp.scss";
+import { MDBContainer } from "mdbreact";
+import DummyContextProvider from "../../context/dummyContext";
 const MainApp = () => {
 	return (
-		<Router>
-			<MDBNav>
-				<MDBNavItem>
-					<MDBNavLink to="/">Home</MDBNavLink>
-				</MDBNavItem>
-				<MDBNavItem>
-					<MDBNavLink to="/bracket">Bracket</MDBNavLink>
-				</MDBNavItem>
-				<MDBNavItem>
-					<MDBNavLink to="/categories">Categories</MDBNavLink>
-				</MDBNavItem>
-				<MDBNavItem>
-					<MDBNavLink to="/guidance">Guidance</MDBNavLink>
-				</MDBNavItem>
-				{/* <MDBNavItem>
-					<MDBNavLink to="/login">Login</MDBNavLink>
-				</MDBNavItem> */}
-				<MDBNavItem>
-					<MDBNavLink to="/medals">Medals</MDBNavLink>
-				</MDBNavItem>
-				<MDBNavItem>
-					<MDBNavLink to="/schedulesResult">SchedulesResult</MDBNavLink>
-				</MDBNavItem>
-				<MDBNavItem>
-					<MDBNavLink to="/statistic">Statistic</MDBNavLink>
-				</MDBNavItem>
-				<MDBNavItem>
-					<MDBNavLink to="/teams">Teams</MDBNavLink>
-				</MDBNavItem>
-			</MDBNav>
+		<Fragment>
+			<MDBContainer fluid>
+				<DummyContextProvider>
+					<Router>
+						<div className="header position-sticky">
+							<Header />
+						</div>
 
-			<Switch>
-				<Route path="/bracket">
-					<Bracket />
-				</Route>
-				<Route path="/categories">
-					<Categories />
-				</Route>
-				<Route path="/guidance">
-					<Guidance />
-				</Route>
-				<Route path="/medals">
-					<Medals />
-				</Route>
-				<Route path="/schedulesResult">
-					<SchedulesResult />
-				</Route>
-				<Route path="/statistic">
-					<Statistic />
-				</Route>
-				<Route path="/teams">
-					<Teams />
-				</Route>
-				{/* <Route path="/login">
-					<Login />
-				</Route> */}
-				<Route path="/" exact>
-					<Home />
-				</Route>
-			</Switch>
-		</Router>
+						<div className="content col-11 ml-5">
+							{/* <MDBRow>
+						<MDBCol size="11"> */}
+							<Switch>
+								<Route path="/bracket">
+									<Bracket />
+								</Route>
+								<Route path="/categories">
+									<Categories />
+								</Route>
+								<Route path="/guidance">
+									<Guidance />
+								</Route>
+								<Route path="/medals">
+									<Medals />
+								</Route>
+								<Route path="/schedulesResult">
+									<SchedulesResult />
+								</Route>
+								<Route path="/statistic">
+									<Statistic />
+								</Route>
+								<Route path="/teams">
+									<Teams />
+								</Route>
+								{/* <Route path="/detail-dummy/:id" component={DetailDummy} /> */}
+								<Route path="/dummy/">
+									<Dummy />
+								</Route>
+								<Route path="/detail-dummy/:id">
+									<DetailDummy />
+								</Route>
+								<Route path="/" exact>
+									<Home />
+								</Route>
+							</Switch>
+						</div>
+					</Router>
+				</DummyContextProvider>
+			</MDBContainer>
+			<div className="footer">
+				<Footer />
+			</div>
+		</Fragment>
 	);
 };
 
