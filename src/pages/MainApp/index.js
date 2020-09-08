@@ -3,21 +3,23 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Bracket, Categories, Guidance, Medals, SchedulesResult, Statistic, Teams, Home, Login, DetailDummy, Dummy } from "../../pages";
 import { Footer, Header } from "../../components";
 import "./mainApp.scss";
-import { MDBContainer } from "mdbreact";
+import { MDBContainer, MDBNavbar } from "mdbreact";
 import DummyContextProvider from "../../context/dummyContext";
+import { useHistory, Link } from "react-router-dom";
 const MainApp = () => {
+	const history = useHistory();
+
 	return (
 		<Fragment>
-			<MDBContainer fluid>
-				<DummyContextProvider>
-					<Router>
-						<div className="header position-sticky">
-							<Header />
-						</div>
-
+			<DummyContextProvider>
+				<Router>
+					<div className="header ">
+						{/* <MDBNavbar color="default-color" dark expand="md" scrolling fixed="top" className=""> */}
+						<Header />
+						{/* </MDBNavbar> */}
+					</div>
+					<MDBContainer className=" mt-5 pt-5" fluid>
 						<div className="content col-11 ml-5">
-							{/* <MDBRow>
-						<MDBCol size="11"> */}
 							<Switch>
 								<Route path="/bracket">
 									<Bracket />
@@ -40,21 +42,24 @@ const MainApp = () => {
 								<Route path="/teams">
 									<Teams />
 								</Route>
-								{/* <Route path="/detail-dummy/:id" component={DetailDummy} /> */}
 								<Route path="/dummy/">
 									<Dummy />
 								</Route>
+								{/* <Route path="/detail-dummy/:id" component={DetailDummy} /> */}
 								<Route path="/detail-dummy/:id">
 									<DetailDummy />
 								</Route>
+								{/* <Route path="/login">
+									<Login />
+								</Route> */}
 								<Route path="/" exact>
 									<Home />
 								</Route>
 							</Switch>
 						</div>
-					</Router>
-				</DummyContextProvider>
-			</MDBContainer>
+					</MDBContainer>
+				</Router>
+			</DummyContextProvider>
 			<div className="footer">
 				<Footer />
 			</div>

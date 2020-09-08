@@ -9,7 +9,7 @@ const Home = () => {
 
 	return (
 		<Fragment>
-			<h1>Halaman Home</h1>
+			<h1 className="pt-3"> Halaman Home</h1>
 			<MDBCarousel activeItem={1} length={3} showControls={true} showIndicators={false} className="z-depth-1" slide>
 				<MDBCarouselInner>
 					<MDBCarouselItem itemId="1">

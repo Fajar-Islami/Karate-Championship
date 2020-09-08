@@ -10,7 +10,7 @@ const Bracket = () => {
 	return (
 		<Fragment>
 			<p>Halaman Bracket</p>
-			<Card detail="tess" />
+			{/* <Card detail="tess" /> */}
 		</Fragment>
 	);
 };

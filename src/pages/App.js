@@ -1,5 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Routes } from "../config";
+import Tes from "./tes";
 
 function App() {
 	return <Routes />;

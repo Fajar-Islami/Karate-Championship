@@ -1,13 +1,14 @@
 .bg-login {
 	background-image: url("../../assets//img/login-BG.jpg");
 	background-size: cover;
-	background-repeat: round;
+	background-position: center;
+	// background-repeat: ;
 }
 
 .card-login {
-	.tombol-sign {
-		border-radius: 10%;
-	}
+	// .tombol-sign {
+	// 	border-radius: 10%;
+	// }
 	.social-wrapper {
 		display: flex;
 
