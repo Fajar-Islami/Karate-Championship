@@ -5,5 +5,8 @@ import Header from "./Header";
 import Modal from "./Modal";
 import Sidebar from "./SideBar";
 import Card from "./Card";
+import Tabel from "./Tabel";
+import IsiTabs from "./IsiTabs";
+import Dropdown from "./Dropdown";
 
-export { Footer, ForgetPw, Header, Modal, Sidebar, Card };
+export { Footer, ForgetPw, Header, Modal, Sidebar, Card, Tabel, IsiTabs, Dropdown };

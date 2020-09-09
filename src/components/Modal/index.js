@@ -1,5 +1,5 @@
-import React, { useState, useEffect, Fragment } from "react";
-import { MDBModalHeader, MDBModalBody, MDBModalFooter, MDBBtn, MDBModal, MDBInput } from "mdbreact";
+import React, { useState, Fragment } from "react";
+import { MDBModalHeader, MDBModalBody, MDBModalFooter, MDBBtn, MDBModal, MDBInput, MDBTypography } from "mdbreact";
 import { Link } from "react-router-dom";
 
 const Modal = (props) => {
@@ -37,8 +37,10 @@ const Modal = (props) => {
 			<MDBModal isOpen={togglee} toggle={handleToggle}>
 				<MDBModalHeader toggle={handleToggle}>{judul} </MDBModalHeader>
 				<MDBModalBody className="py-0">
-					<p className="pt-3">{teks}</p>
-					(...)
+					<MDBTypography className="ml-1 pt-3" colorText="grey">
+						{teks}
+					</MDBTypography>
+
 					{/* <MDBInput label="E-mail address" outline icon="envelope" /> */}
 					{/* <MDBInput label="Username" icon="user" /> */}
 					{nama.map((namas, i) => {

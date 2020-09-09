@@ -28,7 +28,7 @@ const Login = () => {
 		document.title = `Login`;
 		document.body.className = "bg-login";
 
-		// // WilllUnMount
+		// WilllUnMount
 		return () => {
 			document.body.className = "";
 		};
@@ -39,7 +39,7 @@ const Login = () => {
 		<MDBContainer fluid>
 			{/* <div className="bg"> */}
 			<MDBRow center className="my-5 card-login">
-				<MDBCol className="col-md-4 ">
+				<MDBCol className="col-4">
 					<MDBCard>
 						<MDBCardBody className="mx-4">
 							<div className="text-center">

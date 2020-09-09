@@ -9,6 +9,7 @@ const Routes = () => {
 				<Route path="/login" exact>
 					<Login />
 				</Route>
+
 				<Route path="/">
 					<MainApp />
 				</Route>

@@ -1,16 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, Fragment } from "react";
+import { Tabel } from "../../components";
 
 const Categories = () => {
-	const [title, setTitle] = useState(0);
-
 	// Lifecycle React Hooks
 	useEffect(() => {
 		document.title = `Categories`;
 	});
 	return (
-		<div>
-			<p>Halaman Kategori</p>
-		</div>
+		<Fragment>
+			<h1 className="pt-3"> Halaman Kategori</h1>
+			<hr />
+			<h4>AA</h4>
+			<Tabel />
+			<br />
+			<h4>BB</h4>
+			<Tabel />
+			<br />
+		</Fragment>
 	);
 };
 

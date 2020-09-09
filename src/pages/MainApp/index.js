@@ -1,14 +1,12 @@
 import React, { Fragment } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Bracket, Categories, Guidance, Medals, SchedulesResult, Statistic, Teams, Home, Login, DetailDummy, Dummy } from "../../pages";
+import { Bracket, Categories, Guidance, Medals, SchedulesResult, Statistic, Teams, Home, DetailDummy, Dummy } from "../../pages";
 import { Footer, Header } from "../../components";
 import "./mainApp.scss";
-import { MDBContainer, MDBNavbar } from "mdbreact";
+import { MDBContainer } from "mdbreact";
 import DummyContextProvider from "../../context/dummyContext";
-import { useHistory, Link } from "react-router-dom";
+import { Photos, Video } from "../Gallery";
 const MainApp = () => {
-	const history = useHistory();
-
 	return (
 		<Fragment>
 			<DummyContextProvider>
@@ -19,7 +17,7 @@ const MainApp = () => {
 						{/* </MDBNavbar> */}
 					</div>
 					<MDBContainer className=" mt-5 pt-5" fluid>
-						<div className="content col-11 ml-5">
+						<div className="content col-11 m-auto">
 							<Switch>
 								<Route path="/bracket">
 									<Bracket />
@@ -42,16 +40,18 @@ const MainApp = () => {
 								<Route path="/teams">
 									<Teams />
 								</Route>
+								<Route path="/photos">
+									<Photos />
+								</Route>
+								<Route path="/videos">
+									<Video />
+								</Route>
 								<Route path="/dummy/">
 									<Dummy />
 								</Route>
-								{/* <Route path="/detail-dummy/:id" component={DetailDummy} /> */}
 								<Route path="/detail-dummy/:id">
 									<DetailDummy />
 								</Route>
-								{/* <Route path="/login">
-									<Login />
-								</Route> */}
 								<Route path="/" exact>
 									<Home />
 								</Route>
