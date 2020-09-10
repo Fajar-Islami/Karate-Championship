@@ -54,7 +54,7 @@ const Bracket = () => {
 							<td></td>
 							<td></td>
 
-							<td className=" pt-0" style={{ width: "80%" }}>
+							<td className="pl-1 pt-0" style={{ width: "80%" }}>
 								<MDBBtn color="primary">Cari</MDBBtn>
 							</td>
 						</tr>

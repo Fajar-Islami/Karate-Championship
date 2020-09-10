@@ -5,7 +5,7 @@ import { BSP, Forki } from "../../assets";
 const Footer = () => {
 	return (
 		<Fragment>
-			<h4 className="d-flex justify-content-center">Official Partner</h4>
+			<h4 className="d-flex justify-content-center pt-3">Official Partner</h4>
 			<div className="d-flex justify-content-center">
 				{/* <div className="p-1 col-example "> */}
 				<img src={BSP} alt="" style={{ height: "70px" }} />

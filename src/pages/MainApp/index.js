@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Bracket, Categories, Guidance, Medals, SchedulesResult, Statistic, Teams, Home, DetailDummy, Dummy } from "../../pages";
+import { Bracket, Categories, Guidance, Medals, SchedulesResult, Statistic, Teams, Home, DetailDummy, Dummy, Registration } from "../../pages";
 import { Footer, Header } from "../../components";
 import "./mainApp.scss";
 import { MDBContainer } from "mdbreact";
@@ -45,6 +45,9 @@ const MainApp = () => {
 								</Route>
 								<Route path="/videos">
 									<Video />
+								</Route>
+								<Route path="/registration">
+									<Registration />
 								</Route>
 								<Route path="/dummy/">
 									<Dummy />

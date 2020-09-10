@@ -69,9 +69,6 @@ const Header = () => {
 							<MDBNavLink to="/categories">Categories</MDBNavLink>
 						</MDBNavItem>
 						<MDBNavItem>
-							<MDBNavLink to="/guidance">Guidance</MDBNavLink>
-						</MDBNavItem>
-						<MDBNavItem>
 							<MDBNavLink to="/medals">Medals</MDBNavLink>
 						</MDBNavItem>
 						<MDBNavItem>
@@ -113,14 +110,12 @@ const Header = () => {
 									</MDBDropdownItem>
 									<MDBDropdownItem className="pl-0 pt-3 pb-3 hoverable">
 										<Link to="/guidance">
-											<MDBIcon icon="user" className="mr-2" />
-											Guidance
+											<MDBIcon icon="user" className="mr-2" /> Guidance
 										</Link>
 									</MDBDropdownItem>
 									<MDBDropdownItem className="pl-0 pt-3 pb-3 hoverable">
 										<Link to="/medals">
-											<MDBIcon icon="user" className="mr-2" />
-											Medals
+											<MDBIcon icon="user" className="mr-2" /> Medals
 										</Link>
 									</MDBDropdownItem>
 									<MDBDropdownItem className="pl-0 pt-3 pb-3 hoverable">
@@ -155,7 +150,7 @@ const Header = () => {
 								<MDBDropdownToggle color="info-color" nav caret>
 									Gallery
 								</MDBDropdownToggle>
-								<MDBDropdownMenu className="dropdown-default pt-0">
+								<MDBDropdownMenu className="dropdown-default ">
 									<MDBDropdownItem className="pl-0 pt-3 pb-3 hoverable " active fixed="true">
 										<Link to="/photos">
 											<MDBIcon icon="image" className="mr-2" />
@@ -172,7 +167,41 @@ const Header = () => {
 							</MDBDropdown>
 						</MDBNavItem>
 					</MDBNavbarNav>
+
 					<MDBNavbarNav right>
+						<div className="pt-2 d-flex">
+							<MDBNavItem>
+								<MDBNavLink className="waves-effect waves-light" to="/guidance">
+									<MDBIcon icon="info-circle" /> Guidance
+								</MDBNavLink>
+							</MDBNavItem>
+							<MDBNavItem>
+								<MDBNavLink className="waves-effect waves-light " to="/registration">
+									<MDBIcon icon="plus-circle" /> Registration
+								</MDBNavLink>
+							</MDBNavItem>
+							<MDBNavItem>
+								<MDBDropdown>
+									<MDBDropdownToggle nav caret>
+										<MDBIcon icon="user" /> User
+									</MDBDropdownToggle>
+									<MDBDropdownMenu className="dropdown-default">
+										<MDBDropdownItem href="#!" className="m-auto hoverable ">
+											My Profile
+										</MDBDropdownItem>
+										<MDBDropdownItem href="#!" className="m-auto hoverable ">
+											Setting
+										</MDBDropdownItem>
+										<MDBDropdownItem href="#!" className="m-auto hoverable ">
+											Something else here
+										</MDBDropdownItem>
+										<MDBDropdownItem href="#!" className="m-auto hoverable ">
+											Logout
+										</MDBDropdownItem>
+									</MDBDropdownMenu>
+								</MDBDropdown>
+							</MDBNavItem>
+						</div>
 						<MDBNavItem>
 							<MDBBtn outline color="white" href="/login" className="rounded mb-0">
 								Sign In
