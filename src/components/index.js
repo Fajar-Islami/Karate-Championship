@@ -8,5 +8,6 @@ import Card from "./Card";
 import Tabel from "./Tabel";
 import IsiTabs from "./IsiTabs";
 import Dropdown from "./Dropdown";
+import RadioButton from "./RadioButton";
 
-export { Footer, ForgetPw, Header, Modal, Sidebar, Card, Tabel, IsiTabs, Dropdown };
+export { Footer, ForgetPw, Header, Modal, Sidebar, Card, Tabel, IsiTabs, Dropdown, RadioButton };

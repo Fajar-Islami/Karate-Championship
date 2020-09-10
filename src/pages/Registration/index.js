@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from "react";
 import { MDBTable, MDBTableBody, MDBBtn, MDBRow, MDBCol, MDBFormInline, MDBInput } from "mdbreact";
-import { Dropdown } from "../../components";
+import { Dropdown, RadioButton } from "../../components";
 import { Link } from "react-router-dom";
 
 const Registration = () => {
@@ -43,7 +43,7 @@ const Registration = () => {
 						<tr>
 							<td className="font-weight-normal">Nama Kontingen</td>
 							<td className=" pt-2">
-								<input type="text" id="exampleDisabled" className="form-control" placeholder="Disabled input" disabled />
+								<input type="text" id="exampleDisabled" className="form-control" placeholder="Nama Kontingen" disabled />
 							</td>
 						</tr>
 						<tr>
@@ -63,14 +63,8 @@ const Registration = () => {
 							<td className="font-weight-normal">Jenis Kelamin</td>
 							<td className=" pt-2">
 								<MDBFormInline>
-									{/* <MDBRow> */}
-									{/* <MDBCol size="6"> */}
-									<MDBInput gap onClick={handleCheck(1)} checked={checked === 1 ? true : false} label="Laki-Laki" type="radio" id="radio1" containerClass="mr-5" />
-									{/* </MDBCol> */}
-									{/* <MDBCol size="6"> */}
-									<MDBInput gap onClick={handleCheck(2)} checked={checked === 2 ? true : false} label="Perempuan" type="radio" id="radio2" />
-									{/* </MDBCol> */}
-									{/* </MDBRow> */}
+									<RadioButton label="Laki-laki" />
+									<RadioButton label="Perempuan" />
 								</MDBFormInline>
 							</td>
 						</tr>

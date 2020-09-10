@@ -6,12 +6,13 @@ const Footer = () => {
 	return (
 		<Fragment>
 			<h4 className="d-flex justify-content-center pt-3">Official Partner</h4>
+			<hr />
 			<div className="d-flex justify-content-center">
 				{/* <div className="p-1 col-example "> */}
-				<img src={BSP} alt="" style={{ height: "70px" }} />
+				<img src={BSP} alt="" style={{ height: "70px" }} title="BSP" />
 				{/* </div> */}
 				{/* <div className="p-1 col-example "> */}
-				<img src={Forki} alt="" style={{ height: "70px" }} />
+				<img src={Forki} alt="" style={{ height: "70px" }} title="Forki" />
 				{/* </div> */}
 			</div>
 			<MDBFooter color="blue" className="font-small pt-4 mt-4">

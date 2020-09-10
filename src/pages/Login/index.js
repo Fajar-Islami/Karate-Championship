@@ -39,7 +39,7 @@ const Login = () => {
 		<MDBContainer fluid>
 			{/* <div className="bg"> */}
 			<MDBRow center className="my-5 card-login">
-				<MDBCol className="col-4">
+				<MDBCol className="col-6 col-lg-4">
 					<MDBCard>
 						<MDBCardBody className="mx-4">
 							<div className="text-center">
@@ -55,12 +55,8 @@ const Login = () => {
 								<Modal title={labelFP} icon={iconFP} type={typeFP} judul="Forgot Password ?" label="Forgot Password ?" tulisan={textFP}>
 									Forgot PW
 								</Modal>
-								{/* Forgot
-									<a href="#!" className="blue-text ml-1">
-										Password?
-									</a> */}
 							</p>
-							{/* </p> */}
+
 							<div className="text-center mb-3">
 								<MDBBtn type="button" gradient="blue" className="rounded-pill" alt="150x75">
 									Sign in
@@ -75,12 +71,7 @@ const Login = () => {
 						</MDBCardBody>
 
 						<MDBModalFooter className="mx-5 pt-3 mb-1">
-							<div className="font-small grey-text d-flex justify-content-end">
-								Not a member?
-								{/* <a href="#!" className="blue-text ml-1">
-									Sign Up
-								</a> */}
-							</div>
+							<div className="font-small grey-text d-flex justify-content-end">Not a member?</div>
 							<Modal title={labelSU} icon={iconSU} type={typeSU} label="Daftar" judul="Daftar" tulisan={textSU} />
 						</MDBModalFooter>
 					</MDBCard>
