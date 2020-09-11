@@ -9,60 +9,60 @@ import { Photos, Video } from "../Gallery";
 const MainApp = () => {
 	return (
 		<Fragment>
-			<DummyContextProvider>
-				<Router>
-					<div className="header ">
-						{/* <MDBNavbar color="default-color" dark expand="md" scrolling fixed="top" className=""> */}
-						<Header />
-						{/* </MDBNavbar> */}
+			{/* <DummyContextProvider> */}
+			<Router>
+				<div className="header ">
+					{/* <MDBNavbar color="default-color" dark expand="md" scrolling fixed="top" className=""> */}
+					<Header />
+					{/* </MDBNavbar> */}
+				</div>
+				<MDBContainer className=" mt-5 pt-5" fluid>
+					<div className="content col-11 m-auto">
+						<Switch>
+							<Route path="/bracket">
+								<Bracket />
+							</Route>
+							<Route path="/categories">
+								<Categories />
+							</Route>
+							<Route path="/guidance">
+								<Guidance />
+							</Route>
+							<Route path="/medals">
+								<Medals />
+							</Route>
+							<Route path="/schedulesResult">
+								<SchedulesResult />
+							</Route>
+							<Route path="/statistic">
+								<Statistic />
+							</Route>
+							<Route path="/teams">
+								<Teams />
+							</Route>
+							<Route path="/photos">
+								<Photos />
+							</Route>
+							<Route path="/videos">
+								<Video />
+							</Route>
+							<Route path="/registration">
+								<Registration />
+							</Route>
+							<Route path="/dummy/">
+								<Dummy />
+							</Route>
+							<Route path="/detail-dummy/:id">
+								<DetailDummy />
+							</Route>
+							<Route path="/" exact>
+								<Home />
+							</Route>
+						</Switch>
 					</div>
-					<MDBContainer className=" mt-5 pt-5" fluid>
-						<div className="content col-11 m-auto">
-							<Switch>
-								<Route path="/bracket">
-									<Bracket />
-								</Route>
-								<Route path="/categories">
-									<Categories />
-								</Route>
-								<Route path="/guidance">
-									<Guidance />
-								</Route>
-								<Route path="/medals">
-									<Medals />
-								</Route>
-								<Route path="/schedulesResult">
-									<SchedulesResult />
-								</Route>
-								<Route path="/statistic">
-									<Statistic />
-								</Route>
-								<Route path="/teams">
-									<Teams />
-								</Route>
-								<Route path="/photos">
-									<Photos />
-								</Route>
-								<Route path="/videos">
-									<Video />
-								</Route>
-								<Route path="/registration">
-									<Registration />
-								</Route>
-								<Route path="/dummy/">
-									<Dummy />
-								</Route>
-								<Route path="/detail-dummy/:id">
-									<DetailDummy />
-								</Route>
-								<Route path="/" exact>
-									<Home />
-								</Route>
-							</Switch>
-						</div>
-					</MDBContainer>
-				</Router>
-			</DummyContextProvider>
+				</MDBContainer>
+			</Router>
+			{/* </DummyContextProvider> */}
 			<div className="footer">
 				<Footer />
 			</div>

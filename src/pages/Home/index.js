@@ -1,8 +1,11 @@
 import React, { useEffect, Fragment } from "react";
 import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView, MDBRow, MDBCol, MDBAnimation, MDBBtn, MDBBox, MDBTypography } from "mdbreact";
-import { Tabel } from "../../components";
+import { Tabel, Carousel } from "../../components";
+import { useHistory } from "react-router";
 
 const Home = () => {
+	const history = useHistory();
+
 	// Lifecycle React Hooks
 	useEffect(() => {
 		document.title = `Home`;
@@ -13,25 +16,7 @@ const Home = () => {
 			<h1 className="pt-3"> Halaman Home</h1>
 			<MDBRow className="mb-5">
 				<MDBCol size="7">
-					<MDBCarousel activeItem={1} length={3} showControls={true} showIndicators={false} className="z-depth-1" slide>
-						<MDBCarouselInner>
-							<MDBCarouselItem itemId="1">
-								<MDBView>
-									<img className="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(45).jpg" alt="First slide" />
-								</MDBView>
-							</MDBCarouselItem>
-							<MDBCarouselItem itemId="2">
-								<MDBView>
-									<img className="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(46).jpg" alt="Second slide" />
-								</MDBView>
-							</MDBCarouselItem>
-							<MDBCarouselItem itemId="3">
-								<MDBView>
-									<img className="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(47).jpg" alt="Third slide" />
-								</MDBView>
-							</MDBCarouselItem>
-						</MDBCarouselInner>
-					</MDBCarousel>
+					<Carousel />
 					<br />
 					<MDBCarousel activeItem={1} length={2} showControls={true} showIndicators={false} className="z-depth-1" slide>
 						<MDBCarouselInner>
@@ -51,7 +36,7 @@ const Home = () => {
 				<MDBCol size="5">
 					<Tabel />
 					<div className="text-center mb-5">
-						<MDBBtn type="button" gradient="blue" className="rounded-pill" alt="150x75">
+						<MDBBtn type="button" gradient="blue" className="rounded-pill" alt="150x75" onClick={() => history.push("/medals")}>
 							View Full List
 						</MDBBtn>
 					</div>
@@ -66,25 +51,7 @@ const Home = () => {
 			<MDBRow className="mb-5">
 				<MDBCol size="6">
 					<MDBView hover zoom>
-						<MDBCarousel activeItem={1} length={3} showControls={true} showIndicators={false} className="z-depth-1" slide>
-							<MDBCarouselInner>
-								<MDBCarouselItem itemId="1">
-									<MDBView>
-										<img className="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(45).jpg" alt="First slide" />
-									</MDBView>
-								</MDBCarouselItem>
-								<MDBCarouselItem itemId="2">
-									<MDBView>
-										<img className="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(46).jpg" alt="Second slide" />
-									</MDBView>
-								</MDBCarouselItem>
-								<MDBCarouselItem itemId="3">
-									<MDBView>
-										<img className="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(47).jpg" alt="Third slide" />
-									</MDBView>
-								</MDBCarouselItem>
-							</MDBCarouselInner>
-						</MDBCarousel>
+						<Carousel />
 					</MDBView>
 				</MDBCol>
 				<MDBCol size="6">
