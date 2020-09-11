@@ -32,13 +32,13 @@ const Dummy = () => {
 			<h3 className="pt-3">Halaman Dummy</h3>
 			<hr />
 			{data.map((item) => {
-				// return <Card datas={item} key={item.id} />;
-				return (
-					<p key={item.id}>
-						{" "}
-						{item.id}-{item.title}{" "}
-					</p>
-				);
+				return <Card datas={item} key={item.id} />;
+				// return (
+				// 	<p key={item.id}>
+				// 		{" "}
+				// 		{item.id}-{item.title}{" "}
+				// 	</p>
+				// );
 			})}
 			{/* <Card title="title" desc="desc" />; */}
 		</Fragment>
