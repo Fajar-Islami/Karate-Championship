@@ -1,23 +1,27 @@
 import React, { useEffect, Fragment } from "react";
 import { Tabel } from "../../components";
 import { MDBDataTable } from "mdbreact";
-import { data } from "./data";
+import { data, usiadini } from "./data";
 
 const Categories = () => {
-	console.log(data);
-	console.log(data.columns);
+	console.log(usiadini);
+	console.log(usiadini.columns);
 
-	const kolom = data.columns;
-	const baris = data.rows;
+	const kolom = usiadini.columns;
+	const baris = usiadini.rows;
+	const kolom2 = data.columns;
+	const baris2 = data.rows;
+	
 	// Lifecycle React Hooks
 	useEffect(() => {
 		document.title = `Categories`;
-	}, [kolom, baris]);
+	}, [kolom, baris], [kolom2, baris2]);
 
 	return (
 			<Fragment>
-				<p className="pt-3">Halaman Categories</p>
+				<p className="pt-3">Categories</p>
 				<hr />
+				<MDBDataTable striped bordered small data={usiadini} />;
 				<MDBDataTable striped bordered small data={data} />;
 			</Fragment>
 	);

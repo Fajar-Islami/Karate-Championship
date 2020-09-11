@@ -1,6 +1,842 @@
 import React from "react";
 import { MDBTable, MDBTableBody, MDBTableHead } from "mdbreact";
 
+	const usiadini = {
+		columns: [
+			{
+				label:"No",
+				field:"no",
+				sort:"asc",
+				width:"100",
+			},
+			{
+				label:"Entries per Category",
+				field:"entry",
+				sort:"asc",
+				width:"270",
+			},
+			{
+				label:"Individuals",
+				field:"individuals",
+				sort:"asc",
+				width:"100",
+			},
+			{
+				label:"Teams",
+				field:"teams",
+				sort:"asc",
+				width:"100",
+			},
+		],
+		rows: [
+			{
+				no:"1",
+				entry:"KATA INDIVIDUAL MALE",
+				individuals:"10",
+				teams:"",
+			},
+			{
+				no:"2",
+				entry:"KATA TEAM MALE",
+				individuals:"2",
+				teams:"1",
+			},
+			{
+				no:"3",
+				entry:"KUMITE -30 KG MALE",
+				individuals:"13",
+				teams:"",
+			},
+			{
+				no:"4",
+				entry:"KUMITE +30 KG MALE",
+				individuals:"7",
+				teams:"",
+			},
+			{
+				no:"5",
+				entry:"KATA INDIVIDUAL FEMALE",
+				individuals:"8",
+				teams:"",
+			},
+			{
+				no:"6",
+				entry:"KATA TEAM FEMALE",
+				individuals:"",
+				teams:"",
+			},
+			{
+				no:"7",
+				entry:"KUMITE -25 KG FEMALE",
+				individuals:"4",
+				teams:"",
+			},
+			{
+				no:"8",
+				entry:"KUMITE +25 KG FEMALE",
+				individuals:"6",
+				teams:"",
+			},
+			{
+				no:"",
+				entry:"",
+				individuals:"50",
+				teams:"1",
+			},
+		],
+	};
+
+	const prapemula = {
+		columns: [
+			{
+				label:"No",
+				field:"no",
+				sort:"asc",
+				width:"100",
+			},
+			{
+				label:"Entries per Category",
+				field:"entry",
+				sort:"asc",
+				width:"270",
+			},
+			{
+				label:"Individuals",
+				field:"individuals",
+				sort:"asc",
+				width:"100",
+			},
+			{
+				label:"Teams",
+				field:"teams",
+				sort:"asc",
+				width:"100",
+			},
+		],
+		rows: [
+			{
+				no:"1",
+				entry:"KATA INDIVIDUAL MALE",
+				individuals:"27",
+				teams:"",
+			},
+			{
+				no:"2",
+				entry:"KATA TEAM MALE",
+				individuals:"6",
+				teams:"3",
+			},
+			{
+				no:"3",
+				entry:"KUMITE -35 KG MALE",
+				individuals:"27",
+				teams:"",
+			},
+			{
+				no:"4",
+				entry:"KUMITE -40 KG MALE",
+				individuals:"10",
+				teams:"",
+			},
+			{
+				no:"5",
+				entry:"KUMITE +40 KG MALE",
+				individuals:"8",
+				teams:"",
+			},
+			{
+				no:"6",
+				entry:"KATA INDIVIDUAL FEMALE",
+				individuals:"28",
+				teams:"",
+			},
+			{
+				no:"7",
+				entry:"KATA TEAM FEMALE",
+				individuals:"4",
+				teams:"2",
+			},
+			{
+				no:"8",
+				entry:"KUMITE -30 KG FEMALE",
+				individuals:"10",
+				teams:"",
+			},
+			{
+				no:"9",
+				entry:"KUMITE -35 KG FEMALE",
+				individuals:"14",
+				teams:"",
+			},
+			{
+				no:"10",
+				entry:"KUMITE +35 KG FEMALE",
+				individuals:"7",
+				teams:"",
+			},
+			{
+				no:"",
+				entry:"",
+				individuals:"141",
+				teams:"5",
+			},
+		],
+	};
+
+	const cadet = {
+		columns: [
+			{
+				label:"No",
+				field:"no",
+				sort:"asc",
+				width:"100",
+			},
+			{
+				label:"Entries per Category",
+				field:"entry",
+				sort:"asc",
+				width:"270",
+			},
+			{
+				label:"Individuals",
+				field:"individuals",
+				sort:"asc",
+				width:"100",
+			},
+			{
+				label:"Teams",
+				field:"teams",
+				sort:"asc",
+				width:"100",
+			},
+		],
+		rows: [
+			{
+				no:"1",
+				entry:"KATA INDIVIDUAL MALE",
+				individuals:"20",
+				teams:"",
+			},
+			{
+				no:"2",
+				entry:"KUMITE -52 KG MALE",
+				individuals:"26",
+				teams:"",
+			},
+			{
+				no:"3",
+				entry:"KUMITE -57 KG MALE",
+				individuals:"4",
+				teams:"",
+			},
+			{
+				no:"4",
+				entry:"KUMITE -63 KG MALE",
+				individuals:"5",
+				teams:"",
+			},
+			{
+				no:"5",
+				entry:"KUMITE -70 KG MALE",
+				individuals:"3",
+				teams:"",
+			},
+			{
+				no:"6",
+				entry:"KUMITE +50 KG MALE",
+				individuals:"3",
+				teams:"",
+			},
+			{
+				no:"7",
+				entry:"KUMITE BEST OF THE BEST MALE",
+				individuals:"5",
+				teams:"",
+			},
+			{
+				no:"8",
+				entry:"KATA INDIVIDUAL FEMALE",
+				individuals:"20",
+				teams:"",
+			},
+			{
+				no:"9",
+				entry:"KUMITE -47 KG FEMALE",
+				individuals:"16",
+				teams:"",
+			},
+			{
+				no:"10",
+				entry:"KUMITE -54 KG FEMALE",
+				individuals:"10",
+				teams:"",
+			},
+			{
+				no:"11",
+				entry:"KUMITE +54 KG FEMALE",
+				individuals:"12",
+				teams:"",
+			},
+			{
+				no:"12",
+				entry:"KUMITE BEST OF THE BEST FEMALE",
+				individuals:"3",
+				teams:"",
+			},
+			{
+				no:"",
+				entry:"",
+				individuals:"127",
+				teams:"0",
+			},
+		],
+	};
+
+	const pemula = {
+		columns: [
+			{
+				label:"No",
+				field:"no",
+				sort:"asc",
+				width:"100",
+			},
+			{
+				label:"Entries per Category",
+				field:"entry",
+				sort:"asc",
+				width:"270",
+			},
+			{
+				label:"Individuals",
+				field:"individuals",
+				sort:"asc",
+				width:"100",
+			},
+			{
+				label:"Teams",
+				field:"teams",
+				sort:"asc",
+				width:"100",
+			},
+		],
+		rows: [
+			{
+				no:"1",
+				entry:"KATA INDIVIDUAL MALE",
+				individuals:"23",
+				teams:"",
+			},
+			{
+				no:"2",
+				entry:"KATA TEAM MALE",
+				individuals:"13",
+				teams:"6",
+			},
+			{
+				no:"3",
+				entry:"KUMITE -45 KG MALE",
+				individuals:"12",
+				teams:"",
+			},
+			{
+				no:"4",
+				entry:"KUMITE -55 KG MALE",
+				individuals:"8",
+				teams:"",
+			},
+			{
+				no:"5",
+				entry:"KUMITE +55 KG MALE",
+				individuals:"8",
+				teams:"",
+			},
+			{
+				no:"6",
+				entry:"KUMITE -50 KG MALE",
+				individuals:"7",
+				teams:"",
+			},
+			{
+				no:"7",
+				entry:"KUMITE -40 KG MALE",
+				individuals:"11",
+				teams:"",
+			},
+			{
+				no:"8",
+				entry:"KATA INDIVIDUAL FEMALE",
+				individuals:"18",
+				teams:"",
+			},
+			{
+				no:"9",
+				entry:"KATA TEAM FEMALE",
+				individuals:"3",
+				teams:"1",
+			},
+			{
+				no:"10",
+				entry:"KUMITE -42 KG FEMALE",
+				individuals:"16",
+				teams:"",
+			},
+			{
+				no:"11",
+				entry:"KUMITE -47 KG FEMALE",
+				individuals:"7",
+				teams:"",
+			},
+			{
+				no:"12",
+				entry:"KUMITE +37 KG FEMALE",
+				individuals:"8",
+				teams:"",
+			},
+			{
+				no:"",
+				entry:"",
+				individuals:"134",
+				teams:"7",
+			},
+		],
+	};
+
+	const junior = {
+		columns: [
+			{
+				label:"No",
+				field:"no",
+				sort:"asc",
+				width:"100",
+			},
+			{
+				label:"Entries per Category",
+				field:"entry",
+				sort:"asc",
+				width:"270",
+			},
+			{
+				label:"Individuals",
+				field:"individuals",
+				sort:"asc",
+				width:"100",
+			},
+			{
+				label:"Teams",
+				field:"teams",
+				sort:"asc",
+				width:"100",
+			},
+		],
+		rows: [
+			{
+				no:"1",
+				entry:"KATA INDIVIDUAL MALE",
+				individuals:"18",
+				teams:"",
+			},
+			{
+				no:"2",
+				entry:"KATA TEAM MALE",
+				individuals:"16",
+				teams:"6",
+			},
+			{
+				no:"3",
+				entry:"KUMITE -55 KG MALE",
+				individuals:"17",
+				teams:"",
+			},
+			{
+				no:"4",
+				entry:"KUMITE -61 KG MALE",
+				individuals:"15",
+				teams:"",
+			},
+			{
+				no:"5",
+				entry:"KUMITE -68 KG MALE",
+				individuals:"17",
+				teams:"",
+			},
+			{
+				no:"6",
+				entry:"KUMITE -76 KG MALE",
+				individuals:"5",
+				teams:"",
+			},
+			{
+				no:"7",
+				entry:"KUMITE +76 KG MALE",
+				individuals:"4",
+				teams:"",
+			},
+			{
+				no:"8",
+				entry:"KUMITE BEST OF THE BEST MALE",
+				individuals:"5",
+				teams:"",
+			},
+			{
+				no:"9",
+				entry:"KATA INDIVIDUAL FEMALE",
+				individuals:"10",
+				teams:"",
+			},
+			{
+				no:"10",
+				entry:"KATA TEAM FEMALE",
+				individuals:"9",
+				teams:"4",
+			},
+			{
+				no:"11",
+				entry:"KUMITE -48 KG FEMALE",
+				individuals:"13",
+				teams:"",
+			},
+			{
+				no:"12",
+				entry:"KUMITE -53 KG FEMALE",
+				individuals:"9",
+				teams:"",
+			},
+			{
+				no:"13",
+				entry:"KUMITE -59 KG FEMALE",
+				individuals:"7",
+				teams:"",
+			},
+			{
+				no:"14",
+				entry:"KUMITE +59 KG FEMALE",
+				individuals:"6",
+				teams:"",
+			},
+			{
+				no:"15",
+				entry:"KUMITE -BEST OF THE BEST FEMALE",
+				individuals:"4",
+				teams:"",
+			},
+			{
+				no:"",
+				entry:"",
+				individuals:"155",
+				teams:"10",
+			},
+		],
+	};
+
+	const senior = {
+		columns: [
+			{
+				label:"No",
+				field:"no",
+				sort:"asc",
+				width:"100",
+			},
+			{
+				label:"Entries per Category",
+				field:"entry",
+				sort:"asc",
+				width:"270",
+			},
+			{
+				label:"Individuals",
+				field:"individuals",
+				sort:"asc",
+				width:"100",
+			},
+			{
+				label:"Teams",
+				field:"teams",
+				sort:"asc",
+				width:"100",
+			},
+		],
+		rows: [
+			{
+				no:"1",
+				entry:"KATA INDIVIDUAL MALE",
+				individuals:"10",
+				teams:"",
+			},
+			{
+				no:"2",
+				entry:"KATA TEAM MALE",
+				individuals:"7",
+				teams:"3",
+			},
+			{
+				no:"3",
+				entry:"KUMITE -60 KG MALE",
+				individuals:"6",
+				teams:"",
+			},
+			{
+				no:"4",
+				entry:"KUMITE -67 KG MALE",
+				individuals:"6",
+				teams:"",
+			},
+			{
+				no:"5",
+				entry:"KUMITE -75 KG MALE",
+				individuals:"4",
+				teams:"",
+			},
+			{
+				no:"6",
+				entry:"KUMITE -84 KG MALE",
+				individuals:"3",
+				teams:"",
+			},
+			{
+				no:"7",
+				entry:"KUMITE +84 KG MALE",
+				individuals:"4",
+				teams:"",
+			},
+			{
+				no:"8",
+				entry:"KUMITE BEST OF THE BEST MALE",
+				individuals:"5",
+				teams:"",
+			},
+			{
+				no:"9",
+				entry:"KATA INDIVIDUAL FEMALE",
+				individuals:"5",
+				teams:"",
+			},
+			{
+				no:"10",
+				entry:"KATA TEAM FEMALE",
+				individuals:"5",
+				teams:"2",
+			},
+			{
+				no:"11",
+				entry:"KUMITE -50 KG FEMALE",
+				individuals:"7",
+				teams:"",
+			},
+			{
+				no:"12",
+				entry:"KUMITE -55 KG FEMALE",
+				individuals:"5",
+				teams:"",
+			},
+			{
+				no:"13",
+				entry:"KUMITE -61 KG FEMALE",
+				individuals:"6",
+				teams:"",
+			},
+			{
+				no:"14",
+				entry:"KUMITE -68 KG FEMALE",
+				individuals:"3",
+				teams:"",
+			},
+			{
+				no:"15",
+				entry:"KUMITE +68 KG FEMALE",
+				individuals:"",
+				teams:"",
+			},
+			{
+				no:"16",
+				entry:"KUMITE -BEST OF THE BEST FEMALE",
+				individuals:"4",
+				teams:"",
+			},
+			{
+				no:"",
+				entry:"",
+				individuals:"80",
+				teams:"5",
+			},
+		],
+	};
+
+	const under21 = {
+		columns: [
+			{
+				label:"No",
+				field:"no",
+				sort:"asc",
+				width:"100",
+			},
+			{
+				label:"Entries per Category",
+				field:"entry",
+				sort:"asc",
+				width:"270",
+			},
+			{
+				label:"Individuals",
+				field:"individuals",
+				sort:"asc",
+				width:"100",
+			},
+			{
+				label:"Teams",
+				field:"teams",
+				sort:"asc",
+				width:"100",
+			},
+		],
+		rows: [
+			{
+				no:"1",
+				entry:"KATA INDIVIDUAL MALE",
+				individuals:"5",
+				teams:"",
+			},
+			{
+				no:"2",
+				entry:"KUMITE -60 KG MALE",
+				individuals:"5",
+				teams:"",
+			},
+			{
+				no:"3",
+				entry:"KUMITE -67 KG MALE",
+				individuals:"5",
+				teams:"",
+			},
+			{
+				no:"4",
+				entry:"KUMITE -75 KG MALE",
+				individuals:"3",
+				teams:"",
+			},
+			{
+				no:"5",
+				entry:"KUMITE -84 KG MALE",
+				individuals:"",
+				teams:"",
+			},
+			{
+				no:"6",
+				entry:"KUMITE +84 KG MALE",
+				individuals:"4",
+				teams:"",
+			},
+			{
+				no:"7",
+				entry:"KUMITE -68 KG MALE",
+				individuals:"",
+				teams:"",
+			},
+			{
+				no:"8",
+				entry:"KUMITE BEST OF THE BEST MALE",
+				individuals:"4",
+				teams:"",
+			},
+			{
+				no:"9",
+				entry:"KATA INDIVIDUAL FEMALE",
+				individuals:"5",
+				teams:"",
+			},
+			{
+				no:"10",
+				entry:"KUMITE -50 KG FEMALE",
+				individuals:"4",
+				teams:"",
+			},
+			{
+				no:"11",
+				entry:"KUMITE -55 KG FEMALE",
+				individuals:"3",
+				teams:"",
+			},
+			{
+				no:"12",
+				entry:"KUMITE -61 KG FEMALE",
+				individuals:"3",
+				teams:"",
+			},
+			{
+				no:"13",
+				entry:"KUMITE -68 KG FEMALE",
+				individuals:"3",
+				teams:"",
+			},
+			{
+				no:"14",
+				entry:"KUMITE +68 KG FEMALE",
+				individuals:"",
+				teams:"",
+			},
+			{
+				no:"15",
+				entry:"KUMITE -BEST OF THE BEST FEMALE",
+				individuals:"4",
+				teams:"",
+			},
+			{
+				no:"",
+				entry:"",
+				individuals:"48",
+				teams:"0",
+			},
+		],
+	};
+
+	const veteran = {
+		columns: [
+			{
+				label:"No",
+				field:"no",
+				sort:"asc",
+				width:"100",
+			},
+			{
+				label:"Entries per Category",
+				field:"entry",
+				sort:"asc",
+				width:"270",
+			},
+			{
+				label:"Individuals",
+				field:"individuals",
+				sort:"asc",
+				width:"100",
+			},
+			{
+				label:"Teams",
+				field:"teams",
+				sort:"asc",
+				width:"100",
+			},
+		],
+		rows: [
+			{
+				no:"1",
+				entry:"KATA INDIVIDUAL MALE",
+				individuals:"8",
+				teams:"",
+			},
+			{
+				no:"2",
+				entry:"KATA INDIVIDUAL FEMALE",
+				individuals:"2",
+				teams:"",
+			},
+			{
+				no:"",
+				entry:"",
+				individuals:"10",
+				teams:"0",
+			},
+		],
+	};
+
 	const data = {
 		columns: [
 			{
@@ -500,4 +1336,4 @@ import { MDBTable, MDBTableBody, MDBTableHead } from "mdbreact";
 		],
 };
 
-export { data };
+export { data, usiadini };

@@ -1,0 +1,9 @@
+.tes-t{
+    th:hover {
+        cursor: default;
+    }
+    tbody + thead {
+        display: none;
+    }
+}
+
