@@ -1,6 +1,8 @@
 import React, { useEffect, Fragment } from "react";
 import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView, MDBRow, MDBCol, MDBBtn, MDBBox, MDBTypography } from "mdbreact";
 import { Tabel } from "../../components";
+import SideBar from "../../components/SideBar";
+
 
 const Home = () => {
 	// Lifecycle React Hooks

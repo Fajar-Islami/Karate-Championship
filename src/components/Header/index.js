@@ -89,8 +89,8 @@ const Header = () => {
 									{/* <div className="d-none d-md-inline">aaa</div> */}
 									AAAA
 								</MDBDropdownToggle>
-								<MDBDropdownMenu basic>
-									<MDBDropdownItem className="pl-0 pt-3 pb-3 hoverable " active fixed="true">
+								<MDBDropdownMenu className="dropdown-default">
+									<MDBDropdownItem className="pl-0 pt-3 pb-3 hoverable " fixed="true" transform="blue">
 										<Link to="/">
 											<MDBIcon icon="user" className="mr-2" />
 											Home

@@ -6,6 +6,7 @@ import "./mainApp.scss";
 import { MDBContainer } from "mdbreact";
 import DummyContextProvider from "../../context/dummyContext";
 import { Photos, Video } from "../Gallery";
+import SideBar from "../../components/SideBar";
 const MainApp = () => {
 	return (
 		<Fragment>
@@ -16,8 +17,14 @@ const MainApp = () => {
 						<Header />
 						{/* </MDBNavbar> */}
 					</div>
+					
 					<MDBContainer className=" mt-5 pt-5" fluid>
+						
+						<SideBar />
+						
+					
 						<div className="content col-11 m-auto">
+						
 							<Switch>
 								<Route path="/bracket">
 									<Bracket />
@@ -60,6 +67,7 @@ const MainApp = () => {
 								</Route>
 							</Switch>
 						</div>
+						
 					</MDBContainer>
 				</Router>
 			</DummyContextProvider>
