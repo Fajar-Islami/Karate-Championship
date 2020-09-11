@@ -3,6 +3,7 @@ import { MDBInput, MDBBtn, MDBCard, MDBRow, MDBCol, MDBCardBody, MDBModalFooter,
 import { ICFacebook, ICTwitter, ICGoogle } from "../../assets";
 import "./login.scss";
 import { Modal } from "../../components";
+import { useHistory } from "react-router";
 
 const Icon = ({ img }) => {
 	return (
@@ -13,6 +14,8 @@ const Icon = ({ img }) => {
 };
 
 const Login = () => {
+	const history = useHistory();
+
 	// Sign Up
 	const labelSU = ["Nama Lengkap", "Email", "Confirm Your email", "password"];
 	const iconSU = ["user", "envelope", "exclamation-triangle", "lock"];
@@ -39,7 +42,7 @@ const Login = () => {
 		<MDBContainer fluid>
 			{/* <div className="bg"> */}
 			<MDBRow center className="my-5 card-login">
-				<MDBCol className="col-6 col-lg-4">
+				<MDBCol className="col-lg-4 col-sm-5">
 					<MDBCard>
 						<MDBCardBody className="mx-4">
 							<div className="text-center">
@@ -56,13 +59,12 @@ const Login = () => {
 									Forgot PW
 								</Modal>
 							</p>
-
 							<div className="text-center mb-3">
-								<MDBBtn type="button" gradient="blue" className="rounded-pill" alt="150x75">
+								<MDBBtn type="button" gradient="blue" className="rounded-pill" alt="150x75" onClick={() => history.push("/")}>
 									Sign in
 								</MDBBtn>
 							</div>
-							<p className="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2">or Sign in with:</p>
+							<p className="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2">or Sign Up with:</p>
 							<div className="row my-2 d-flex justify-content-center social-wrapper">
 								<Icon img={ICFacebook} />
 								<Icon img={ICTwitter} />
@@ -72,7 +74,7 @@ const Login = () => {
 
 						<MDBModalFooter className="mx-5 pt-3 mb-1">
 							<div className="font-small grey-text d-flex justify-content-end">Not a member?</div>
-							<Modal title={labelSU} icon={iconSU} type={typeSU} label="Daftar" judul="Daftar" tulisan={textSU} />
+							<Modal title={labelSU} icon={iconSU} type={typeSU} label="Sign Up" judul="Sign Up" tulisan={textSU} />
 						</MDBModalFooter>
 					</MDBCard>
 				</MDBCol>

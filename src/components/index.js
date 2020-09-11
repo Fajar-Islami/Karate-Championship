@@ -9,5 +9,6 @@ import Tabel from "./Tabel";
 import IsiTabs from "./IsiTabs";
 import Dropdown from "./Dropdown";
 import RadioButton from "./RadioButton";
+import Carousel from "./Carousel";
 
-export { Footer, ForgetPw, Header, Modal, Sidebar, Card, Tabel, IsiTabs, Dropdown, RadioButton };
+export { Footer, ForgetPw, Header, Modal, Sidebar, Card, Tabel, IsiTabs, Dropdown, RadioButton, Carousel };
