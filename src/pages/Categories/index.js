@@ -1,31 +1,25 @@
 import React, { useEffect, Fragment } from "react";
 import { Tabel } from "../../components";
-import { MDBDataTableV5 } from "mdbreact";
-import { usiaDini } from "./data";
+import { MDBDataTable } from "mdbreact";
+import { data } from "./data";
 
 const Categories = () => {
-	console.log(usiaDini());
-	console.log(usiaDini().columns);
+	console.log(data);
+	console.log(data.columns);
 
-	const kolom = usiaDini().columns;
-	const baris = usiaDini().rows;
+	const kolom = data.columns;
+	const baris = data.rows;
 	// Lifecycle React Hooks
 	useEffect(() => {
 		document.title = `Categories`;
 	}, [kolom, baris]);
 
 	return (
-		<Fragment>
-			<h1 className="pt-3"> Halaman Kategori</h1>
-			<hr />
-			<h4>Usia Dini</h4>
-			<Tabel data={usiaDini()} paging={false} searching={false} />
-			<br />
-			<h4>Pra Pemula</h4>
-			<br />
-			{/* <Tabel col={kolom} row={baris} /> */}
-			<br />
-		</Fragment>
+			<Fragment>
+				<p className="pt-3">Halaman Categories</p>
+				<hr />
+				<MDBDataTable striped bordered small data={data} />;
+			</Fragment>
 	);
 };
 
