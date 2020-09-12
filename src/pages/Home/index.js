@@ -1,5 +1,5 @@
 import React, { useEffect, Fragment } from "react";
-import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView, MDBRow, MDBCol, MDBAnimation, MDBBtn, MDBBox, MDBTypography } from "mdbreact";
+import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView, MDBRow, MDBCol, MDBBtn, MDBBox, MDBTypography } from "mdbreact";
 import { Tabel, Carousel } from "../../components";
 import { useHistory } from "react-router";
 
