@@ -11,46 +11,7 @@ const Header = () => {
 		setdropD((dropD) => !dropD);
 	};
 
-	// const [collapseID, setCollapse] = useState();
-	// const prevCollapseRef = useRef();
-
-	// const handleCollapse = (collapseIDB) => () => {
-	// 	// setCollapse((prevCollapse) => ({
-	// 	// 	collapseID: prevCollapse.collapseID !== collapseID ? collapseID : "",
-	// 	// }));
-	// 	setCollapse((collapseID) => (collapseID !== collapseIDB ? collapseIDB : ""));
-	// };
-
 	return (
-		// <MDBNav>
-		// 	<MDBNavItem>
-		// 		<MDBNavLink to="/">Home</MDBNavLink>
-		// 	</MDBNavItem>
-		// 	<MDBNavItem>
-		// 		<MDBNavLink to="/bracket">Bracket</MDBNavLink>
-		// 	</MDBNavItem>
-		// 	<MDBNavItem>
-		// 		<MDBNavLink to="/categories">Categories</MDBNavLink>
-		// 	</MDBNavItem>
-		// 	<MDBNavItem>
-		// 		<MDBNavLink to="/guidance">Guidance</MDBNavLink>
-		// 	</MDBNavItem>
-		// 	<MDBNavItem>
-		// 		<MDBNavLink to="/medals">Medals</MDBNavLink>
-		// 	</MDBNavItem>
-		// 	<MDBNavItem>
-		// 		<MDBNavLink to="/schedulesResult">SchedulesResult</MDBNavLink>
-		// 	</MDBNavItem>
-		// 	<MDBNavItem>
-		// 		<MDBNavLink to="/statistic">Statistic</MDBNavLink>
-		// 	</MDBNavItem>
-		// 	<MDBNavItem>
-		// 		<MDBNavLink to="/teams">Teams</MDBNavLink>
-		// 	</MDBNavItem>
-		// 	<MDBNavItem>
-		// 		<MDBNavLink to="/dummy">Dummy</MDBNavLink>
-		// 	</MDBNavItem>
-		// </MDBNav>
 		<Fragment>
 			<MDBNavbar color="info-color" dark expand="md" scrolling fixed="top">
 				<MDBNavbarBrand>
@@ -86,7 +47,6 @@ const Header = () => {
 						<MDBNavItem>
 							<MDBDropdown>
 								<MDBDropdownToggle color="info-color" nav caret>
-									{/* <div className="d-none d-md-inline">aaa</div> */}
 									AAAA
 								</MDBDropdownToggle>
 								<MDBDropdownMenu basic>
@@ -210,25 +170,6 @@ const Header = () => {
 					</MDBNavbarNav>
 				</MDBCollapse>
 			</MDBNavbar>
-			{/* <MDBNavbar color="light-blue lighten-4" light>
-				<MDBContainer>
-					<MDBNavbarToggler onClick={handleCollapse("navbarCollapse1")} />
-					<MDBCollapse id="navbarCollapse1" isOpen={collapseID} navbar>
-						<MDBNavbarNav right>
-							<MDBNavItem active>
-								<MDBNavLink to="#!">Home</MDBNavLink>
-							</MDBNavItem>
-							<MDBNavItem>
-								<MDBNavLink to="#!">Link</MDBNavLink>
-							</MDBNavItem>
-							<MDBNavItem>
-								<MDBNavLink to="#!">Profile</MDBNavLink>
-							</MDBNavItem>
-						</MDBNavbarNav>
-					</MDBCollapse>
-					<MDBNavbarBrand>Navbar</MDBNavbarBrand>
-				</MDBContainer>
-			</MDBNavbar> */}
 		</Fragment>
 	);
 };
