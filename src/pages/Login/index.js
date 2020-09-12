@@ -42,7 +42,7 @@ const Login = () => {
 		<MDBContainer fluid>
 			{/* <div className="bg"> */}
 			<MDBRow center className="my-5 card-login">
-				<MDBCol className="col-6 col-lg-4">
+				<MDBCol className="col-lg-4 col-sm-5">
 					<MDBCard>
 						<MDBCardBody className="mx-4">
 							<div className="text-center">

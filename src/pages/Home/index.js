@@ -14,8 +14,8 @@ const Home = () => {
 	return (
 		<Fragment>
 			<h1 className="pt-3"> Halaman Home</h1>
-			<MDBRow className="mb-5">
-				<MDBCol size="7">
+			<MDBRow>
+				<MDBCol lg="7" sm="12" className="mb-5">
 					<Carousel />
 					<br />
 					<MDBCarousel activeItem={1} length={2} showControls={true} showIndicators={false} className="z-depth-1" slide>
@@ -33,7 +33,7 @@ const Home = () => {
 						</MDBCarouselInner>
 					</MDBCarousel>
 				</MDBCol>
-				<MDBCol size="5">
+				<MDBCol lg="5" sm="12" className="mb-5">
 					<Tabel />
 					<div className="text-center mb-5">
 						<MDBBtn type="button" gradient="blue" className="rounded-pill" alt="150x75" onClick={() => history.push("/medals")}>
@@ -48,13 +48,13 @@ const Home = () => {
 			<MDBBox className="py-3 pl-5 mb-5" bgColor="primary" color="white">
 				<h3 className="font-weight-normal m-auto">News & Gallery</h3>
 			</MDBBox>
-			<MDBRow className="mb-5">
-				<MDBCol size="6">
+			<MDBRow>
+				<MDBCol lg="6" sm="12" className="mb-5">
 					<MDBView hover zoom>
 						<Carousel />
 					</MDBView>
 				</MDBCol>
-				<MDBCol size="6">
+				<MDBCol lg="6" sm="12" className="mb-5">
 					<MDBTypography blockquote>
 						<MDBBox tag="p" mb={0}>
 							Welcome To Kejurnas Lemkari 2019

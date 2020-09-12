@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Login, MainApp } from "../../pages";
+import { MDBContainer } from "mdbreact";
 
 const Routes = () => {
 	return (

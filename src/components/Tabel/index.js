@@ -2,7 +2,7 @@ import React from "react";
 import { MDBTable, MDBTableBody, MDBTableHead } from "mdbreact";
 const Tabel = () => {
 	return (
-		<MDBTable striped>
+		<MDBTable striped responsive>
 			<MDBTableHead color="primary-color" textWhite>
 				<tr>
 					<th>#</th>
