@@ -55,7 +55,7 @@ const Home = () => {
 					</MDBView>
 				</MDBCol>
 				<MDBCol lg="6" sm="12" className="mb-5">
-					<MDBTypography blockquote>
+					<MDBTypography blockquote bqColor="primary">
 						<MDBBox tag="p" mb={0}>
 							Welcome To Kejurnas Lemkari 2019
 						</MDBBox>

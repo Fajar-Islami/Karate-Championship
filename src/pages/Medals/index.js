@@ -1,6 +1,6 @@
 import React, { useState, useEffect, Fragment } from "react";
 import { MDBTabPane, MDBTabContent, MDBNav, MDBNavItem, MDBNavLink, MDBBtnGroup, MDBBtn, MDBBadge, MDBTable, MDBCardBody, MDBTableBody } from "mdbreact";
-import { IsiTabs } from "../../components";
+import { IsiTabs, Dropdown } from "../../components";
 
 const Medals = () => {
 	const [activeItem, setActiveItem] = useState("1");
@@ -48,22 +48,11 @@ const Medals = () => {
 					<MDBTabPane tabId="1" role="tabpanel">
 						<MDBTable borderless>
 							<MDBTableBody>
+								<Dropdown label="Age Categories" selected="--ALL--" option={["Usia Dini", "Pra Pemula", "Pemula", "Cadet", "Junior", "Senior", "Under 21", "Veteran"]} />
 								<tr>
-									<th className="col-2">Age Categories</th>
-									<th className="col-1">:</th>
-									<th className="col-9 pt-2">
-										<select className=" browser-default custom-select">
-											<option>Choose your option</option>
-											<option value="1">Option 1</option>
-											<option value="2">Option 2</option>
-											<option value="3">Option 3</option>
-										</select>
-									</th>
-								</tr>
-								<tr>
-									<th className="col-2">Day</th>
-									<th className="col-1">:</th>
-									<th className="col-9 pt-2">
+									<th className="font-weight-normal">Day</th>
+									<th>:</th>
+									<th className="pt-2">
 										<MDBBadge pill color="dark" className="my-2 py-2">
 											Overall
 										</MDBBadge>

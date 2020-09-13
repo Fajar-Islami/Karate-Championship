@@ -17,45 +17,21 @@ const Bracket = () => {
 					<form>
 						<MDBTable borderless>
 							<MDBTableBody>
-								<tr>
-									<td style={{ width: "10%" }}>Age Categories</td>
-									<td style={{ width: "1%" }}>:</td>
-									<td className=" pt-2" style={{ width: "80%" }}>
-										<Dropdown />
-									</td>
-								</tr>
-								<tr>
-									<td>Gender</td>
-									<td>:</td>
-									<td className=" pt-2" style={{ width: "80%" }}>
-										<Dropdown />
-									</td>
-								</tr>
-								<tr>
-									<td>Categories</td>
-									<td>:</td>
-									<td className=" pt-2" style={{ width: "80%" }}>
-										<Dropdown />
-									</td>
-								</tr>
-								<tr>
-									<td>Class Categories</td>
-									<td>:</td>
-									<td className=" pt-2" style={{ width: "80%" }}>
-										<Dropdown />
-									</td>
-								</tr>
-								<tr>
-									<td>Athlete Name</td>
-									<td>:</td>
-									<td className=" pt-2" style={{ width: "80%" }}>
-										<input type="email" className="form-control" placeholder="Your e-mail" />
-									</td>
-								</tr>
-								<tr>
-									<td></td>
-									<td></td>
+								<Dropdown label="Age Categories" selected="--ALL--" option={["Usia Dini", "Pra Pemula", "Pemula", "Cadet", "Junior", "Senior", "Under 21", "Veteran"]} />
+								<Dropdown label="Gender" selected="--ALL--" option={["Male", "Female"]} />
+								<Dropdown label="Categories" selected="--ALL--" option={["KATA", "KUMITE"]} />
+								<Dropdown label="Class Categories" selected="--ALL--" />
 
+								<tr>
+									<td className="font-weight-normal">Athlete Name</td>
+									<td>:</td>
+									<td className=" pt-2" style={{ width: "80%" }}>
+										<input type="text" className="form-control" placeholder="Masukan Nama Atlet" />
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
 									<td className="pl-1 pt-0" style={{ width: "80%" }}>
 										<MDBBtn color="primary">Cari</MDBBtn>
 									</td>
