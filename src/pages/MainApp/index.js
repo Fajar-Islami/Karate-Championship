@@ -7,23 +7,23 @@ import DummyContextProvider from "../../context/dummyContext";
 import { RoutesMainApp } from "../../config";
 const MainApp = () => {
 	return (
-		<Fragment>
-			{/* <DummyContextProvider> */}
-			<Router>
-				<div className="header ">
-					<Header />
+		// <Fragment>
+		//  <DummyContextProvider>
+		<Router>
+			<div className="header ">
+				<Header />
+			</div>
+			<MDBContainer className=" mt-5 pt-5" fluid>
+				<div className="content col-11 m-auto">
+					<RoutesMainApp />
 				</div>
-				<MDBContainer className=" mt-5 pt-5" fluid>
-					<div className="content col-11 m-auto">
-						<RoutesMainApp />
-					</div>
-				</MDBContainer>
-			</Router>
-			{/* </DummyContextProvider> */}
+			</MDBContainer>
+			{/* </DummyContextProvider>  */}
 			<div className="footer">
 				<Footer />
 			</div>
-		</Fragment>
+		</Router>
+		//  </Fragment>
 	);
 };
 

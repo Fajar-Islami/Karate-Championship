@@ -1,4 +1,4 @@
-import React, { useState, Fragment, useRef } from "react";
+import React, { useState, Fragment } from "react";
 import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBIcon, MDBBtn, MDBContainer, MDBListGroupItem } from "mdbreact";
 import { useHistory, Link } from "react-router-dom";
 import { Lemkari } from "../../assets";
@@ -13,7 +13,7 @@ const Header = () => {
 
 	return (
 		<Fragment>
-			<MDBNavbar color="info-color" dark expand="md" scrolling fixed="top">
+			<MDBNavbar color="info-color" dark expand="lg" scrolling fixed="top">
 				<MDBNavbarBrand>
 					<img src={Lemkari} alt="" className="ml-3 rounded-circle hoverable" style={{ height: "65px", cursor: "pointer" }} onClick={() => history.push("/")} />
 				</MDBNavbarBrand>
@@ -129,39 +129,37 @@ const Header = () => {
 					</MDBNavbarNav>
 
 					<MDBNavbarNav right>
-						<div className="pt-2 d-flex">
-							<MDBNavItem>
-								<MDBNavLink className="waves-effect waves-light" to="/guidance">
-									<MDBIcon icon="info-circle" /> Guidance
-								</MDBNavLink>
-							</MDBNavItem>
-							<MDBNavItem>
-								<MDBNavLink className="waves-effect waves-light " to="/registration">
-									<MDBIcon icon="plus-circle" /> Registration
-								</MDBNavLink>
-							</MDBNavItem>
-							<MDBNavItem>
-								<MDBDropdown>
-									<MDBDropdownToggle nav caret>
-										<MDBIcon icon="user" /> User
-									</MDBDropdownToggle>
-									<MDBDropdownMenu className="dropdown-default">
-										<MDBDropdownItem href="#!" className="m-auto hoverable ">
-											My Profile
-										</MDBDropdownItem>
-										<MDBDropdownItem href="#!" className="m-auto hoverable ">
-											Setting
-										</MDBDropdownItem>
-										<MDBDropdownItem href="#!" className="m-auto hoverable ">
-											Something else here
-										</MDBDropdownItem>
-										<MDBDropdownItem href="#!" className="m-auto hoverable ">
-											Logout
-										</MDBDropdownItem>
-									</MDBDropdownMenu>
-								</MDBDropdown>
-							</MDBNavItem>
-						</div>
+						<MDBNavItem className="pt-2 ">
+							<MDBNavLink className="waves-effect waves-light" to="/guidance">
+								<MDBIcon icon="info-circle" /> Guidance
+							</MDBNavLink>
+						</MDBNavItem>
+						<MDBNavItem className="pt-2 ">
+							<MDBNavLink className="waves-effect waves-light " to="/registration">
+								<MDBIcon icon="plus-circle" /> Registration
+							</MDBNavLink>
+						</MDBNavItem>
+						<MDBNavItem className="pt-2 ">
+							<MDBDropdown>
+								<MDBDropdownToggle nav caret>
+									<MDBIcon icon="user" /> User
+								</MDBDropdownToggle>
+								<MDBDropdownMenu className="dropdown-default">
+									<MDBDropdownItem href="#!" className="m-auto hoverable ">
+										My Profile
+									</MDBDropdownItem>
+									<MDBDropdownItem href="#!" className="m-auto hoverable ">
+										Setting
+									</MDBDropdownItem>
+									<MDBDropdownItem href="#!" className="m-auto hoverable ">
+										Something else here
+									</MDBDropdownItem>
+									<MDBDropdownItem href="#!" className="m-auto hoverable ">
+										Logout
+									</MDBDropdownItem>
+								</MDBDropdownMenu>
+							</MDBDropdown>
+						</MDBNavItem>
 						<MDBNavItem>
 							<MDBBtn outline color="white" href="/login" className="rounded mb-0">
 								Sign In

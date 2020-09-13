@@ -41,7 +41,7 @@ const Home = () => {
 						</MDBBtn>
 					</div>
 					<div className="embed-responsive embed-responsive-16by9">
-						<iframe title="Embeds Page" className="embed-responsive-item" src="https://www.youtube.com/embed/v64KOxKVLVg" allowfullscreen></iframe>
+						<iframe title="Embeds Page" className="embed-responsive-item" src="https://www.youtube.com/embed/v64KOxKVLVg" allowFullScreen></iframe>
 					</div>
 				</MDBCol>
 			</MDBRow>

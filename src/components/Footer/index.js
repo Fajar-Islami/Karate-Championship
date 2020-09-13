@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import { MDBFooter, MDBContainer, MDBRow, MDBCol } from "mdbreact";
 import { BSP, Forki } from "../../assets";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
 	return (
@@ -22,13 +23,13 @@ const Footer = () => {
 							<h5 className="title">Generals</h5>
 							<ul>
 								<li className="list-unstyled">
-									<a href="/">K-champ</a>
+									<Link to="/">K-champ</Link>
 								</li>
 								<li className="list-unstyled">
-									<a href="/">Home</a>
+									<Link to="/">Home</Link>
 								</li>
 								<li className="list-unstyled">
-									<a href="/Registration">Registration</a>
+									<Link to="/Registration">Registration</Link>
 								</li>
 								<li className="list-unstyled">
 									<a href="/Login">Login</a>
@@ -39,19 +40,19 @@ const Footer = () => {
 							<h5 className="title">Informations</h5>
 							<ul>
 								<li className="list-unstyled">
-									<a href="/">Time and Place</a>
+									<Link to="/">Time and Place</Link>
 								</li>
 								<li className="list-unstyled">
-									<a href="/">Classes Contested</a>
+									<Link to="/">Classes Contested</Link>
 								</li>
 								<li className="list-unstyled">
-									<a href="/">General Provisions</a>
+									<Link to="/">General Provisions</Link>
 								</li>
 								<li className="list-unstyled">
-									<a href="/">Hotel and Resort</a>
+									<Link to="/">Hotel and Resort</Link>
 								</li>
 								<li className="list-unstyled">
-									<a href="/">Foods</a>
+									<Link to="/">Foods</Link>
 								</li>
 							</ul>
 						</MDBCol>
@@ -59,13 +60,13 @@ const Footer = () => {
 							<h5 className="title">News</h5>
 							<ul>
 								<li className="list-unstyled">
-									<a href="/news">News</a>
+									<Link to="/news">News</Link>
 								</li>
 								<li className="list-unstyled">
-									<a href="/photos">Photos</a>
+									<Link to="/photos">Photos</Link>
 								</li>
 								<li className="list-unstyled">
-									<a href="/videos">Video</a>
+									<Link to="/videos">Video</Link>
 								</li>
 							</ul>
 						</MDBCol>
@@ -73,35 +74,33 @@ const Footer = () => {
 							<h5 className="title">Results</h5>
 							<ul>
 								<li className="list-unstyled">
-									<a href="/schedulesResult">Schedules and Result</a>
+									<Link to="/schedulesResult">Schedules and Result</Link>
 								</li>
 								<li className="list-unstyled">
-									<a href="/teams">Teams</a>
+									<Link to="/teams">Teams</Link>
 								</li>
 								<li className="list-unstyled">
-									<a href="/categories">Categories</a>
+									<Link to="/categories">Categories</Link>
 								</li>
 								<li className="list-unstyled">
-									<a href="/statistic">Statistics</a>
+									<Link to="/statistic">Statistics</Link>
 								</li>
 								<li className="list-unstyled">
-									<a href="/medals">Medals</a>
+									<Link to="/medals">Medals</Link>
 								</li>
 								<li className="list-unstyled">
-									<a href="/bracket">Bracket</a>
+									<Link to="/bracket">Bracket</Link>
 								</li>
 							</ul>
 						</MDBCol>
 					</MDBRow>
-					<h6 style={{fontSize: 12}}>Downloads</h6>
-					<h6 style={{fontSize: 12}}>Proposal Indonesia | Proposal English | Manual Guide</h6>
-					<h6 style={{fontSize: 12}}>Supported By</h6>
-					<h6 style={{fontSize: 12}}>All Right Reserved &copy; Brilyan Sport Technology 2011</h6>
+					<h6 style={{ fontSize: 12 }}>Downloads</h6>
+					<h6 style={{ fontSize: 12 }}>Proposal Indonesia | Proposal English | Manual Guide</h6>
+					<h6 style={{ fontSize: 12 }}>Supported By</h6>
+					<h6 style={{ fontSize: 12 }}>All Right Reserved &copy; Brilyan Sport Technology 2011</h6>
 				</MDBContainer>
 				<div className="footer-copyright text-center py-3">
-					<MDBContainer fluid>
-						
-					</MDBContainer>
+					<MDBContainer fluid></MDBContainer>
 				</div>
 			</MDBFooter>
 		</Fragment>
