@@ -4,9 +4,9 @@ const Dropdown = ({ label, selected, option = [] }) => {
 	return (
 		<tr>
 			<td className="font-weight-normal">{label}</td>
-			<td>:</td>
+			<td className="font-weight-bold">:</td>
 			<td className=" pt-2" style={{ width: "80%" }}>
-				<select className=" browser-default custom-select">
+				<select className=" browser-default custom-select ">
 					<option selected disabled>
 						{selected}
 					</option>

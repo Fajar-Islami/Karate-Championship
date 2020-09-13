@@ -25,14 +25,14 @@ const Bracket = () => {
 								<tr>
 									<td className="font-weight-normal">Athlete Name</td>
 									<td>:</td>
-									<td className=" pt-2" style={{ width: "80%" }}>
+									<td className=" pt-2">
 										<input type="text" className="form-control" placeholder="Masukan Nama Atlet" />
 									</td>
 								</tr>
 								<tr>
 									<td></td>
 									<td></td>
-									<td className="pl-1 pt-0" style={{ width: "80%" }}>
+									<td className="pl-1 pt-0">
 										<MDBBtn color="primary">Cari</MDBBtn>
 									</td>
 								</tr>

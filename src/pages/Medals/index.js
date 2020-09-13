@@ -51,7 +51,7 @@ const Medals = () => {
 								<Dropdown label="Age Categories" selected="--ALL--" option={["Usia Dini", "Pra Pemula", "Pemula", "Cadet", "Junior", "Senior", "Under 21", "Veteran"]} />
 								<tr>
 									<th className="font-weight-normal">Day</th>
-									<th>:</th>
+									<th className="font-weight-bold">:</th>
 									<th className="pt-2">
 										<MDBBadge pill color="dark" className="my-2 py-2">
 											Overall

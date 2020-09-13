@@ -16,7 +16,10 @@ const Registration = () => {
 			<form>
 				<MDBTable borderless>
 					<MDBTableBody>
-						<tr>
+						<Dropdown label="Pilih Jenis Pendaftaran Akun" selected="Pilih Role" option={["Sebagai Admin Pengprov", "Sebagai Admin Wilayah"]} />
+						<Dropdown label="Pengprov" selected="--Select" option={["Aceh", "Bali"]} />
+						<Dropdown label="Wilayah" selected="Pilih Wilayah" option={["Wilayah I", "Wilayah II", "Wilayah III", "Wilayah IV", "Wilayah V"]} />
+						{/* <tr>
 							<td className="font-weight-normal col-2">Pilih Jenis Pendaftaran Akun</td>
 
 							<td className=" pt-2 col-9">
@@ -39,15 +42,17 @@ const Registration = () => {
 							<td colspan="3">
 								<hr />
 							</td>
-						</tr>
+						</tr> */}
 						<tr>
 							<td className="font-weight-normal">Nama Kontingen</td>
+							<td className="font-weight-bold">:</td>
 							<td className=" pt-2">
 								<input type="text" id="exampleDisabled" className="form-control" placeholder="Nama Kontingen" disabled />
 							</td>
 						</tr>
 						<tr>
 							<td className="font-weight-normal">Nama Pemegang Akun</td>
+							<td className="font-weight-bold">:</td>
 							<td className=" pt-2">
 								<MDBRow>
 									<MDBCol size="6">
@@ -61,6 +66,7 @@ const Registration = () => {
 						</tr>
 						<tr>
 							<td className="font-weight-normal">Jenis Kelamin</td>
+							<td className="font-weight-bold">:</td>
 							<td className=" pt-2">
 								<MDBFormInline>
 									<RadioButton label="Laki-laki" />
@@ -70,36 +76,42 @@ const Registration = () => {
 						</tr>
 						<tr>
 							<td className="font-weight-normal">Alamat</td>
+							<td className="font-weight-bold">:</td>
 							<td className=" pt-2">
 								<input type="text" className="form-control" placeholder="Alamat" />
 							</td>
 						</tr>
 						<tr>
 							<td className="font-weight-normal">Telp</td>
+							<td className="font-weight-bold">:</td>
 							<td className=" pt-2">
 								<input type="text" className="form-control" placeholder="No Telepon" />
 							</td>
 						</tr>
 						<tr>
 							<td className="font-weight-normal">Email</td>
+							<td className="font-weight-bold">:</td>
 							<td className=" pt-2">
 								<input type="Email" className="form-control" placeholder="Your e-mail" />
 							</td>
 						</tr>
 						<tr>
 							<td className="font-weight-normal">Password</td>
+							<td className="font-weight-bold">:</td>
 							<td className=" pt-2">
 								<input type="password" className="form-control" placeholder="Password" />
 							</td>
 						</tr>
 						<tr>
 							<td className="font-weight-normal">Repeat Password</td>
+							<td className="font-weight-bold">:</td>
 							<td className=" pt-2">
 								<input type="password" className="form-control" placeholder="Repeat Password" />
 							</td>
 						</tr>
 						<tr>
 							<td className="font-weight-normal">Foto</td>
+							<td className="font-weight-bold">:</td>
 							<td className=" pt-2">
 								<div className="custom-file">
 									<input type="file" className="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" />
@@ -111,6 +123,7 @@ const Registration = () => {
 						</tr>
 
 						<tr>
+							<td></td>
 							<td></td>
 							<td className=" pl-1 pt-0">
 								<MDBBtn color="primary">Register</MDBBtn> <Link>Click here </Link> to download manual guide for registration.
