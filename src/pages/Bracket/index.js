@@ -1,12 +1,16 @@
 import React, { useEffect, Fragment } from "react";
-import { Card, Dropdown, Tabel } from "../../components";
-import { MDBTable, MDBTableBody, MDBBtn, MDBCol, MDBRow } from "mdbreact";
+import { Dropdown, Tabel, TabelBracket } from "../../components";
+import { MDBTable, MDBTableBody, MDBBtn, MDBCol, MDBRow, MDBBadge } from "mdbreact";
 
 const Bracket = () => {
 	// Lifecycle React Hooks
 	useEffect(() => {
 		document.title = `Bracket`;
 	});
+
+	const Badge = (teks, warna) => {
+		return <MDBBadge color={warna}>{teks}</MDBBadge>;
+	};
 
 	return (
 		<Fragment>
@@ -44,10 +48,10 @@ const Bracket = () => {
 					<hr />
 					<MDBRow>
 						<MDBCol size="6">
-							<Tabel />
+							<TabelBracket kolom={["Male", "Status"]} baris={["Kata Individual Male Final", "Kumite Individual Male -30kg Final", "Kumite Individual Male +30kg Final"]} isiKolom1={[Badge("Match Over", "danger"), Badge("Match Over", "danger"), Badge("Match Over", "danger")]} />
 						</MDBCol>
 						<MDBCol size="6">
-							<Tabel />
+							<TabelBracket kolom={["Female", "Status"]} baris={["Kata Individual Female Final", "Kumite Individual Male -25kg Final", "Kumite Individual Male +25kg Final"]} isiKolom1={[Badge("Match Over", "danger"), Badge("Match Over", "danger"), Badge("Match Over", "danger")]} />
 						</MDBCol>
 					</MDBRow>
 
@@ -55,10 +59,10 @@ const Bracket = () => {
 					<hr />
 					<MDBRow>
 						<MDBCol size="6">
-							<Tabel />
+							<TabelBracket kolom={["Male", "Status"]} baris={["Kata Individual Male Final", "Kumite Individual Male -30kg Final", "Kumite Individual Male +30kg Final"]} isiKolom1={[Badge("Match Over", "danger"), Badge("Match Over", "danger"), Badge("Match Over", "danger")]} />
 						</MDBCol>
 						<MDBCol size="6">
-							<Tabel />
+							<TabelBracket kolom={["Male", "Status"]} baris={["Kata Individual Male Final", "Kumite Individual Male -30kg Final", "Kumite Individual Male +30kg Final"]} isiKolom1={[Badge("Match Over", "danger"), Badge("Match Over", "danger"), Badge("Match Over", "danger")]} />
 						</MDBCol>
 					</MDBRow>
 
@@ -66,10 +70,10 @@ const Bracket = () => {
 					<hr />
 					<MDBRow>
 						<MDBCol size="6">
-							<Tabel />
+							<TabelBracket kolom={["Male", "Status"]} baris={["Kata Individual Male Final", "Kumite Individual Male -30kg Final", "Kumite Individual Male +30kg Final"]} isiKolom1={[Badge("Match Over", "danger"), Badge("Match Over", "danger"), Badge("Match Over", "danger")]} />
 						</MDBCol>
 						<MDBCol size="6">
-							<Tabel />
+							<TabelBracket kolom={["Male", "Status"]} baris={["Kata Individual Male Final", "Kumite Individual Male -30kg Final", "Kumite Individual Male +30kg Final"]} isiKolom1={[Badge("Match Over", "danger"), Badge("Match Over", "danger"), Badge("Match Over", "danger")]} />
 						</MDBCol>
 					</MDBRow>
 
@@ -77,10 +81,10 @@ const Bracket = () => {
 					<hr />
 					<MDBRow>
 						<MDBCol size="6">
-							<Tabel />
+							<TabelBracket kolom={["Male", "Status"]} baris={["Kata Individual Male Final", "Kumite Individual Male -30kg Final", "Kumite Individual Male +30kg Final"]} isiKolom1={[Badge("Match Over", "danger"), Badge("Match Over", "danger"), Badge("Match Over", "danger")]} />
 						</MDBCol>
 						<MDBCol size="6">
-							<Tabel />
+							<TabelBracket kolom={["Male", "Status"]} baris={["Kata Individual Male Final", "Kumite Individual Male -30kg Final", "Kumite Individual Male +30kg Final"]} isiKolom1={[Badge("Match Over", "danger"), Badge("Match Over", "danger"), Badge("Match Over", "danger")]} />
 						</MDBCol>
 					</MDBRow>
 
@@ -88,10 +92,10 @@ const Bracket = () => {
 					<hr />
 					<MDBRow>
 						<MDBCol size="6">
-							<Tabel />
+							<TabelBracket kolom={["Male", "Status"]} baris={["Kata Individual Male Final", "Kumite Individual Male -30kg Final", "Kumite Individual Male +30kg Final"]} isiKolom1={[Badge("Match Over", "danger"), Badge("Match Over", "danger"), Badge("Match Over", "danger")]} />
 						</MDBCol>
 						<MDBCol size="6">
-							<Tabel />
+							<TabelBracket kolom={["Male", "Status"]} baris={["Kata Individual Male Final", "Kumite Individual Male -30kg Final", "Kumite Individual Male +30kg Final"]} isiKolom1={[Badge("Match Over", "danger"), Badge("Match Over", "danger"), Badge("Match Over", "danger")]} />
 						</MDBCol>
 					</MDBRow>
 
@@ -99,10 +103,10 @@ const Bracket = () => {
 					<hr />
 					<MDBRow>
 						<MDBCol size="6">
-							<Tabel />
+							<TabelBracket kolom={["Male", "Status"]} baris={["Kata Individual Male Final", "Kumite Individual Male -30kg Final", "Kumite Individual Male +30kg Final"]} isiKolom1={[Badge("Match Over", "danger"), Badge("Match Over", "danger"), Badge("Match Over", "danger")]} />
 						</MDBCol>
 						<MDBCol size="6">
-							<Tabel />
+							<TabelBracket kolom={["Male", "Status"]} baris={["Kata Individual Male Final", "Kumite Individual Male -30kg Final", "Kumite Individual Male +30kg Final"]} isiKolom1={[Badge("Match Over", "danger"), Badge("Match Over", "danger"), Badge("Match Over", "danger")]} />
 						</MDBCol>
 					</MDBRow>
 
@@ -110,10 +114,10 @@ const Bracket = () => {
 					<hr />
 					<MDBRow>
 						<MDBCol size="6">
-							<Tabel />
+							<TabelBracket kolom={["Male", "Status"]} baris={["Kata Individual Male Final", "Kumite Individual Male -30kg Final", "Kumite Individual Male +30kg Final"]} isiKolom1={[Badge("Match Over", "danger"), Badge("Match Over", "danger"), Badge("Match Over", "danger")]} />
 						</MDBCol>
 						<MDBCol size="6">
-							<Tabel />
+							<TabelBracket kolom={["Male", "Status"]} baris={["Kata Individual Male Final", "Kumite Individual Male -30kg Final", "Kumite Individual Male +30kg Final"]} isiKolom1={[Badge("Match Over", "danger"), Badge("Match Over", "danger"), Badge("Match Over", "danger")]} />
 						</MDBCol>
 					</MDBRow>
 
@@ -121,10 +125,10 @@ const Bracket = () => {
 					<hr />
 					<MDBRow>
 						<MDBCol size="6">
-							<Tabel />
+							<TabelBracket kolom={["Male", "Status"]} baris={["Kata Individual Male Final", "Kumite Individual Male -30kg Final", "Kumite Individual Male +30kg Final"]} isiKolom1={[Badge("Match Over", "danger"), Badge("Match Over", "danger"), Badge("Match Over", "danger")]} />
 						</MDBCol>
 						<MDBCol size="6">
-							<Tabel />
+							<TabelBracket kolom={["Male", "Status"]} baris={["Kata Individual Male Final", "Kumite Individual Male -30kg Final", "Kumite Individual Male +30kg Final"]} isiKolom1={[Badge("Match Over", "danger"), Badge("Match Over", "danger"), Badge("Match Over", "danger")]} />
 						</MDBCol>
 					</MDBRow>
 				</MDBCol>

@@ -11,5 +11,6 @@ import Dropdown from "./Dropdown";
 import RadioButton from "./RadioButton";
 import Carousel from "./Carousel";
 import Input from "./Input";
+import TabelBracket from "./TabelBracket";
 
-export { Footer, ForgetPw, Header, Modal, Sidebar, Card, Tabel, IsiTabs, Dropdown, RadioButton, Carousel, Input };
+export { Footer, ForgetPw, Header, Modal, Sidebar, Card, Tabel, IsiTabs, Dropdown, RadioButton, Carousel, Input, TabelBracket };
