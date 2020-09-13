@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from "react";
 import { MDBTable, MDBTableBody, MDBBtn, MDBRow, MDBCol, MDBFormInline, MDBInput } from "mdbreact";
-import { Dropdown, RadioButton } from "../../components";
+import { Dropdown, RadioButton, Input } from "../../components";
 import { Link } from "react-router-dom";
 
 const Registration = () => {
@@ -17,7 +17,7 @@ const Registration = () => {
 				<MDBTable borderless>
 					<MDBTableBody>
 						<Dropdown label="Pilih Jenis Pendaftaran Akun" selected="Pilih Role" option={["Sebagai Admin Pengprov", "Sebagai Admin Wilayah"]} />
-						<Dropdown label="Pengprov" selected="--Select" option={["Aceh", "Bali"]} />
+						<Dropdown label="Pengprov" selected="--Select--" option={["Aceh", "Bali"]} />
 						<Dropdown label="Wilayah" selected="Pilih Wilayah" option={["Wilayah I", "Wilayah II", "Wilayah III", "Wilayah IV", "Wilayah V"]} />
 						{/* <tr>
 							<td className="font-weight-normal col-2">Pilih Jenis Pendaftaran Akun</td>
@@ -43,13 +43,8 @@ const Registration = () => {
 								<hr />
 							</td>
 						</tr> */}
-						<tr>
-							<td className="font-weight-normal">Nama Kontingen</td>
-							<td className="font-weight-bold">:</td>
-							<td className=" pt-2">
-								<input type="text" id="exampleDisabled" className="form-control" placeholder="Nama Kontingen" disabled />
-							</td>
-						</tr>
+						<Input label="Nama Kontingen" type="text" placeholder="Nama kontingen" disabled />
+
 						<tr>
 							<td className="font-weight-normal">Nama Pemegang Akun</td>
 							<td className="font-weight-bold">:</td>
@@ -74,6 +69,20 @@ const Registration = () => {
 								</MDBFormInline>
 							</td>
 						</tr>
+						<Input label="Alamat" type="text" placeholder="Alamat" />
+						<Input label="Telepon" type="text" placeholder="Telepon" />
+						<Input label="Email" type="email" placeholder="Email" />
+						<Input label="Password" type="password" placeholder="Password" />
+						<Input label="Repeat Password" type="password" placeholder="Repeat Password" />
+
+						{/* <tr>
+							<td className="font-weight-normal">Nama Kontingen</td>
+							<td className="font-weight-bold">:</td>
+							<td className=" pt-2">
+								<input type="text" id="exampleDisabled" className="form-control" placeholder="Nama Kontingen" disabled />
+							</td>
+						</tr>
+						
 						<tr>
 							<td className="font-weight-normal">Alamat</td>
 							<td className="font-weight-bold">:</td>
@@ -108,7 +117,7 @@ const Registration = () => {
 							<td className=" pt-2">
 								<input type="password" className="form-control" placeholder="Repeat Password" />
 							</td>
-						</tr>
+						</tr> */}
 						<tr>
 							<td className="font-weight-normal">Foto</td>
 							<td className="font-weight-bold">:</td>

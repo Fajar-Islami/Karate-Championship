@@ -10,5 +10,6 @@ import IsiTabs from "./IsiTabs";
 import Dropdown from "./Dropdown";
 import RadioButton from "./RadioButton";
 import Carousel from "./Carousel";
+import Input from "./Input";
 
-export { Footer, ForgetPw, Header, Modal, Sidebar, Card, Tabel, IsiTabs, Dropdown, RadioButton, Carousel };
+export { Footer, ForgetPw, Header, Modal, Sidebar, Card, Tabel, IsiTabs, Dropdown, RadioButton, Carousel, Input };

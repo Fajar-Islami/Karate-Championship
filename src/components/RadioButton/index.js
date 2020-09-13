@@ -6,7 +6,11 @@ const RadioButton = ({ label, ...rest }) => {
 	const handleCheck = (status) => () => {
 		setChecked((checked) => status);
 	};
-	return <MDBInput gap onClick={handleCheck(1)} checked={checked === 1 ? true : false} label={label} type="radio" id="radio1" containerClass="mr-5" {...rest} />;
+	return (
+		<MDBInput gap onClick={handleCheck(1)} checked={checked === 1 ? true : false} type="radio" id="radio1" containerClass="mr-5" {...rest}>
+			<div className="font-weight-normal"> {label} </div>
+		</MDBInput>
+	);
 };
 
 export default RadioButton;
