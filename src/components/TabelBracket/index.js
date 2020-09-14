@@ -22,12 +22,13 @@ const TabelBracket = ({ kolom, baris, isiKolom1 = [], isiKolom2 = [], isiKolom3 
 			</MDBTableHead>
 			<MDBTableBody>
 				{baris.map((item, i) => {
+					const v = ` font-weight-normal col-${i}`;
 					return (
 						<tr key={i}>
-							<td className=" font-weight-normal"> {item}</td>
-							{isiKolom1.length > 0 ? <td className="text-center font-weight-normal"> {isiKolom1[i]}</td> : ""}
-							{isiKolom2.length > 0 ? <td className="text-center font-weight-normal"> {isiKolom2[i]}</td> : ""}
-							{isiKolom3.length > 0 ? <td className="text-center font-weight-normal"> {isiKolom3[i]}</td> : ""}
+							<td className={v}> {item}</td>
+							{isiKolom1.length > 0 ? <td className="text-center font-weight-normal col-1"> {isiKolom1[i]}</td> : ""}
+							{isiKolom2.length > 0 ? <td className="text-center font-weight-normal col-1"> {isiKolom2[i]}</td> : ""}
+							{isiKolom3.length > 0 ? <td className="text-center font-weight-normal col-1"> {isiKolom3[i]}</td> : ""}
 						</tr>
 					);
 				})}
