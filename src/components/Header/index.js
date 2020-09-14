@@ -49,8 +49,8 @@ const Header = () => {
 								<MDBDropdownToggle color="info-color" nav caret>
 									AAAA
 								</MDBDropdownToggle>
-								<MDBDropdownMenu className="dropdown-default">
-									<MDBDropdownItem className="pl-0 pt-3 pb-3 hoverable " fixed="true" transform="blue">
+								<MDBDropdownMenu basic>
+									<MDBDropdownItem className="pl-0 pt-3 pb-3 hoverable " active fixed="true">
 										<Link to="/">
 											<MDBIcon icon="user" className="mr-2" />
 											Home
