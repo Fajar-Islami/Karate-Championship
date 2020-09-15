@@ -2,14 +2,14 @@ import React, { useEffect } from "react";
 import { MDBTable, MDBTableBody, MDBTableHead, MDBDataTableV5, MDBDataTable } from "mdbreact";
 import "./style.scss";
 
-const Tabel = ({ data, ...rest }) => {
+const Tabel = ({ data, order, ket, ...rest }) => {
 	// const Tabel = ({ col, row }) => {
 	// console.log(data.rows);
 	// console.log({ ...rest });
 	return (
 		// <MDBDataTableV5 hover entriesOptions={[5, 20, 25]} entries={5} pagesAmount={4} data={data} sorting={false} />
 		// <MDBDataTableV5 hover data={data} searching={false} striped bordered small />
-		<MDBDataTable striped bordered small data={data} order={["no", "asc"]} className="tes-t" responsive {...rest} />
+		<MDBDataTable responsive hover striped bordered small data={data} order={[order, ket]} className="tes-t" {...rest} />
 		// <MDBTable striped responsive bordered sorting="true">
 		// 	<MDBTableHead columns={col} cola />
 		// 	<MDBTableBody rows={row} />
