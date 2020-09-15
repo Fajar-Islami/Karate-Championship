@@ -66,12 +66,12 @@ const Registration = () => {
 							<td className="font-weight-normal">Jenis Kelamin</td>
 							<td className="font-weight-bold">:</td>
 							<td className=" pt-2">
-								{/* <MDBFormInline> */}
-								{/* <div className="d-flex"> */}
-								<RadioButton label="Laki-laki" />
-								<RadioButton label="Perempuan" />
-								{/* </div> */}
-								{/* </MDBFormInline> */}
+							<div className="radio">
+								<label><input type="radio" name="radio1" checked /> Laki-laki</label>
+							</div>
+							<div className="radio">
+								<label><input type="radio" name="radio1" checked /> Perempuan</label>
+							</div>
 							</td>
 						</tr>
 						<Input label="Alamat" type="text" placeholder="Alamat" />
