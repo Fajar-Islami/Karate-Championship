@@ -1,6 +1,7 @@
 import React, { useEffect, Fragment, useState } from "react";
 import { MDBTabPane, MDBTabContent, MDBNav, MDBNavItem, MDBNavLink } from "mdbreact";
-
+import {Worker} from '@phuocng/react-pdf-viewer';
+import Viewer from '@phuocng/react-pdf-viewer';
 const Guidance = () => {
 	const [activeItem, setActiveItem] = useState("1");
 
@@ -37,11 +38,15 @@ const Guidance = () => {
 			<div className="block-example border border-dark p-3">
 				<MDBTabContent activeItem={activeItem}>
 					<MDBTabPane tabId="1" role="tabpanel">
-						Preview PDF
+						<Worker workerUrl="https://unpkg.com/pdfjs-dist@2.5.207/build/pdf.worker.min.js">
+							<Viewer fileUrl="https://arxiv.org/pdf/quant-ph/0410100.pdf " />
+						</Worker>
 					</MDBTabPane>
 
 					<MDBTabPane tabId="2" role="tabpanel">
-						Preview PDF
+						<Worker workerUrl="https://unpkg.com/pdfjs-dist@2.5.207/build/pdf.worker.min.js">
+							<Viewer fileUrl="https://arxiv.org/pdf/quant-ph/0410100.pdf " />
+						</Worker>
 					</MDBTabPane>
 				</MDBTabContent>
 			</div>

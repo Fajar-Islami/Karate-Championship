@@ -2,6 +2,7 @@ import React, { useEffect, Fragment } from "react";
 import { Tabel } from "../../components";
 import { MDBDataTable } from "mdbreact";
 import { data, usiadini } from "./data";
+import "../../components/Tabel/style.scss";
 
 const Categories = () => {
 	console.log(usiadini);
@@ -13,13 +14,9 @@ const Categories = () => {
 	const baris2 = data.rows;
 
 	// Lifecycle React Hooks
-	useEffect(
-		() => {
-			document.title = `Categories`;
-		},
-		[kolom, baris],
-		[kolom2, baris2],
-	);
+	useEffect(() => {
+		document.title = `Categories`;
+	}, [kolom, baris]);
 
 	return (
 		<Fragment>
