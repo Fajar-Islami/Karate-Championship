@@ -2,216 +2,212 @@ import { MDBBtn } from "mdbreact";
 
 import React from "react";
 
-// const data = () => {
-// 	const isi = {
-// 		columns: [
-// 			{
-// 				label: "#",
-// 				field: "id",
-// 				sort: "asc",
-// 			},
-// 			{
-// 				label: "First",
-// 				field: "first",
-// 				sort: "asc",
-// 			},
-// 			{
-// 				label: "Last",
-// 				field: "last",
-// 				sort: "asc",
-// 			},
-// 			{
-// 				label: "Handle",
-// 				field: "handle",
-// 				sort: "asc",
-// 				width: 1000,
-// 			},
-// 		],
-// 		rows: [
-// 			{
-// 				id: 1,
-// 				first: (
-// 					<MDBBtn color="purple" outline size="sm">
-// 						Button
-// 					</MDBBtn>
-// 				),
-// 				last: "Otto",
-// 				handle: [<i key="cell3" className="fa fa-book mr-2 grey-text" aria-hidden="true"></i>, "Cell3"],
-// 			},
-// 			{
-// 				id: 2,
-// 				first: "Jacob",
-// 				last: (
-// 					<MDBBtn color="purple" outline size="sm">
-// 						Button
-// 					</MDBBtn>
-// 				),
-// 				handle: "@fat",
-// 			},
-// 			{
-// 				id: 3,
-// 				first: "Larry",
-// 				last: "the Bird",
-// 				handle: (
-// 					<MDBBtn color="purple" outline size="sm">
-// 						Button
-// 					</MDBBtn>
-// 				),
-// 			},
-// 		],
-// 	};
-
-// 	return isi;
-// };
-
-// const dataa = data();
-
-// export { dataa };
-
-const data = {
-	columns: [
-		{
-			label: "No",
-			field: "no",
-			width: 150,
-			sort: "disabled",
-			attributes: {
-				"aria-controls": "DataTable",
-				"aria-label": "No",
+const data1 = () => {
+	const isi = {
+		columns: [
+			{
+				label: "Name",
+				field: "name",
+				width: 150,
+				attributes: {
+					"aria-controls": "DataTable",
+					"aria-label": "Name",
+					className: "col-5",
+				},
 			},
-		},
-		{
-			label: "Flag",
-			field: "flag",
-			width: 270,
-			sort: "disabled",
-		},
-		{
-			label: "Contingent",
-			field: "contingent",
-			width: 270,
-			sort: "disabled",
-		},
-		{
-			label: "Male Entries",
-			field: "MaleE",
-			width: 200,
-			sort: "disabled",
-		},
-		{
-			label: "Female Entries",
-			field: "FemaleE",
-			sort: "disabled",
-			width: 100,
-		},
-		{
-			label: "Total Entries",
-			field: "TotalE",
-			sort: "disabled",
-			width: 150,
-		},
-		{
-			label: "Total Athletes",
-			field: "TotalA",
-			sort: "disabled",
-			width: 100,
-		},
-	],
-	rows: [
-		{
-			no: "1",
-			flag: <img src="" alt="bendera" />,
-			contingent: <a href="/#">Jakarta</a>,
-			MaleE: "48",
-			FemaleE: "18",
-			TotalE: "66",
-			TotalA: (
-				<MDBBtn color="purple" size="sm">
-					Button
-				</MDBBtn>
-			),
-		},
-		{
-			no: "2",
-			flag: <img src="" alt="bendera" />,
-			contingent: <a href="/#">Jakarta</a>,
-			MaleE: "48",
-			FemaleE: "18",
-			TotalE: "66",
-			TotalA: "48",
-		},
-		{
-			no: "3",
-			flag: <img src="" alt="bendera" />,
-			contingent: <a href="/#">Jakarta</a>,
-			MaleE: "48",
-			FemaleE: "18",
-			TotalE: "66",
-			TotalA: "48",
-		},
-		{
-			no: "4",
-			flag: <img src="" alt="bendera" />,
-			contingent: <a href="/#">Jakarta</a>,
-			MaleE: "48",
-			FemaleE: "18",
-			TotalE: "66",
-			TotalA: "48",
-		},
-		{
-			no: "5",
-			flag: <img src="" alt="bendera" />,
-			contingent: <a href="/#">Jakarta</a>,
-			MaleE: "48",
-			FemaleE: "18",
-			TotalE: "66",
-			TotalA: "48",
-		},
-		{
-			no: "1",
-			flag: <img src="" alt="bendera" />,
-			contingent: <a href="/#">Jakarta</a>,
-			MaleE: "48",
-			FemaleE: "18",
-			TotalE: "66",
-			TotalA: "48",
-		},
-		{
-			no: "2",
-			flag: <img src="" alt="bendera" />,
-			contingent: <a href="/#">Jakarta</a>,
-			MaleE: "48",
-			FemaleE: "18",
-			TotalE: "66",
-			TotalA: "48",
-		},
-		{
-			no: "3",
-			flag: <img src="" alt="bendera" />,
-			contingent: <a href="/#">Jakarta</a>,
-			MaleE: "48",
-			FemaleE: "18",
-			TotalE: "66",
-			TotalA: "48",
-		},
-		{
-			no: "4",
-			flag: <img src="" alt="bendera" />,
-			contingent: <a href="/#">Jakarta</a>,
-			MaleE: "48",
-			FemaleE: "18",
-			TotalE: "66",
-			TotalA: "48",
-		},
-		{
-			no: "5",
-			flag: <img src="" alt="bendera" />,
-			contingent: <a href="/#">Jakarta</a>,
-			MaleE: "48",
-			FemaleE: "18",
-			TotalE: "66",
-			TotalA: "48",
-		},
-	],
+			{
+				label: "Position",
+				field: "position",
+				width: 270,
+			},
+			{
+				label: "Office",
+				field: "office",
+				width: 200,
+			},
+			{
+				label: "Age",
+				field: "age",
+				sort: "asc",
+				width: 50,
+			},
+			{
+				label: "Start date",
+				field: "date",
+				sort: "disabled",
+				width: 2000,
+			},
+			{
+				label: "Salary",
+				field: "salary",
+				sort: "disabled",
+				width: 100,
+			},
+		],
+		rows: [
+			{
+				name: "Tiger Nixon",
+				position: "System Architect",
+				office: "Edinburgh",
+				age: "61",
+				date: "2011/04/25",
+				salary: "$320",
+			},
+			{
+				name: "Garrett Winters",
+				position: "Accountant",
+				office: "Tokyo",
+				age: "63",
+				date: "2011/07/25",
+				salary: "$170",
+			},
+			{
+				name: "Ashton Cox",
+				position: "Junior Technical Author",
+				office: "San Francisco",
+				age: "66",
+				date: "2009/01/12",
+				salary: "$86",
+			},
+			{
+				name: "Cedric Kelly",
+				position: "Senior Javascript Developer",
+				office: "Edinburgh",
+				age: "22",
+				date: "2012/03/29",
+				salary: "$433",
+			},
+			{
+				name: "Airi Satou",
+				position: "Accountant",
+				office: "Tokyo",
+				age: "33",
+				date: "2008/11/28",
+				salary: "$162",
+			},
+			{
+				name: "Brielle Williamson",
+				position: "Integration Specialist",
+				office: "New York",
+				age: "61",
+				date: "2012/12/02",
+				salary: "$372",
+			},
+			{
+				name: "Herrod Chandler",
+				position: "Sales Assistant",
+				office: "San Francisco",
+				age: "59",
+				date: "2012/08/06",
+				salary: "$137",
+			},
+		],
+	};
+
+	return isi;
 };
-export { data };
+
+const dataa = data1();
+
+export { dataa };
+
+// const data = {
+// 	columns: [
+// 		{
+// 			label: "Name",
+// 			field: "name",
+// 			width: 150,
+// 			attributes: {
+// 				"aria-controls": "DataTable",
+// 				"aria-label": "Name",
+// 			},
+// 		},
+// 		{
+// 			label: "Position",
+// 			field: "position",
+// 			width: 270,
+// 		},
+// 		{
+// 			label: "Office",
+// 			field: "office",
+// 			width: 200,
+// 		},
+// 		{
+// 			label: "Age",
+// 			field: "age",
+// 			sort: "asc",
+// 			width: 50,
+// 		},
+// 		{
+// 			label: "Start date",
+// 			field: "date",
+// 			sort: "disabled",
+// 			width: 2000,
+// 		},
+// 		{
+// 			label: "Salary",
+// 			field: "salary",
+// 			sort: "disabled",
+// 			width: 100,
+// 		},
+// 	],
+// 	rows: [
+// 		{
+// 			name: "Tiger Nixon",
+// 			position: "System Architect",
+// 			office: "Edinburgh",
+// 			age: "61",
+// 			date: "2011/04/25",
+// 			salary: "$320",
+// 		},
+// 		{
+// 			name: "Garrett Winters",
+// 			position: "Accountant",
+// 			office: "Tokyo",
+// 			age: "63",
+// 			date: "2011/07/25",
+// 			salary: "$170",
+// 		},
+// 		{
+// 			name: "Ashton Cox",
+// 			position: "Junior Technical Author",
+// 			office: "San Francisco",
+// 			age: "66",
+// 			date: "2009/01/12",
+// 			salary: "$86",
+// 		},
+// 		{
+// 			name: "Cedric Kelly",
+// 			position: "Senior Javascript Developer",
+// 			office: "Edinburgh",
+// 			age: "22",
+// 			date: "2012/03/29",
+// 			salary: "$433",
+// 		},
+// 		{
+// 			name: "Airi Satou",
+// 			position: "Accountant",
+// 			office: "Tokyo",
+// 			age: "33",
+// 			date: "2008/11/28",
+// 			salary: "$162",
+// 		},
+// 		{
+// 			name: "Brielle Williamson",
+// 			position: "Integration Specialist",
+// 			office: "New York",
+// 			age: "61",
+// 			date: "2012/12/02",
+// 			salary: "$372",
+// 		},
+// 		{
+// 			name: "Herrod Chandler",
+// 			position: "Sales Assistant",
+// 			office: "San Francisco",
+// 			age: "59",
+// 			date: "2012/08/06",
+// 			salary: "$137",
+// 		},
+// 	],
+// };
+// export { data };
