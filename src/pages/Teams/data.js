@@ -12,7 +12,7 @@ const data1 = () => {
 				attributes: {
 					"aria-controls": "DataTable",
 					"aria-label": "Name",
-					className: "col-5",
+					className: "col-1",
 				},
 			},
 			{

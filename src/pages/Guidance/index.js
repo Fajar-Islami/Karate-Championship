@@ -1,7 +1,7 @@
 import React, { useEffect, Fragment, useState } from "react";
 import { MDBTabPane, MDBTabContent, MDBNav, MDBNavItem, MDBNavLink } from "mdbreact";
-import {Worker} from '@phuocng/react-pdf-viewer';
-import Viewer from '@phuocng/react-pdf-viewer';
+import { Worker } from "@phuocng/react-pdf-viewer";
+import Viewer from "@phuocng/react-pdf-viewer";
 const Guidance = () => {
 	const [activeItem, setActiveItem] = useState("1");
 

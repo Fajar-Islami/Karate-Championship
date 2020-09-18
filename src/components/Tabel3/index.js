@@ -1,142 +1,124 @@
-// import React from "react";
-// import { MDBBtn, MDBTable, MDBTableBody, MDBTableHead } from "mdbreact";
-
-// const Tabel3 = ({ data, ...rest }) => {
-// 	return <MDBTable btn>{/* <MDBTableHead columns={columns} />
-//       <MDBTableBody rows={rows_outline_btn} /> */}</MDBTable>;
-// };
-
-// export default Tabel3;
-
-import React from "react";
-import { MDBDataTableV5 } from "mdbreact";
+import React, { Fragment, useEffect, useState } from "react";
+import { MDBTable, MDBTableBody, thead } from "mdbreact";
 
 const Tabel3 = () => {
-	const data = {
-		columns: [
-			{
-				label: "Name",
-				field: "name",
-				width: 150,
-				attributes: {
-					"aria-controls": "DataTable",
-					"aria-label": "Name",
-				},
-			},
-			{
-				label: "Position",
-				field: "position",
-				width: 270,
-			},
-			{
-				label: "Office",
-				field: "office",
-				width: 200,
-			},
-			{
-				label: "Age",
-				field: "age",
-				sort: "asc",
-				width: 100,
-			},
-			{
-				label: "Start date",
-				field: "date",
-				sort: "disabled",
-				width: 150,
-			},
-			{
-				label: "Salary",
-				field: "salary",
-				sort: "disabled",
-				width: 100,
-			},
-		],
-		rows: [
-			{
-				name: "Tiger Nixon",
-				position: "System Architect",
-				office: "Edinburgh",
-				age: "61",
-				date: "2011/04/25",
-				salary: "$320",
-			},
-			{
-				name: "Garrett Winters",
-				position: "Accountant",
-				office: "Tokyo",
-				age: "63",
-				date: "2011/07/25",
-				salary: "$170",
-			},
-			{
-				name: "Ashton Cox",
-				position: "Junior Technical Author",
-				office: "San Francisco",
-				age: "66",
-				date: "2009/01/12",
-				salary: "$86",
-			},
-			{
-				name: "Cedric Kelly",
-				position: "Senior Javascript Developer",
-				office: "Edinburgh",
-				age: "22",
-				date: "2012/03/29",
-				salary: "$433",
-			},
-			{
-				name: "Airi Satou",
-				position: "Accountant",
-				office: "Tokyo",
-				age: "33",
-				date: "2008/11/28",
-				salary: "$162",
-			},
-			{
-				name: "Brielle Williamson",
-				position: "Integration Specialist",
-				office: "New York",
-				age: "61",
-				date: "2012/12/02",
-				salary: "$372",
-			},
-			{
-				name: "Herrod Chandler",
-				position: "Sales Assistant",
-				office: "San Francisco",
-				age: "59",
-				date: "2012/08/06",
-				salary: "$137",
-			},
-			{
-				name: "Rhona Davidson",
-				position: "Integration Specialist",
-				office: "Tokyo",
-				age: "55",
-				date: "2010/10/14",
-				salary: "$327",
-			},
-			{
-				name: "Colleen Hurst",
-				position: "Javascript Developer",
-				office: "San Francisco",
-				age: "39",
-				date: "2009/09/15",
-				salary: "$205",
-			},
-			{
-				name: "Sonya Frost",
-				position: "Software Engineer",
-				office: "Edinburgh",
-				age: "23",
-				date: "2008/12/13",
-				salary: "$103",
-			},
-		],
+	const data = [
+		{
+			nama: "fajar",
+			no: 1,
+		},
+		{
+			nama: "fajar",
+			no: 2,
+		},
+	];
+
+	const [dataentries, setDataEntries] = useState([
+		{
+			nom: "1",
+			entry: "KATA INDIVIDUAL MALE",
+			individuals: 10,
+			teams: "",
+		},
+		{
+			nom: "2",
+			entry: "KATA TEAM MALE",
+			individuals: 2,
+			teams: "1",
+		},
+		{
+			nom: "3",
+			entry: "KUMITE -30 KG MALE",
+			individuals: 13,
+			teams: "",
+		},
+		{
+			nom: "4",
+			entry: "KUMITE +30 KG MALE",
+			individuals: 7,
+			teams: "",
+		},
+		{
+			nom: "5",
+			entry: "KATA INDIVIDUAL FEMALE",
+			individuals: 8,
+			teams: "",
+		},
+		{
+			nom: "6",
+			entry: "KATA TEAM FEMALE",
+			individuals: 0,
+			teams: "",
+		},
+		{
+			nom: "7",
+			entry: "KUMITE -25 KG FEMALE",
+			individuals: 4,
+			teams: "",
+		},
+		{
+			nom: "8",
+			entry: "KUMITE +25 KG FEMALE",
+			individuals: 6,
+			teams: "",
+		},
+	]);
+
+	const [totalindividual, settotalindividual] = useState(0);
+	const [totalteam, settotalteam] = useState(0);
+
+	const hitungfooter = async () => {
+		var individual = 0;
+		var team = 0;
+		await dataentries.map((item) => {
+			individual = individual + item.individuals;
+			team = team + item.teams;
+		});
+		settotalindividual(individual);
+		settotalteam(team);
 	};
 
-	return <MDBDataTableV5 hover entriesOptions={[5, 20, 25]} entries={5} pagesAmount={4} data={data} />;
+	useEffect(() => {
+		hitungfooter();
+	}, []);
+	// console.log(tes);
+	// console.log(tes[0]);	const columns = tes[0] && Object.keys(tes[0]);
+
+	return (
+		<Fragment>
+			<div>aaaa</div>
+			<div>bbbb</div>
+			<table className="col-12">
+				<thead>
+					<tr>
+						<th>No</th>
+						<th>Entry</th>
+						<th>Individuals</th>
+						<th>Teams</th>
+					</tr>
+				</thead>
+				<tbody>
+					{dataentries.map((data, i) => {
+						return (
+							<tr>
+								<td>{i + 1}</td>
+								<td>{data.entry}</td>
+								<td>{data.individuals}</td>
+								<td>{data.teams}</td>
+							</tr>
+						);
+					})}
+				</tbody>
+				<tfoot>
+					<tr>
+						<td colSpan="2">Totoal</td>
+						<td>{totalindividual}</td>
+						<td>{totalteam}</td>
+					</tr>
+				</tfoot>
+			</table>
+		</Fragment>
+	);
 };
 
 export default Tabel3;

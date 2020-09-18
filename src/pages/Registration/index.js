@@ -1,9 +1,12 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import { MDBTable, MDBTableBody, MDBBtn, MDBRow, MDBCol, MDBFormInline, MDBInput } from "mdbreact";
 import { Dropdown, RadioButton, Input } from "../../components";
 import { Link } from "react-router-dom";
 
 const Registration = () => {
+	useEffect(() => {
+		document.title = `Registration`;
+	});
 	const [checked, setChecked] = useState("");
 	const handleCheck = (status) => () => {
 		setChecked((checked) => status);
@@ -63,10 +66,12 @@ const Registration = () => {
 							<td className="font-weight-normal">Jenis Kelamin</td>
 							<td className="font-weight-bold">:</td>
 							<td className=" pt-2">
-								<MDBFormInline>
+								{/* <MDBFormInline> */}
+								<div className="d-flex">
 									<RadioButton label="Laki-laki" />
 									<RadioButton label="Perempuan" />
-								</MDBFormInline>
+								</div>
+								{/* </MDBFormInline> */}
 							</td>
 						</tr>
 						<Input label="Alamat" type="text" placeholder="Alamat" />

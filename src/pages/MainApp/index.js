@@ -14,7 +14,7 @@ const MainApp = () => {
 				<Header />
 			</div>
 			<MDBContainer className=" mt-5 pt-5" fluid>
-				<div className="content col-11 m-auto">
+				<div className="content col-12 m-auto">
 					<RoutesMainApp />
 				</div>
 			</MDBContainer>

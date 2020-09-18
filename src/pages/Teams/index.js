@@ -23,7 +23,7 @@ const Teams = () => {
 			<h4>Tabel MDBDataTable </h4>
 			{/* <Tabel data={dataa} striped bordered small /> */}
 			{/* <Tabel data={data} striped bordered small /> */}
-			<MDBDataTable responsive hover striped bordered small data={dataa} />;
+			<MDBDataTable responsive hover striped bordered small data={dataa} order={["name", "asc"]} />;
 			<hr />
 			<h4>Tabel Biasa </h4>
 			<MDBDataTableV5 responsive hover striped bordered small data={dataa} />;
