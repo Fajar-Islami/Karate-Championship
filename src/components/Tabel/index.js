@@ -1,23 +1,27 @@
 import React, { useEffect, useState } from "react";
-import { MDBTable, MDBTableBody, MDBTableHead, MDBDataTableV5, MDBDataTable } from "mdbreact";
-import "./style.scss";
+import { MDBTable, MDBTableBody, MDBTableHead } from "mdbreact";
+// import "./style.scss";
 
-const Tabel = ({ data, alignText, ...rest }) => {
-	console.log(data);
-	console.log(alignText);
-	console.log(alignText[1]);
-	console.log(rest);
-	const [dataentries, setDataEntries] = useState(data.rows);
+const Tabel = ({ data, alignText = "right", ...rest }) => {
+	// console.log(data);
+	// console.log(alignText);
+	// console.log(alignText[1]);
+	// console.log(rest);
+	const [dataEntries, setDataEntries] = useState(data.rows);
 
 	const [totalindividual, settotalindividual] = useState(0);
 	const [totalteam, settotalteam] = useState(0);
 
+	const angka = (tes) => {
+		return parseInt(tes, 10);
+	};
+
 	const hitungfooter = async () => {
 		var individual = 0;
 		var team = 0;
-		await dataentries.map((item) => {
-			individual = parseInt(individual, 10) + parseInt(item.individuals, 10);
-			team = parseInt(team, 10) + parseInt(item.teams, 10);
+		await dataEntries.map((item) => {
+			individual = angka(individual) + angka(item.individuals);
+			team = angka(team) + angka(item.teams);
 		});
 		settotalindividual(individual);
 		settotalteam(team);
@@ -39,7 +43,7 @@ const Tabel = ({ data, alignText, ...rest }) => {
 				<tr>
 					{column.map((heading, i) => (
 						// console.log(heading.label),
-						<th key={i} className={heading.pl} style={{ width: heading.width, textAlign: heading.textAlign }}>
+						<th key={i} className={heading.pl} style={{ width: heading.width, textAlign: heading.textAlign, verticalAlign: "middle" }}>
 							{heading.label}
 						</th>
 					))}
@@ -47,7 +51,7 @@ const Tabel = ({ data, alignText, ...rest }) => {
 			</MDBTableHead>
 			{/* <MDBTableBody rows={data.rows} /> */}
 			<MDBTableBody>
-				{dataentries.map((data, i) => {
+				{dataEntries.map((data, i) => {
 					return (
 						<tr>
 							<td style={{ textAlign: alignText[0] }}>{i + 1}</td>

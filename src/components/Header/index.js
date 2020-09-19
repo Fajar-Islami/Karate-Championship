@@ -2,6 +2,7 @@ import React, { useState, Fragment } from "react";
 import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBIcon, MDBBtn, MDBContainer, MDBListGroupItem } from "mdbreact";
 import { useHistory, Link } from "react-router-dom";
 import { Lemkari } from "../../assets";
+import { Image } from "..";
 
 const Header = () => {
 	const history = useHistory();
@@ -15,7 +16,7 @@ const Header = () => {
 		<Fragment>
 			<MDBNavbar color="info-color" dark expand="lg" scrolling fixed="top">
 				<MDBNavbarBrand>
-					<img src={Lemkari} alt="" className="ml-3 rounded-circle hoverable" style={{ height: "65px", cursor: "pointer" }} onClick={() => history.push("/")} />
+					<Image image={Lemkari} alt="" className="ml-3 rounded-circle hoverable" height="65px" cursor="pointer" onClick={() => history.push("/")} title="Lemakri" />
 				</MDBNavbarBrand>
 				<MDBNavbarToggler onClick={handleToggle} />
 				<MDBCollapse id="navbarCollapse3" isOpen={dropD} navbar>

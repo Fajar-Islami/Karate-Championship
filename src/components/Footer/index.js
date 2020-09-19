@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import { MDBFooter, MDBContainer, MDBRow, MDBCol } from "mdbreact";
 import { BSP, Forki } from "../../assets";
 import { Link } from "react-router-dom";
+import { Image } from "..";
 
 const Footer = () => {
 	return (
@@ -9,8 +10,8 @@ const Footer = () => {
 			<h4 className="d-flex justify-content-center pt-3">Official Partner</h4>
 			<hr />
 			<div className="d-flex justify-content-center">
-				<img src={BSP} alt="" style={{ height: "70px" }} title="BSP" />
-				<img src={Forki} alt="" style={{ height: "70px" }} title="Forki" />
+				<Image image={BSP} height="60px" title="BSP" className="mr-3" />
+				<Image image={Forki} height="65px" title="Forki" />
 			</div>
 			<MDBFooter color="blue" className="font-small pt-4 mt-4">
 				<MDBContainer fluid className="text-center text-md-left">

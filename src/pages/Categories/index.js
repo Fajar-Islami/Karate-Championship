@@ -23,7 +23,7 @@ const Categories = () => {
 			<h3 className="pt-3">Categories</h3>
 			<hr />
 			<h4>Usia Dini</h4>
-			<Tabel bordered small data={usiadini} alignText={["center", "left", "center", "center"]} />
+			<Tabel small data={usiadini} alignText={["center", "left", "center", "center"]} />
 			{/* <Tabel striped bordered small data={usiadini} /> */}
 			<br />
 			<h4>Pra Pemula</h4>
