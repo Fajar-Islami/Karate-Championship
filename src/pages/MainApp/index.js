@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
-import { Footer, Header } from "../../components";
+import { Footer, Header, Sidebar } from "../../components";
 import "./mainApp.scss";
 import { MDBContainer } from "mdbreact";
 import DummyContextProvider from "../../context/dummyContext";
@@ -13,13 +13,14 @@ const MainApp = () => {
 			<div className="header ">
 				<Header />
 			</div>
-			<MDBContainer className=" mt-5 pt-5" fluid>
-				<div className="content col-12 m-auto">
+			<Sidebar />
+			<div id="content" className=" mt-5 pt-5">
+				<div className="col-12 mx-auto ">
 					<RoutesMainApp />
 				</div>
-			</MDBContainer>
+			</div>
 			{/* </DummyContextProvider>  */}
-			<div className="footer">
+			<div className="footer " id="content">
 				<Footer />
 			</div>
 		</Router>

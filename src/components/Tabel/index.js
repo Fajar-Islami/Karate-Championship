@@ -37,7 +37,7 @@ const Tabel = ({ data, alignText = "right", ...rest }) => {
 
 	return (
 		// <MDBDataTable responsive hover data={data} className="tes-t" {...rest} />
-		<MDBTable responsive hover className="tabel-k" {...rest}>
+		<MDBTable responsive hover className="tabel-biru" {...rest}>
 			{/* <MDBTableHead columns={data.columns} /> */}
 			<MDBTableHead>
 				<tr>

@@ -1,24 +1,29 @@
 import React, { Fragment } from "react";
-import { Tabel } from "../../components";
-import { MDBAlert, MDBTypography } from "mdbreact";
+// import { Tabel } from "../../components";
+import { MDBAlert, MDBTypography, MDBBox } from "mdbreact";
 
-const IsiTabs = () => {
+const IsiTabs = ({ judul, tabel }) => {
+	// console.log(tabel);
 	return (
 		<Fragment>
-			<MDBAlert className="teal accent-3">
-				<MDBTypography colorText="black" className=" mb-0 pb-0">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+			{/* <MDBAlert className="warning-color">
+				<MDBTypography colorText="primary-color-dark" className="font-weight-bold mb-0 pb-0">
+					{judul}
 				</MDBTypography>
-			</MDBAlert>
+			</MDBAlert> */}
+			<MDBBox bgColor="warning" color="indigo" className="font-weight-normal">
+				<p className="ml-3 py-1"> {judul} </p>
+			</MDBBox>
+			{tabel}
 
-			<h5>Kata Team</h5>
+			{/* <h5>Kata Team</h5>
 			<h6>Kata Individual</h6>
 			<Tabel />
 			<h6>Kumite -30kg</h6>
 			<Tabel />
 
 			<h6>Kumite +30kg</h6>
-			<Tabel />
+			<Tabel /> */}
 		</Fragment>
 	);
 };

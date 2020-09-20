@@ -15,5 +15,6 @@ import Image from "./Image";
 
 import TabelBracket from "./TabelBracket";
 import TabelTeams from "./TabelTeams";
+import TabelStatistics from "./TabelStatistics";
 
-export { Footer, ForgetPw, Header, Modal, Sidebar, Card, Tabel, IsiTabs, Dropdown, RadioButton, Carousel, Input, Image, TabelBracket, TabelTeams };
+export { Footer, ForgetPw, Header, Modal, Sidebar, Card, Tabel, IsiTabs, Dropdown, RadioButton, Carousel, Input, Image, TabelBracket, TabelTeams, TabelStatistics };

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, Fragment } from "react";
 import { MDBTabPane, MDBTabContent, MDBNav, MDBNavItem, MDBNavLink } from "mdbreact";
-import { IsiTabs } from "../../components";
+import { IsiTabs, TabelStatistics } from "../../components";
 const Statistic = () => {
 	const [activeItem, setActiveItem] = useState("1");
 
@@ -20,48 +20,50 @@ const Statistic = () => {
 
 	return (
 		<Fragment>
-			<p className="pt-3">Halaman Statistic</p>
-			<MDBNav className="nav-tabs pt-3 px-3">
+			<h3 className="pt-3">Halaman Statistic</h3>
+			<hr />
+			<MDBNav className="nav-tabs  px-3" header>
 				<MDBNavItem>
 					<MDBNavLink link to="#" active={activeItem === "1"} onClick={handleToggle("1")} role="tab">
-						Home
+						Rangking
 					</MDBNavLink>
 				</MDBNavItem>
 				<MDBNavItem>
 					<MDBNavLink link to="#" active={activeItem === "2"} onClick={handleToggle("2")} role="tab">
-						Profile
+						Summary
 					</MDBNavLink>
 				</MDBNavItem>
 				<MDBNavItem>
 					<MDBNavLink link to="#" active={activeItem === "3"} onClick={handleToggle("3")} role="tab">
-						Profile
+						By Point
 					</MDBNavLink>
 				</MDBNavItem>
 			</MDBNav>
 
-			<div className="block-example border border-dark p-3">
+			<div className="block-example border  border-warning py-3">
 				{/* <div className="block-example border border-dark"> */}
 				{/* Content */}
 				<MDBTabContent activeItem={activeItem}>
 					<MDBTabPane tabId="1" role="tabpanel">
+						<IsiTabs judul="Male Usia Dini" tabel={[<TabelStatistics tes="abbbbb" />, <TabelStatistics tes="2" />]} />
+						<IsiTabs tabel={<TabelStatistics />} />
+						{/* <IsiTabs />
 						<IsiTabs />
-						<IsiTabs />
-						<IsiTabs />
-						<IsiTabs />
+						<IsiTabs /> */}
 					</MDBTabPane>
 
 					<MDBTabPane tabId="2" role="tabpanel">
+						{/* <IsiTabs />
 						<IsiTabs />
 						<IsiTabs />
-						<IsiTabs />
-						<IsiTabs />
+						<IsiTabs /> */}
 					</MDBTabPane>
 
 					<MDBTabPane tabId="3" role="tabpanel">
+						{/* <IsiTabs />
 						<IsiTabs />
 						<IsiTabs />
-						<IsiTabs />
-						<IsiTabs />
+						<IsiTabs /> */}
 					</MDBTabPane>
 				</MDBTabContent>
 				{/* </div> */}

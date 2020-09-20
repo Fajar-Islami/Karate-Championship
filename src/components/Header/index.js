@@ -1,8 +1,9 @@
 import React, { useState, Fragment } from "react";
 import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBIcon, MDBBtn, MDBContainer, MDBListGroupItem } from "mdbreact";
-import { useHistory, Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { Lemkari } from "../../assets";
 import { Image } from "..";
+import "./style.scss";
 
 const Header = () => {
 	const history = useHistory();
@@ -14,13 +15,17 @@ const Header = () => {
 
 	return (
 		<Fragment>
-			<MDBNavbar color="info-color" dark expand="lg" scrolling fixed="top">
+			{/* <MDBNavbar color="info-color" dark expand="lg" scrolling fixed="top"> */}
+			<MDBNavbar color="blue-gradient" dark expand="lg" id="content" scrolling fixed="top">
+				{/* <div className="jajar ml-3"></div> */}
+				{/* <MDBNavbar className="flexible-navbar" light expand="md" scrolling> */}
 				<MDBNavbarBrand>
 					<Image image={Lemkari} alt="" className="ml-3 rounded-circle hoverable" height="65px" cursor="pointer" onClick={() => history.push("/")} title="Lemakri" />
+					{/* aaaaa */}
 				</MDBNavbarBrand>
 				<MDBNavbarToggler onClick={handleToggle} />
 				<MDBCollapse id="navbarCollapse3" isOpen={dropD} navbar>
-					<MDBNavbarNav left>
+					{/* <MDBNavbarNav left>
 						<MDBNavItem active>
 							<MDBNavLink to="/">Home</MDBNavLink>
 						</MDBNavItem>
@@ -127,7 +132,7 @@ const Header = () => {
 								</MDBDropdownMenu>
 							</MDBDropdown>
 						</MDBNavItem>
-					</MDBNavbarNav>
+					</MDBNavbarNav> */}
 
 					<MDBNavbarNav right>
 						<MDBNavItem className="pt-2 ">

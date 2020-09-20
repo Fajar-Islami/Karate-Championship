@@ -1,5 +1,5 @@
 import React, { useEffect, Fragment } from "react";
-import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView, MDBRow, MDBCol, MDBBtn, MDBBox, MDBTypography } from "mdbreact";
+import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView, MDBRow, MDBCol, MDBBtn, MDBBox, MDBTypography, MDBTable, MDBTableHead, MDBTableBody } from "mdbreact";
 import { Tabel, Carousel } from "../../components";
 import { useHistory } from "react-router";
 
@@ -13,7 +13,7 @@ const Home = () => {
 
 	return (
 		<Fragment>
-			<h1 className="pt-3"> Halaman Home</h1>
+			<h3 className="pt-3"> Halaman Home</h3>
 			<MDBRow>
 				<MDBCol lg="7" sm="12" className="mb-5">
 					<Carousel />
@@ -22,19 +22,113 @@ const Home = () => {
 						<MDBCarouselInner>
 							<MDBCarouselItem itemId="1">
 								<MDBView>
-									<img className="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(46).jpg" alt="Second slide" />
+									{/* Dummy */}
+									<MDBTable striped>
+										<MDBTableHead>
+											<tr>
+												<th>#</th>
+												<th>First</th>
+												<th>Last</th>
+												<th>Handle</th>
+											</tr>
+										</MDBTableHead>
+										<MDBTableBody>
+											<tr>
+												<td>1</td>
+												<td>res</td>
+												<td>adad</td>
+												<td>@m1qqq</td>
+											</tr>
+											<tr>
+												<td>2</td>
+												<td>cccccc</td>
+												<td>aaaaa</td>
+												<td>@aaaaa</td>
+											</tr>
+											<tr>
+												<td>3</td>
+												<td>ccccc</td>
+												<td>the bbbbb</td>
+												<td>@vvvv</td>
+											</tr>
+										</MDBTableBody>
+									</MDBTable>
+									{/* Dummy */}
 								</MDBView>
 							</MDBCarouselItem>
 							<MDBCarouselItem itemId="2">
 								<MDBView>
-									<Tabel />
+									{/* Dummy */}
+									<MDBTable striped>
+										<MDBTableHead>
+											<tr>
+												<th>#</th>
+												<th>First</th>
+												<th>Last</th>
+												<th>Handle</th>
+											</tr>
+										</MDBTableHead>
+										<MDBTableBody>
+											<tr>
+												<td>1</td>
+												<td>Mark</td>
+												<td>Otto</td>
+												<td>@mdo</td>
+											</tr>
+											<tr>
+												<td>2</td>
+												<td>Jacob</td>
+												<td>Thornton</td>
+												<td>@fat</td>
+											</tr>
+											<tr>
+												<td>3</td>
+												<td>Larry</td>
+												<td>the Bird</td>
+												<td>@twitter</td>
+											</tr>
+										</MDBTableBody>
+									</MDBTable>
+									{/* Dummy */}
 								</MDBView>
 							</MDBCarouselItem>
 						</MDBCarouselInner>
 					</MDBCarousel>
 				</MDBCol>
 				<MDBCol lg="5" sm="12" className="mb-5">
-					<Tabel />
+					{/* <Tabel /> */}
+					<MDBTable>
+						<MDBTableHead color="primary-color" textWhite>
+							{/* Dummy */}
+							<tr>
+								<th>#</th>
+								<th>First</th>
+								<th>Last</th>
+								<th>Handle</th>
+							</tr>
+						</MDBTableHead>
+						<MDBTableBody>
+							<tr>
+								<td>1</td>
+								<td>Mark</td>
+								<td>Otto</td>
+								<td>@mdo</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>Jacob</td>
+								<td>Thornton</td>
+								<td>@fat</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>Larry</td>
+								<td>the Bird</td>
+								<td>@twitter</td>
+							</tr>
+							{/* Dummy */}
+						</MDBTableBody>
+					</MDBTable>
 					<div className="text-center mb-5">
 						<MDBBtn type="button" gradient="blue" className="rounded-pill" alt="150x75" onClick={() => history.push("/medals")}>
 							View Full List
