@@ -14,7 +14,7 @@ const MainApp = () => {
 				<Header />
 			</div>
 			<Sidebar />
-			<div id="content" className=" mt-5 pt-5">
+			<div id="content" className=" mt-5 pt-4">
 				<div className="col-12 mx-auto ">
 					<RoutesMainApp />
 				</div>

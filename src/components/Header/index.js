@@ -16,13 +16,20 @@ const Header = () => {
 	return (
 		<Fragment>
 			{/* <MDBNavbar color="info-color" dark expand="lg" scrolling fixed="top"> */}
-			<MDBNavbar color="blue-gradient" dark expand="lg" id="content" scrolling fixed="top">
-				{/* <div className="jajar ml-3"></div> */}
-				{/* <MDBNavbar className="flexible-navbar" light expand="md" scrolling> */}
-				<MDBNavbarBrand>
-					<Image image={Lemkari} alt="" className="ml-3 rounded-circle hoverable" height="65px" cursor="pointer" onClick={() => history.push("/")} title="Lemakri" />
-					{/* aaaaa */}
-				</MDBNavbarBrand>
+			<MDBNavbar color="blue-gradient" dark expand="lg" id="content" className="py-0" fixed="top">
+				<div className="jajar ml-5">
+					<div className="isi-jajar">
+						<MDBNavbarBrand>
+							<Image image={Lemkari} alt="" className="ml-4 rounded-circle hoverable" height="65px" cursor="pointer" onClick={() => history.push("/")} title="Lemakri" />
+						</MDBNavbarBrand>
+						<div className="teks mt-2">
+							<span>
+								<span className="judul">Kerjunas Lemkari 2019</span>
+								<br /> Jakarta, September 2019{" "}
+							</span>
+						</div>
+					</div>
+				</div>
 				<MDBNavbarToggler onClick={handleToggle} />
 				<MDBCollapse id="navbarCollapse3" isOpen={dropD} navbar>
 					{/* <MDBNavbarNav left>

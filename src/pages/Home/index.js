@@ -14,6 +14,7 @@ const Home = () => {
 	return (
 		<Fragment>
 			<h3 className="pt-3"> Halaman Home</h3>
+			<hr />
 			<MDBRow>
 				<MDBCol lg="7" sm="12" className="mb-5">
 					<Carousel />

@@ -1,7 +1,22 @@
 .jajar {
-	width: 100px;
-	height: 50px;
-	transform: skew(-20deg);
-	background: #555;
-	color: black;
+	width: 50%;
+	height: 80px;
+	transform: skew(-30deg);
+	background: white;
+	// color: black;
+	position: relative;
+	.isi-jajar {
+		display: flex;
+		flex-wrap: wrap;
+		position: absolute;
+		transform: skew(30deg);
+		top: 5px;
+		span {
+			color: #0099cc;
+			span {
+				font-size: larger;
+				font-weight: bolder;
+			}
+		}
+	}
 }
