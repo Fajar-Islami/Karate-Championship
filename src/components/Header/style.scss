@@ -1,5 +1,5 @@
 .jajar {
-	width: 50%;
+	width: 40%;
 	height: 80px;
 	transform: skew(-30deg);
 	background: white;
@@ -16,6 +16,17 @@
 			span {
 				font-size: larger;
 				font-weight: bolder;
+			}
+		}
+	}
+}
+
+@media (max-width: 811px) {
+	.jajar {
+		background: none;
+		.isi-jajar {
+			span {
+				display: none;
 			}
 		}
 	}

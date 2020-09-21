@@ -1,29 +1,18 @@
 import React, { Fragment } from "react";
 // import { Tabel } from "../../components";
-import { MDBAlert, MDBTypography, MDBBox } from "mdbreact";
+import { MDBBox } from "mdbreact";
 
-const IsiTabs = ({ judul, tabel }) => {
+const IsiTabs = ({ label, tableType }) => {
 	// console.log(tabel);
 	return (
 		<Fragment>
-			{/* <MDBAlert className="warning-color">
-				<MDBTypography colorText="primary-color-dark" className="font-weight-bold mb-0 pb-0">
-					{judul}
-				</MDBTypography>
-			</MDBAlert> */}
-			<MDBBox bgColor="warning" color="indigo" className="font-weight-normal">
-				<p className="ml-3 py-1"> {judul} </p>
-			</MDBBox>
-			{tabel}
-
-			{/* <h5>Kata Team</h5>
-			<h6>Kata Individual</h6>
-			<Tabel />
-			<h6>Kumite -30kg</h6>
-			<Tabel />
-
-			<h6>Kumite +30kg</h6>
-			<Tabel /> */}
+			<div className="block-example border  border-warning py-3">
+				<MDBBox bgColor="warning" color="indigo">
+					<h4 className="ml-3 py-1 font-weight-normal"> {label} </h4>
+				</MDBBox>
+				<div className="px-3">{tableType}</div>
+			</div>
+			<br />
 		</Fragment>
 	);
 };

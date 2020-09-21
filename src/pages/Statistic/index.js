@@ -1,6 +1,8 @@
 import React, { useState, useEffect, Fragment } from "react";
 import { MDBTabPane, MDBTabContent, MDBNav, MDBNavItem, MDBNavLink } from "mdbreact";
 import { IsiTabs, TabelStatistics } from "../../components";
+import { Male_UsiaDini } from "./data";
+
 const Statistic = () => {
 	const [activeItem, setActiveItem] = useState("1");
 
@@ -22,7 +24,7 @@ const Statistic = () => {
 		<Fragment>
 			<h3 className="pt-3">Halaman Statistic</h3>
 			<hr />
-			<MDBNav className="nav-tabs  px-3" header>
+			<MDBNav className="nav-tabs ">
 				<MDBNavItem>
 					<MDBNavLink link to="#" active={activeItem === "1"} onClick={handleToggle("1")} role="tab">
 						Rangking
@@ -40,16 +42,26 @@ const Statistic = () => {
 				</MDBNavItem>
 			</MDBNav>
 
-			<div className="block-example border  border-warning py-3">
+			<div className="block-example border border-primary p-3 ">
 				{/* <div className="block-example border border-dark"> */}
 				{/* Content */}
 				<MDBTabContent activeItem={activeItem}>
 					<MDBTabPane tabId="1" role="tabpanel">
-						<IsiTabs judul="Male Usia Dini" tabel={[<TabelStatistics tes="abbbbb" />, <TabelStatistics tes="2" />]} />
-						<IsiTabs tabel={<TabelStatistics />} />
-						{/* <IsiTabs />
-						<IsiTabs />
-						<IsiTabs /> */}
+						<IsiTabs label="Male Usia Dini" tableType={[<TabelStatistics tableTitle="KATA TEAM" />, <TabelStatistics data={Male_UsiaDini.data_KataIndividual} tableTitle="KATA INDIVIDUAL" />, <TabelStatistics data={Male_UsiaDini.data_KataIndividual} tableTitle="KUMITE -30 KG" />, <TabelStatistics data={Male_UsiaDini.data_KataIndividual} tableTitle="KUMITE +30 KG" />]} />
+						<IsiTabs label="Female Usia Dini" tableType={[<TabelStatistics tableTitle="KATA TEAM" />, <TabelStatistics data={Male_UsiaDini.data_KataIndividual} tableTitle="KATA INDIVIDUAL" />, <TabelStatistics data={Male_UsiaDini.data_KataIndividual} tableTitle="KUMITE -30 KG" />, <TabelStatistics data={Male_UsiaDini.data_KataIndividual} tableTitle="KUMITE +30 KG" />]} />
+						<IsiTabs label="Male Pra Pemula" tableType={[<TabelStatistics tableTitle="KATA TEAM" />, <TabelStatistics data={Male_UsiaDini.data_KataIndividual} tableTitle="KATA INDIVIDUAL" />, <TabelStatistics data={Male_UsiaDini.data_KataIndividual} tableTitle="KUMITE -30 KG" />, <TabelStatistics data={Male_UsiaDini.data_KataIndividual} tableTitle="KUMITE +30 KG" />]} />
+						<IsiTabs label="Female Pra Pemula" tableType={[<TabelStatistics tableTitle="KATA TEAM" />, <TabelStatistics data={Male_UsiaDini.data_KataIndividual} tableTitle="KATA INDIVIDUAL" />, <TabelStatistics data={Male_UsiaDini.data_KataIndividual} tableTitle="KUMITE -30 KG" />, <TabelStatistics data={Male_UsiaDini.data_KataIndividual} tableTitle="KUMITE +30 KG" />]} />
+						<IsiTabs label="Male Pemula" tableType={[<TabelStatistics tableTitle="KATA TEAM" />, <TabelStatistics data={Male_UsiaDini.data_KataIndividual} tableTitle="KATA INDIVIDUAL" />, <TabelStatistics data={Male_UsiaDini.data_KataIndividual} tableTitle="KUMITE -30 KG" />, <TabelStatistics data={Male_UsiaDini.data_KataIndividual} tableTitle="KUMITE +30 KG" />]} />
+						<IsiTabs label="Female Pemula" tableType={[<TabelStatistics tableTitle="KATA TEAM" />, <TabelStatistics data={Male_UsiaDini.data_KataIndividual} tableTitle="KATA INDIVIDUAL" />, <TabelStatistics data={Male_UsiaDini.data_KataIndividual} tableTitle="KUMITE -30 KG" />, <TabelStatistics data={Male_UsiaDini.data_KataIndividual} tableTitle="KUMITE +30 KG" />]} />
+						<IsiTabs label="Male Cadet" tableType={[<TabelStatistics tableTitle="KATA TEAM" />, <TabelStatistics data={Male_UsiaDini.data_KataIndividual} tableTitle="KATA INDIVIDUAL" />, <TabelStatistics data={Male_UsiaDini.data_KataIndividual} tableTitle="KUMITE -30 KG" />, <TabelStatistics data={Male_UsiaDini.data_KataIndividual} tableTitle="KUMITE +30 KG" />]} />
+						<IsiTabs label="Female Cadet" tableType={[<TabelStatistics tableTitle="KATA TEAM" />, <TabelStatistics data={Male_UsiaDini.data_KataIndividual} tableTitle="KATA INDIVIDUAL" />, <TabelStatistics data={Male_UsiaDini.data_KataIndividual} tableTitle="KUMITE -30 KG" />, <TabelStatistics data={Male_UsiaDini.data_KataIndividual} tableTitle="KUMITE +30 KG" />]} />
+						<IsiTabs label="Male Junior" tableType={[<TabelStatistics tableTitle="KATA TEAM" />, <TabelStatistics data={Male_UsiaDini.data_KataIndividual} tableTitle="KATA INDIVIDUAL" />, <TabelStatistics data={Male_UsiaDini.data_KataIndividual} tableTitle="KUMITE -30 KG" />, <TabelStatistics data={Male_UsiaDini.data_KataIndividual} tableTitle="KUMITE +30 KG" />]} />
+						<IsiTabs label="Female Junior" tableType={[<TabelStatistics tableTitle="KATA TEAM" />, <TabelStatistics data={Male_UsiaDini.data_KataIndividual} tableTitle="KATA INDIVIDUAL" />, <TabelStatistics data={Male_UsiaDini.data_KataIndividual} tableTitle="KUMITE -30 KG" />, <TabelStatistics data={Male_UsiaDini.data_KataIndividual} tableTitle="KUMITE +30 KG" />]} />
+						<IsiTabs label="Male Senior" tableType={[<TabelStatistics tableTitle="KATA TEAM" />, <TabelStatistics data={Male_UsiaDini.data_KataIndividual} tableTitle="KATA INDIVIDUAL" />, <TabelStatistics data={Male_UsiaDini.data_KataIndividual} tableTitle="KUMITE -30 KG" />, <TabelStatistics data={Male_UsiaDini.data_KataIndividual} tableTitle="KUMITE +30 KG" />]} />
+						<IsiTabs label="Female Senior" tableType={[<TabelStatistics tableTitle="KATA TEAM" />, <TabelStatistics data={Male_UsiaDini.data_KataIndividual} tableTitle="KATA INDIVIDUAL" />, <TabelStatistics data={Male_UsiaDini.data_KataIndividual} tableTitle="KUMITE -30 KG" />, <TabelStatistics data={Male_UsiaDini.data_KataIndividual} tableTitle="KUMITE +30 KG" />]} />
+						<IsiTabs label="Female Under 21" tableType={[<TabelStatistics tableTitle="KATA TEAM" />, <TabelStatistics data={Male_UsiaDini.data_KataIndividual} tableTitle="KATA INDIVIDUAL" />, <TabelStatistics data={Male_UsiaDini.data_KataIndividual} tableTitle="KUMITE -30 KG" />, <TabelStatistics data={Male_UsiaDini.data_KataIndividual} tableTitle="KUMITE +30 KG" />]} />
+						<IsiTabs label="Male Veteran" tableType={[<TabelStatistics tableTitle="KATA INDIVIDUAL" />]} />
+						<IsiTabs label="Female Veteran" tableType={[<TabelStatistics tableTitle="KATA INDIVIDUAL" />]} />
 					</MDBTabPane>
 
 					<MDBTabPane tabId="2" role="tabpanel">

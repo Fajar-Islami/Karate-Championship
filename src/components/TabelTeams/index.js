@@ -39,7 +39,8 @@ const TabelTeams = ({ data, alignText = "right", ...rest }) => {
 
 	const column = data.columns;
 	const row = data.rows;
-	console.log(row);
+	// console.log(row);
+	console.log(dataEntries);
 	return (
 		<MDBTable responsive hover className="tabel-biru" {...rest}>
 			{/* <MDBTableHead columns={data.columns} /> */}
