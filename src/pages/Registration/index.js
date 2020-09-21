@@ -67,10 +67,10 @@ const Registration = () => {
 							<td className="font-weight-bold">:</td>
 							<td className=" pt-2">
 								{/* <MDBFormInline> */}
-								<div className="d-flex">
-									<RadioButton label="Laki-laki" />
-									<RadioButton label="Perempuan" />
-								</div>
+								{/* <div className="d-flex"> */}
+								<RadioButton label="Laki-laki" />
+								<RadioButton label="Perempuan" />
+								{/* </div> */}
 								{/* </MDBFormInline> */}
 							</td>
 						</tr>

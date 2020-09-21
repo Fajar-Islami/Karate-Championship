@@ -1,7 +1,20 @@
 .tabel-tes {
+	thead {
+		background-color: #0061ff;
+		color: white;
+		tr {
+			th {
+				font-weight: bold;
+			}
+		}
+	}
 	tbody {
 		tr:nth-child(odd) {
 			background-color: #e1f5fe;
+		}
+		tr:hover {
+			background-color: #e9f0fb;
+			cursor: pointer;
 		}
 	}
 }
