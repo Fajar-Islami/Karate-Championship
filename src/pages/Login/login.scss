@@ -1,27 +1,97 @@
-.bg-login {
-	background-image: url("../../assets//img/login-BG.jpg");
-	background-size: cover;
-	background-position: center;
-	// background-repeat: ;
-}
+// .bg-login {
+// 	background-image: url("../../assets//img/login-BG.jpg");
+// 	background-size: cover;
+// 	background-position: center;
+// 	// background-repeat: ;
+// }
 
-.card-login {
-	// .tombol-sign {
-	// 	border-radius: 10%;
-	// }
-	.social-wrapper {
+// .card-login {
+// 	// .tombol-sign {
+// 	// 	border-radius: 10%;
+// 	// }
+// 	.social-wrapper {
+// 		display: flex;
+
+// 		.icon-wrapper {
+// 			background-color: white;
+// 			padding: 10px;
+// 			border-radius: 40px;
+// 			margin: 0px 10px;
+// 		}
+// 		.icon-medsos {
+// 			width: 40px;
+// 			height: 40px;
+// 			object-fit: contain;
+// 		}
+// 	}
+// }
+
+.login {
+	font-family: "Raleway", sans-serif;
+	background: #000000;
+	.background {
+		background: url("../../assets//img/login-baru.jpg") no-repeat;
+		background-size: cover;
+		height: 100vh;
 		display: flex;
-
-		.icon-wrapper {
-			background-color: white;
-			padding: 10px;
-			border-radius: 40px;
-			margin: 0px 10px;
+		.text,
+		.box {
+			margin-top: 45vh;
+			flex: 1;
 		}
-		.icon-medsos {
-			width: 40px;
-			height: 40px;
-			object-fit: contain;
+		.text {
+			margin-left: 10%;
+			font-weight: 100px;
+			h1 {
+				font-size: 70px;
+				color: #ffffff;
+				font-weight: 500;
+			}
+			p {
+				font-size: 20px;
+				color: #ffffff;
+				font-weight: 300;
+				a {
+					color: white;
+				}
+			}
+		}
+		.box {
+			margin-left: 35%;
+			.form {
+				background: transparent;
+				color: #fff;
+				box-sizing: border-box;
+				display: flex;
+				flex-direction: column;
+				width: 250px;
+				input {
+					margin: 20px 0;
+					padding: 10px;
+					background: transparent;
+					border: none;
+					outline: none;
+					color: #ffffff;
+				}
+				input:invalid {
+					box-shadow: none;
+				}
+				.username,
+				.password {
+					border-bottom: 1px solid #fff;
+				}
+				.button {
+					background: transparent;
+					border: 1px solid #fff;
+					color: #fff;
+					font-size: 18px;
+				}
+				.button:hover {
+					background: #fff;
+					color: #000000;
+					// font-weight: bolder;
+				}
+			}
 		}
 	}
 }
