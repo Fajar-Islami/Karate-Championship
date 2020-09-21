@@ -4,6 +4,7 @@ import { ICFacebook, ICTwitter, ICGoogle } from "../../assets";
 import "./login.scss";
 import { Modal } from "../../components";
 import { useHistory } from "react-router";
+import { Link } from "react-router-dom";
 
 const Icon = ({ img }) => {
 	return (
@@ -82,19 +83,19 @@ const Login = () => {
 		// 	</MDBRow>
 		// 	{/* </div> */}
 		// </MDBContainer>
-		<div className="login">
-			<div className="background">
+		<div className="auth-LR">
+			<div className="background-login">
 				<div className="text">
 					<h1>Login</h1>
 					<p>
-						No Account? <a href="#">Sign Up</a>{" "}
+						No Account? <Link to="/signup">Sign Up</Link>
 					</p>
 				</div>
 				<div className="box">
 					<form action="" className="form">
 						<input type="text" className="username" placeholder="Username" required />
 						<input type="password" className="password" placeholder="Password" required />
-						<input type="submit" className="button" value="Login" />
+						<input type="submit" className="button" value="Login" onClick={() => history.push("/")} />
 					</form>
 				</div>
 			</div>

@@ -4,7 +4,8 @@ import Lemkari from "./img/lemkari.jpeg";
 import BSP from "./img/BSP.jpg";
 import Forki from "./img/FORKI.jpg";
 import Fajar from "./img/Fajar.png";
-import LoginBAru from "./img/login-baru.jpg";
+import LoginBaruBG from "./img/login-baru.jpg";
+import SignUpBG from "./img/sign-up.jpg";
 
 // ICOM
 import ICFacebook from "./icon/facebook.svg";
@@ -49,7 +50,7 @@ import SumateraSelatan from "./logo-teams/sumatera-selatan.png";
 import SumateraUtara from "./logo-teams/sumatera-utara.png";
 import Yogyakarta from "./logo-teams/yogyakarta.jpg";
 
-export { LoginBg, Lemkari, BSP, Forki, Fajar, LoginBAru };
+export { LoginBg, Lemkari, BSP, Forki, Fajar, LoginBaruBG, SignUpBG };
 export { ICFacebook, ICGoogle, ICTwitter };
 export { ICCalendar, ICBracket, ICCategory, ICMedal, ICStatistic, ICTeam };
 export { Aceh, Bali, Banten, Bengkulu, Jakarta, JawaBarat, JawaTengah, JawaTimur, KalimantanBarat, KalimantanSelatan, KalimantanUtara, KalimantanTengah, KalimantanTimur, KepulauanBangkaBelitung, KepulauanRiau, Lampung, Maluku, MalukuUtara, NusaTenggaraBarat, PapuaBarat, Riau, SulawesiSelatan, SulawesiTenggara, SulawesiUtara, SumateraBarat, SumateraSelatan, SumateraUtara, Yogyakarta };

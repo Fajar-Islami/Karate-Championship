@@ -1,6 +1,6 @@
 import Bracket from "./Bracket";
 import Categories from "./Categories";
-// import Gallery from "./Gallery";
+import SignUp from "./SignUp";
 import Guidance from "./Guidance";
 import Home from "./Home";
 import Login from "./Login/index";
@@ -13,4 +13,4 @@ import Teams from "./Teams";
 import DetailDummy from "./detailDummy";
 import Dummy from "./Dummy";
 
-export { Bracket, Categories, Guidance, Home, Login, MainApp, Medals, SchedulesResult, Statistic, Teams, DetailDummy, Dummy, Registration };
+export { Bracket, Categories, Guidance, Home, Login, MainApp, Medals, SchedulesResult, Statistic, Teams, DetailDummy, Dummy, Registration, SignUp };

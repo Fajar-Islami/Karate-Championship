@@ -26,20 +26,32 @@
 // 	}
 // }
 
-.login {
+.auth-LR {
 	font-family: "Raleway", sans-serif;
 	background: #000000;
-	.background {
+
+	.background-login {
 		background: url("../../assets//img/login-baru.jpg") no-repeat;
+		.box {
+			margin-top: 35vh;
+		}
+	}
+	.background-signUP {
+		background: url("../../assets//img/sign-up.jpg") no-repeat;
+		.box {
+			margin-top: 10vh;
+		}
+	}
+
+	.background-login,
+	.background-signUP {
 		background-size: cover;
 		height: 100vh;
 		display: flex;
-		.text,
-		.box {
+
+		.text {
 			margin-top: 45vh;
 			flex: 1;
-		}
-		.text {
 			margin-left: 10%;
 			font-weight: 100px;
 			h1 {
@@ -53,11 +65,15 @@
 				font-weight: 300;
 				a {
 					color: white;
+					font-weight: 700;
 				}
 			}
 		}
+
 		.box {
-			margin-left: 35%;
+			margin-left: 25%;
+
+			flex: 1;
 			.form {
 				background: transparent;
 				color: #fff;
@@ -77,7 +93,9 @@
 					box-shadow: none;
 				}
 				.username,
-				.password {
+				.password,
+				.fullname,
+				.email {
 					border-bottom: 1px solid #fff;
 				}
 				.button {
@@ -89,7 +107,6 @@
 				.button:hover {
 					background: #fff;
 					color: #000000;
-					// font-weight: bolder;
 				}
 			}
 		}
