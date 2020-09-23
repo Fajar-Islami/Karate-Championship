@@ -16,7 +16,7 @@ const Header = () => {
 	return (
 		<Fragment>
 			{/* <MDBNavbar color="info-color" dark expand="lg" scrolling fixed="top"> */}
-			<MDBNavbar color="blue-gradient" dark expand="lg" id="content" className="py-0" fixed="top">
+			<MDBNavbar color="blue-gradient" dark expand="lg" className="py-0" fixed="top">
 				<div className="jajar ml-5">
 					<div className="isi-jajar">
 						<MDBNavbarBrand>

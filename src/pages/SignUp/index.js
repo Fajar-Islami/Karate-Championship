@@ -27,7 +27,7 @@ const SignUp = () => {
 				<div className="text">
 					<h1>Sign Up</h1>
 					<p>
-						Have Account? <Link to="/login">Login</Link>
+						Have Account? <Link to="/login">Sign In</Link>
 					</p>
 				</div>
 				<div className="box">
@@ -37,7 +37,8 @@ const SignUp = () => {
 						<input type="text" className="username" placeholder="Username" required />
 						<input type="password" className="password" placeholder="Password" required />
 						<input type="password" className="password" placeholder="Re-Enter Password" required />
-						<input type="submit" className="button" value="Sign Up" onClick={() => history.push("/")} />
+						<input type="submit" className="button" value="Sign Up" />
+						<Link to="/">Back to home</Link>
 					</form>
 				</div>
 			</div>

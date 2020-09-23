@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Login, MainApp, SignUp } from "../../pages";
+import { ScrollToTop } from "..";
 
 const Routes = () => {
 	return (

@@ -1,5 +1,5 @@
 import React, { useEffect, Fragment } from "react";
-import { Dropdown, Tabel, TabelBracket } from "../../components";
+import { Dropdown, Tabel, TabelBracket, Header2 } from "../../components";
 import { MDBTable, MDBTableBody, MDBBtn, MDBCol, MDBRow, MDBBadge } from "mdbreact";
 import { UsiaDini } from "./data";
 

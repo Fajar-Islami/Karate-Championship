@@ -30,7 +30,7 @@ const Login = () => {
 
 	// Lifecycle React Hooks
 	useEffect(() => {
-		document.title = `Login`;
+		document.title = `Sign In`;
 		// document.body.className = "bg-login";
 
 		// WilllUnMount
@@ -86,16 +86,23 @@ const Login = () => {
 		<div className="auth-LR">
 			<div className="background-login">
 				<div className="text">
-					<h1>Login</h1>
+					<h1>Sign In</h1>
 					<p>
-						No Account? <Link to="/signup">Sign Up</Link>
+						No Account? <Link to="/signup">Sign Up Here</Link>
+						<br /> Or Sign Up With
 					</p>
+					<div className="row social-wrapper">
+						<a className="google" href="https://github.com/Fajar-Islami/Karate-Championship"></a>
+						<a className="facebook" href="https://github.com/Fajar-Islami/Karate-Championship"></a>
+						<a className="twitter" href="https://github.com/Fajar-Islami/Karate-Championship"></a>
+					</div>
 				</div>
 				<div className="box">
 					<form action="" className="form">
 						<input type="text" className="username" placeholder="Username" required />
 						<input type="password" className="password" placeholder="Password" required />
-						<input type="submit" className="button" value="Login" onClick={() => history.push("/")} />
+						<input type="submit" className="button" value="Sign In" />
+						<Link to="/">Back to home</Link>
 					</form>
 				</div>
 			</div>

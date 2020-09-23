@@ -9,9 +9,9 @@ code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-#content {
+/* #content {
 	margin-left: 100px;
-}
+} */
 
 .sidebar-fixed {
 	left: 0;

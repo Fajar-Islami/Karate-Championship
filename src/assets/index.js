@@ -6,6 +6,9 @@ import Forki from "./img/FORKI.jpg";
 import Fajar from "./img/Fajar.png";
 import LoginBaruBG from "./img/login-baru.jpg";
 import SignUpBG from "./img/sign-up.jpg";
+import LoginBaruBG_1 from "./img/login-baru-1.jpg";
+import SignUpBG_1 from "./img/sign-up-1.jpg";
+import SignUpBG_2 from "./img/sign-up-2.jpg";
 
 // ICOM
 import ICFacebook from "./icon/facebook.svg";

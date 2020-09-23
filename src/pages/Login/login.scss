@@ -28,16 +28,19 @@
 
 .auth-LR {
 	font-family: "Raleway", sans-serif;
-	background: #000000;
+	// background: #000000;
 
 	.background-login {
-		background: url("../../assets//img/login-baru.jpg") no-repeat;
+		background: linear-gradient(to right, transparent, white), url("../../assets//img/login-baru-1.jpg") no-repeat;
+		opacity: 0.5;
 		.box {
 			margin-top: 35vh;
 		}
 	}
 	.background-signUP {
-		background: url("../../assets//img/sign-up.jpg") no-repeat;
+		background: linear-gradient(to right, transparent, white), url("../../assets//img/sign-up-2.jpg") no-repeat;
+		opacity: 0.7;
+
 		.box {
 			margin-top: 10vh;
 		}
@@ -64,8 +67,54 @@
 				color: #ffffff;
 				font-weight: 300;
 				a {
-					color: white;
+					color: #ffffff;
 					font-weight: 700;
+				}
+			}
+			.social-wrapper {
+				display: flex;
+
+				.google {
+					background: url("../../assets//icon/google.svg") no-repeat;
+				}
+				.google:hover {
+					background: url("../../assets//icon/google-1.svg") no-repeat;
+				}
+				.facebook {
+					background: url("../../assets//icon/facebook.svg") no-repeat;
+				}
+				.facebook:hover {
+					background: url("../../assets//icon/facebook-1.svg") no-repeat;
+				}
+				.twitter {
+					background: url("../../assets//icon/twitter.svg") no-repeat;
+				}
+				.twitter:hover {
+					background: url("../../assets//icon/twitter-1.svg") no-repeat;
+				}
+
+				.google,
+				.facebook,
+				.twitter {
+					border-radius: 40px;
+					width: 50px;
+					height: 50px;
+					background-color: black;
+					background-size: 30px 30px;
+					padding: 10px;
+					background-position: center;
+					margin: 0px 10px;
+				}
+				.google:hover,
+				.facebook:hover,
+				.twitter:hover {
+					border-radius: 40px;
+					width: 50px;
+					height: 50px;
+					background-color: white;
+					background-size: 30px 30px;
+					padding: 10px;
+					background-position: center;
 				}
 			}
 		}
@@ -87,7 +136,8 @@
 					background: transparent;
 					border: none;
 					outline: none;
-					color: #ffffff;
+					color: #000000;
+					font-weight: bold;
 				}
 				input:invalid {
 					box-shadow: none;
@@ -96,17 +146,28 @@
 				.password,
 				.fullname,
 				.email {
-					border-bottom: 1px solid #fff;
+					border-bottom: 1px solid #000000;
 				}
 				.button {
 					background: transparent;
-					border: 1px solid #fff;
-					color: #fff;
+					border: 1px solid #000000;
+					color: #000000;
 					font-size: 18px;
+					transition: all 0.5s ease;
 				}
 				.button:hover {
-					background: #fff;
+					background: #000000;
+					color: #ffffff;
+				}
+				a {
+					margin-top: 10px;
 					color: #000000;
+					font-weight: 100;
+					font-size: 12px;
+					text-align: center;
+				}
+				a:hover {
+					text-decoration: underline;
 				}
 			}
 		}

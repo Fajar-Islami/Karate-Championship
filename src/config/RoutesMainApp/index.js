@@ -42,6 +42,9 @@ const Routes = () => {
 			<Route path="/detail-dummy/:id">
 				<DetailDummy />
 			</Route>
+			<Route path="/home">
+				<Home />
+			</Route>
 			<Route path="/" exact>
 				<Home />
 			</Route>
