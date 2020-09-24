@@ -12,11 +12,14 @@ import Statistic from "./Statistic";
 import Teams from "./Teams";
 import DetailDummy from "./detailDummy";
 import Dummy from "./Dummy";
+import Photos from "./Gallery/Photos";
+import Videos from "./Gallery/Video";
+
 
 import Tes from "./tes";
 import SignIn from "./SignIn";
 import ForgotPassword from "./ForgotPassword";
 
-export { Bracket, Categories, Guidance, Home, Login, MainApp, Medals, SchedulesResult, Statistic, Teams, DetailDummy, Dummy, Registration, SignUp };
+export { Bracket, Categories, Guidance, Home, Login, MainApp, Medals, SchedulesResult, Statistic, Teams, DetailDummy, Dummy, Registration, SignUp, Photos, Videos };
 
 export { Tes, SignIn, ForgotPassword };
