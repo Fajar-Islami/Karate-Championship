@@ -1,28 +1,34 @@
 import React, { useState } from "react";
 import "./style.scss";
 import Burger from "./Burger";
+import { Lemkari } from "../../assets";
+import { useHistory } from "react-router-dom";
 
 const Header3 = () => {
-	const [navbar, setNavbar] = useState(false);
+  const history = useHistory();
+  const [navbar, setNavbar] = useState(false);
 
-	const changeBackground = () => {
-		console.log(window.scrollY);
-		if (window.scrollY > 0) {
-			setNavbar(true);
-		} else {
-			setNavbar(false);
-		}
-	};
+  const changeBackground = () => {
+    // console.log(window.scrollY);
+    if (window.scrollY > 0) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  };
 
-	window.addEventListener("scroll", changeBackground);
+  window.addEventListener("scroll", changeBackground);
 
-	return (
-		<>
-			<div className={navbar ? "nav-f sticky" : "nav-f"}>
-				<div className="logo">Header3</div>
-				<Burger />
-			</div>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, eius. Pariatur aliquam autem quisquam dolores asperiores veniam repellendus, iure dolorum tempora accusantium recusandae, ducimus soluta maxime? Atque assumenda fuga id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, eius. Pariatur aliquam autem quisquam dolores asperiores veniam repellendus, iure dolorum tempora accusantium recusandae, ducimus soluta maxime? Atque assumenda fuga id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, eius. Pariatur aliquam autem quisquam dolores asperiores veniam repellendus, iure dolorum tempora accusantium recusandae, ducimus soluta maxime? Atque assumenda fuga id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, eius. Pariatur aliquam autem quisquam dolores asperiores veniam repellendus, iure dolorum tempora accusantium recusandae, ducimus soluta maxime? Atque assumenda fuga id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi,
+  return (
+    <>
+      <div className={navbar ? "nav-f sticky" : "nav-f"}>
+        <div className="kiri" style={{ cursor: "pointer" }} onClick={() => history.push("/")} title="Lemakri">
+          <img src={Lemkari} alt="Lemkari" />
+          <span> Lemkari Kerjunas 2019</span>
+        </div>
+        <Burger />
+      </div>
+      {/* Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, eius. Pariatur aliquam autem quisquam dolores asperiores veniam repellendus, iure dolorum tempora accusantium recusandae, ducimus soluta maxime? Atque assumenda fuga id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, eius. Pariatur aliquam autem quisquam dolores asperiores veniam repellendus, iure dolorum tempora accusantium recusandae, ducimus soluta maxime? Atque assumenda fuga id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, eius. Pariatur aliquam autem quisquam dolores asperiores veniam repellendus, iure dolorum tempora accusantium recusandae, ducimus soluta maxime? Atque assumenda fuga id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, eius. Pariatur aliquam autem quisquam dolores asperiores veniam repellendus, iure dolorum tempora accusantium recusandae, ducimus soluta maxime? Atque assumenda fuga id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi,
 			eius. Pariatur aliquam autem quisquam dolores asperiores veniam repellendus, iure dolorum tempora accusantium recusandae, ducimus soluta maxime? Atque assumenda fuga id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, eius. Pariatur aliquam autem quisquam dolores asperiores veniam repellendus, iure dolorum tempora accusantium recusandae, ducimus soluta maxime? Atque assumenda fuga id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, eius. Pariatur aliquam autem quisquam dolores asperiores veniam repellendus, iure dolorum tempora accusantium recusandae, ducimus soluta maxime? Atque assumenda fuga id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, eius. Pariatur aliquam autem quisquam dolores asperiores veniam repellendus, iure dolorum tempora accusantium recusandae, ducimus soluta maxime? Atque assumenda fuga id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, eius. Pariatur aliquam autem quisquam dolores asperiores
 			veniam repellendus, iure dolorum tempora accusantium recusandae, ducimus soluta maxime? Atque assumenda fuga id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, eius. Pariatur aliquam autem quisquam dolores asperiores veniam repellendus, iure dolorum tempora accusantium recusandae, ducimus soluta maxime? Atque assumenda fuga id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, eius. Pariatur aliquam autem quisquam dolores asperiores veniam repellendus, iure dolorum tempora accusantium recusandae, ducimus soluta maxime? Atque assumenda fuga id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, eius. Pariatur aliquam autem quisquam dolores asperiores veniam repellendus, iure dolorum tempora accusantium recusandae, ducimus soluta maxime? Atque assumenda fuga id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, eius. Pariatur aliquam autem quisquam dolores asperiores veniam repellendus, iure dolorum tempora accusantium
 			recusandae, ducimus soluta maxime? Atque assumenda fuga id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, eius. Pariatur aliquam autem quisquam dolores asperiores veniam repellendus, iure dolorum tempora accusantium recusandae, ducimus soluta maxime? Atque assumenda fuga id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, eius. Pariatur aliquam autem quisquam dolores asperiores veniam repellendus, iure dolorum tempora accusantium recusandae, ducimus soluta maxime? Atque assumenda fuga id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, eius. Pariatur aliquam autem quisquam dolores asperiores veniam repellendus, iure dolorum tempora accusantium recusandae, ducimus soluta maxime? Atque assumenda fuga id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, eius. Pariatur aliquam autem quisquam dolores asperiores veniam repellendus, iure dolorum tempora accusantium recusandae, ducimus soluta maxime? Atque assumenda fuga id.
@@ -30,9 +36,9 @@ const Header3 = () => {
 			eius. Pariatur aliquam autem quisquam dolores asperiores veniam repellendus, iure dolorum tempora accusantium recusandae, ducimus soluta maxime? Atque assumenda fuga id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, eius. Pariatur aliquam autem quisquam dolores asperiores veniam repellendus, iure dolorum tempora accusantium recusandae, ducimus soluta maxime? Atque assumenda fuga id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, eius. Pariatur aliquam autem quisquam dolores asperiores veniam repellendus, iure dolorum tempora accusantium recusandae, ducimus soluta maxime? Atque assumenda fuga id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, eius. Pariatur aliquam autem quisquam dolores asperiores veniam repellendus, iure dolorum tempora accusantium recusandae, ducimus soluta maxime? Atque assumenda fuga id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, eius. Pariatur aliquam autem quisquam dolores asperiores
 			veniam repellendus, iure dolorum tempora accusantium recusandae, ducimus soluta maxime? Atque assumenda fuga id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, eius. Pariatur aliquam autem quisquam dolores asperiores veniam repellendus, iure dolorum tempora accusantium recusandae, ducimus soluta maxime? Atque assumenda fuga id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, eius. Pariatur aliquam autem quisquam dolores asperiores veniam repellendus, iure dolorum tempora accusantium recusandae, ducimus soluta maxime? Atque assumenda fuga id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, eius. Pariatur aliquam autem quisquam dolores asperiores veniam repellendus, iure dolorum tempora accusantium recusandae, ducimus soluta maxime? Atque assumenda fuga id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, eius. Pariatur aliquam autem quisquam dolores asperiores veniam repellendus, iure dolorum tempora accusantium
 			recusandae, ducimus soluta maxime? Atque assumenda fuga id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, eius. Pariatur aliquam autem quisquam dolores asperiores veniam repellendus, iure dolorum tempora accusantium recusandae, ducimus soluta maxime? Atque assumenda fuga id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, eius. Pariatur aliquam autem quisquam dolores asperiores veniam repellendus, iure dolorum tempora accusantium recusandae, ducimus soluta maxime? Atque assumenda fuga id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, eius. Pariatur aliquam autem quisquam dolores asperiores veniam repellendus, iure dolorum tempora accusantium recusandae, ducimus soluta maxime? Atque assumenda fuga id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, eius. Pariatur aliquam autem quisquam dolores asperiores veniam repellendus, iure dolorum tempora accusantium recusandae, ducimus soluta maxime? Atque assumenda fuga id.
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, eius. Pariatur aliquam autem quisquam dolores asperiores veniam repellendus, iure dolorum tempora accusantium recusandae, ducimus soluta maxime? Atque assumenda fuga id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, eius. Pariatur aliquam autem quisquam dolores asperiores veniam repellendus, iure dolorum tempora accusantium recusandae, ducimus soluta maxime? Atque assumenda fuga id.
-		</>
-	);
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, eius. Pariatur aliquam autem quisquam dolores asperiores veniam repellendus, iure dolorum tempora accusantium recusandae, ducimus soluta maxime? Atque assumenda fuga id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, eius. Pariatur aliquam autem quisquam dolores asperiores veniam repellendus, iure dolorum tempora accusantium recusandae, ducimus soluta maxime? Atque assumenda fuga id. */}
+    </>
+  );
 };
 
 export default Header3;
