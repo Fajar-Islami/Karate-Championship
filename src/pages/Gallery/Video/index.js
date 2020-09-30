@@ -11,58 +11,87 @@ const Video = () => {
 			<h3 className="pt-3">Halaman Video </h3>
 			<hr />
 			<MDBRow>
-				<MDBCol size="6">
+				<MDBCol size="3">
 					<div className="embed-responsive embed-responsive-16by9">
 						<iframe title="Embeds Page" className="embed-responsive-item" src="https://www.youtube.com/embed/v64KOxKVLVg" allowfullscreen></iframe>
 					</div>
-				</MDBCol>
-				<MDBCol size="6">
-					<MDBTypography blockquote>
-						<MDBBox tag="p" mb={0}>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
-						</MDBBox>
-						<MDBBox tag="footer" mb={3} className="blockquote-footer">
+					<MDBBox tag="footer" mb={3} className="blockquote-footer">
 							Someone famous in <cite title="Source Title">Source Title</cite>
 						</MDBBox>
-					</MDBTypography>
+				</MDBCol>
+				<MDBCol size="3">
+					<div className="embed-responsive embed-responsive-16by9">
+						<iframe title="Embeds Page" className="embed-responsive-item" src="https://www.youtube.com/embed/v64KOxKVLVg" allowfullscreen></iframe>
+					</div>
+					<MDBBox tag="footer" mb={3} className="blockquote-footer">
+							Someone famous in <cite title="Source Title">Source Title</cite>
+						</MDBBox>
+				</MDBCol>
+				<MDBCol size="3">
+					<div className="embed-responsive embed-responsive-16by9">
+						<iframe title="Embeds Page" className="embed-responsive-item" src="https://www.youtube.com/embed/v64KOxKVLVg" allowfullscreen></iframe>
+					</div>
+					<MDBBox tag="footer" mb={3} className="blockquote-footer">
+							Someone famous in <cite title="Source Title">Source Title</cite>
+						</MDBBox>
+				</MDBCol>
+				<MDBCol size="3">
+					<div className="embed-responsive embed-responsive-16by9">
+						<iframe title="Embeds Page" className="embed-responsive-item" src="https://www.youtube.com/embed/v64KOxKVLVg" allowfullscreen></iframe>
+					</div>
+					<MDBBox tag="footer" mb={3} className="blockquote-footer">
+							Someone famous in <cite title="Source Title">Source Title</cite>
+						</MDBBox>
 				</MDBCol>
 			</MDBRow>
-			<br />
+			
 			<MDBRow>
-				<MDBCol size="6">
+			<MDBCol size="3">
 					<div className="embed-responsive embed-responsive-16by9">
 						<iframe title="Embeds Page" className="embed-responsive-item" src="https://www.youtube.com/embed/v64KOxKVLVg" allowfullscreen></iframe>
 					</div>
-				</MDBCol>
-				<MDBCol size="6">
-					<MDBTypography blockquote>
-						<MDBBox tag="p" mb={0}>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
-						</MDBBox>
-						<MDBBox tag="footer" mb={3} className="blockquote-footer">
+					<MDBBox tag="footer" mb={3} className="blockquote-footer">
 							Someone famous in <cite title="Source Title">Source Title</cite>
 						</MDBBox>
-					</MDBTypography>
 				</MDBCol>
-			</MDBRow>
-			<br />
-			<MDBRow>
-				<MDBCol size="6">
+				<MDBCol size="3">
 					<div className="embed-responsive embed-responsive-16by9">
 						<iframe title="Embeds Page" className="embed-responsive-item" src="https://www.youtube.com/embed/v64KOxKVLVg" allowfullscreen></iframe>
 					</div>
-				</MDBCol>
-				<MDBCol size="6">
-					<MDBTypography blockquote>
-						<MDBBox tag="p" mb={0}>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
-						</MDBBox>
-						<MDBBox tag="footer" mb={3} className="blockquote-footer">
+					<MDBBox tag="footer" mb={3} className="blockquote-footer">
 							Someone famous in <cite title="Source Title">Source Title</cite>
 						</MDBBox>
-					</MDBTypography>
+				</MDBCol>
+				<MDBCol size="3">
+					<div className="embed-responsive embed-responsive-16by9">
+						<iframe title="Embeds Page" className="embed-responsive-item" src="https://www.youtube.com/embed/v64KOxKVLVg" allowfullscreen></iframe>
+					</div>
+					<MDBBox tag="footer" mb={3} className="blockquote-footer">
+							Someone famous in <cite title="Source Title">Source Title</cite>
+						</MDBBox>
+				</MDBCol>
+				<MDBCol size="3">
+					<div className="embed-responsive embed-responsive-16by9">
+						<iframe title="Embeds Page" className="embed-responsive-item" src="https://www.youtube.com/embed/v64KOxKVLVg" allowfullscreen></iframe>
+					</div>
+					<MDBBox tag="footer" mb={3} className="blockquote-footer">
+							Someone famous in <cite title="Source Title">Source Title</cite>
+						</MDBBox>
 				</MDBCol>
 			</MDBRow>
+			<nav aria-label="Page navigation example">
+			<ul class="pagination justify-content-end">
+				<li class="page-item disabled">
+				<a class="page-link" href="#" tabindex="-1">Previous</a>
+				</li>
+				<li class="page-item"><a class="page-link" href="#">1</a></li>
+				<li class="page-item"><a class="page-link" href="#">2</a></li>
+				<li class="page-item"><a class="page-link" href="#">3</a></li>
+				<li class="page-item">
+				<a class="page-link" href="#">Next</a>
+				</li>
+			</ul>
+			</nav>
 		</Fragment>
 	);
 };

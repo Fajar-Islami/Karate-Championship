@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import {MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBIcon} from "mdbreact";
 
 const Burger = () => {
   const [open, setOpen] = useState(false);
@@ -74,6 +75,30 @@ const Burger = () => {
             }}>
             Registration
           </Link>
+        </li>
+        <li>
+        <MDBDropdown>
+								<MDBDropdownToggle color="info-color" nav caret>
+									Gallery
+								</MDBDropdownToggle>
+								<MDBDropdownMenu basic onClick={() => {
+              setOpen(!open);
+              setOpenSide(false);
+            }}>
+									<MDBDropdownItem className="pl-0 pt-3 pb-3 hoverable " fixed="true">
+										<Link to="/photos">
+											<MDBIcon icon="camera" className="mr-2" />
+											Photos
+										</Link>
+									</MDBDropdownItem>
+									<MDBDropdownItem className="pl-0 pt-3 pb-3 hoverable" fixed="true">
+										<Link to="/videos">
+											<MDBIcon icon="play" className="mr-2" />
+											Videos
+										</Link>
+									</MDBDropdownItem>
+								</MDBDropdownMenu>
+							</MDBDropdown>
         </li>
         <li>
           <a
