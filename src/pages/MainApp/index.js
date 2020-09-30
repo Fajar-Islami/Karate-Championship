@@ -24,10 +24,8 @@ const MainApp = () => {
       {/* </div> */}
       {/* </div> */}
       {/* </DummyContextProvider>  */}
-      <div className="footer ">
-        <MDBAnimation reveal type="fadeInUp">
-          <Footer />
-        </MDBAnimation>
+      <div className="footer-m">
+        <Footer />
       </div>
     </Router>
     //  </Fragment>

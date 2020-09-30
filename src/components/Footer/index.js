@@ -1,21 +1,23 @@
 import React, { Fragment } from "react";
-import { MDBFooter, MDBContainer, MDBRow, MDBCol } from "mdbreact";
+import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBAnimation } from "mdbreact";
 import { BSP, Forki } from "../../assets";
 import { Link } from "react-router-dom";
 import { Image } from "..";
+import "./index.scss";
 
 const Footer = () => {
   return (
     <Fragment>
-      <div className="footer ">
+      <MDBAnimation reveal type="fadeInUp">
         <h4 className="d-flex justify-content-center pt-3">Official Partner</h4>
         <hr />
         <div className="d-flex justify-content-center">
           <Image image={BSP} height="60px" title="BSP" className="mr-3" />
           <Image image={Forki} height="65px" title="Forki" />
         </div>
-        <MDBFooter color="blue" className="font-small pt-4 mt-4">
-          <MDBContainer fluid className="text-center text-md-left">
+
+        <MDBFooter className="footer-color font-small pt-4 mt-4">
+          <MDBContainer fluid className=" text-left">
             <MDBRow>
               <MDBCol md="2">
                 <h5 className="title">Generals</h5>
@@ -92,16 +94,18 @@ const Footer = () => {
                 </ul>
               </MDBCol>
             </MDBRow>
-            <h6 style={{ fontSize: 12 }}>Downloads</h6>
-            <h6 style={{ fontSize: 12 }}>Proposal Indonesia | Proposal English | Manual Guide</h6>
-            <h6 style={{ fontSize: 12 }}>Supported By</h6>
-            <h6 style={{ fontSize: 12 }}>All Right Reserved &copy; Brilyan Sport Technology 2011</h6>
+            <h6>Downloads</h6>
+            <h6>
+              <a href="">Proposal Indonesia</a> | <a href="">Proposal English</a> | <a href="">Manual Guide</a>
+            </h6>
           </MDBContainer>
-          <div className="footer-copyright text-center py-3">
-            <MDBContainer fluid></MDBContainer>
+          <div className="footer-copyright text-center py-2">
+            <MDBContainer fluid>
+              All Right Reserved <Link to="/">Brilyan Sport Technology </Link> &copy; {new Date().getFullYear()}
+            </MDBContainer>
           </div>
         </MDBFooter>
-      </div>
+      </MDBAnimation>
     </Fragment>
   );
 };
