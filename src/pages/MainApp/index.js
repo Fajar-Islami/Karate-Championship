@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Footer, Header, Sidebar, Header2, Sidebar2, Header3 } from "../../components";
 import "./mainApp.scss";
-import { MDBContainer } from "mdbreact";
+import { MDBContainer, MDBAnimation } from "mdbreact";
 import DummyContextProvider from "../../context/dummyContext";
 import { RoutesMainApp, ScrollToTop } from "../../config";
 const MainApp = () => {
@@ -11,7 +11,7 @@ const MainApp = () => {
     //  <DummyContextProvider>
     <Router>
       <ScrollToTop />
-      <div className="header ">
+      <div className="header-m ">
         {/* <Header /> */}
         {/* <Header2 /> */}
         <Header3 />
@@ -24,7 +24,11 @@ const MainApp = () => {
       {/* </div> */}
       {/* </div> */}
       {/* </DummyContextProvider>  */}
-      <div className="footer ">{/* <Footer /> */}</div>
+      <div className="footer ">
+        <MDBAnimation reveal type="fadeInUp">
+          <Footer />
+        </MDBAnimation>
+      </div>
     </Router>
     //  </Fragment>
   );

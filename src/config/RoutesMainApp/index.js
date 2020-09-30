@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Bracket, Categories, Guidance, Medals, SchedulesResult, Statistic, Teams, Home, DetailDummy, Dummy, Registration, Tes } from "../../pages";
+import { Bracket, Categories, Guidance, Medals, SchedulesResult, Statistic, Teams, Home, DetailDummy, Dummy, Registration, Tes, Home2 } from "../../pages";
 import { Photos, Video } from "../../pages/Gallery";
 
 const Routes = () => {
@@ -42,15 +42,21 @@ const Routes = () => {
       <Route path="/detail-dummy/:id">
         <DetailDummy />
       </Route>
-      <Route path="/home">
-        <Home />
-      </Route>
       <Route path="/tes">
         <Tes />
       </Route>
 
+      {/* <Route path="/home">
+        <Home />
+      </Route>
       <Route path="/" exact>
         <Home />
+      </Route> */}
+      <Route path="/home">
+        <Home2 />
+      </Route>
+      <Route path="/" exact>
+        <Home2 />
       </Route>
     </Switch>
   );

@@ -16,7 +16,8 @@ import Dummy from "./Dummy";
 import Tes from "./tes";
 import SignIn from "./SignIn";
 import ForgotPassword from "./ForgotPassword";
+import Home2 from "./Home2";
 
 export { Bracket, Categories, Guidance, Home, Login, MainApp, Medals, SchedulesResult, Statistic, Teams, DetailDummy, Dummy, Registration, SignUp };
 
-export { Tes, SignIn, ForgotPassword };
+export { Tes, SignIn, ForgotPassword, Home2 };
