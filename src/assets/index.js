@@ -20,6 +20,11 @@ import ICMatches from "./icon/winner.png";
 import ICUpcoming from "./icon/calendar.png";
 import ICPhoto from "./icon/gallery.svg";
 
+// ICO Medals
+import ICGoldM from "./icon/gold-medal.png";
+import ICSilverM from "./icon/silver-medal.png";
+import ICBronzeM from "./icon/bronze-medal.png";
+
 // ICON Sidebar
 import ICBracket from "./icon/bracket.png";
 import ICCalendar from "./icon/calendar.png";
@@ -60,6 +65,7 @@ import Yogyakarta from "./logo-teams/yogyakarta.jpg";
 
 export { Lemkari, BSP, Forki, Fajar, SignIn, SignIn2, SignUp, ForgotPW };
 export { ICFacebook, ICGoogle, ICTwitter };
+export { ICGoldM, ICSilverM, ICBronzeM };
 export { ICMatches, ICNews, ICVideo, ICUpcoming, ICPhoto };
 export { ICCalendar, ICBracket, ICCategory, ICMedal, ICStatistic, ICTeam };
 export { Aceh, Bali, Banten, Bengkulu, Jakarta, JawaBarat, JawaTengah, JawaTimur, KalimantanBarat, KalimantanSelatan, KalimantanUtara, KalimantanTengah, KalimantanTimur, KepulauanBangkaBelitung, KepulauanRiau, Lampung, Maluku, MalukuUtara, NusaTenggaraBarat, PapuaBarat, Riau, SulawesiSelatan, SulawesiTenggara, SulawesiUtara, SumateraBarat, SumateraSelatan, SumateraUtara, Yogyakarta };

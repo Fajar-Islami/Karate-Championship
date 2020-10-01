@@ -4,7 +4,7 @@ import { useHistory } from "react-router";
 import "./style.scss";
 import { MDBBtn, MDBIcon, MDBCardImage, MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardGroup, MDBCol, MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView, MDBMask, MDBTableHead, MDBTable, MDBTableBody, MDBContainer, MDBRow, MDBAnimation } from "mdbreact";
 import { Link } from "react-router-dom";
-import { Image } from "../../components";
+import { Image, TabelMedals, TabelMatches, Carousel2 } from "../../components";
 import { ICNews, ICMatches, ICUpcoming, ICPhoto, ICVideo } from "../../assets";
 
 const Home2 = () => {
@@ -104,163 +104,37 @@ const Home2 = () => {
         <MDBAnimation reveal type="fadeInUp">
           <MDBCardGroup className="d-flex justify-content-around">
             <MDBCol lg="5">
-              <MDBTable>
-                <MDBTableHead color="primary-color" textWhite>
-                  {/* Dummy */}
-                  <tr>
-                    <th>#</th>
-                    <th>First</th>
-                    <th>Last</th>
-                    <th>Handle</th>
-                  </tr>
-                </MDBTableHead>
-                <MDBTableBody>
-                  <tr>
-                    <td>1</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
-                  {/* Dummy */}
-                </MDBTableBody>
-              </MDBTable>
+              <TabelMedals />
               <div className="text-center mb-5">
-                <MDBBtn type="button" gradient="blue" className="rounded-pill" alt="150x75" onClick={() => history.push("/medals")}>
+                <MDBBtn type="button" gradient="tempting-azure" className="rounded-pill" alt="150x75" onClick={() => history.push("/medals")}>
                   View Full List
                 </MDBBtn>
               </div>
             </MDBCol>
             <MDBCol lg="5">
-              <MDBCarousel activeItem={1} length={2} interval={3000} showControls={false} onHoverStop={false} showIndicators={false} slide>
-                <MDBCarouselInner>
-                  <MDBCarouselItem itemId="1">
-                    <MDBView>
-                      {/* Dummy */}
-                      <h5>Kategori</h5>
-                      <MDBTable>
-                        <MDBTableHead color="primary-color" textWhite>
-                          {/* Dummy */}
-                          <tr>
-                            <th>#</th>
-                            <th>First</th>
-                            <th>Last</th>
-                            <th>Handle</th>
-                          </tr>
-                        </MDBTableHead>
-                        <MDBTableBody>
-                          <tr>
-                            <td>1</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                          </tr>
-                          <tr>
-                            <td>2</td>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                          </tr>
-                          {/* Dummy */}
-                        </MDBTableBody>
-                      </MDBTable>
-                      <h5>Kategori 2</h5>
-                      <MDBTable striped>
-                        <MDBTableHead>
-                          <tr>
-                            <th>#</th>
-                            <th>First</th>
-                            <th>Last</th>
-                            <th>Handle</th>
-                          </tr>
-                        </MDBTableHead>
-                        <MDBTableBody>
-                          <tr>
-                            <td>1</td>
-                            <td>res</td>
-                            <td>adad</td>
-                            <td>@m1qqq</td>
-                          </tr>
-                          <tr>
-                            <td>2</td>
-                            <td>cccccc</td>
-                            <td>aaaaa</td>
-                            <td>@aaaaa</td>
-                          </tr>
-                        </MDBTableBody>
-                      </MDBTable>
-                      {/* Dummy */}
-                    </MDBView>
-                  </MDBCarouselItem>
-                  <MDBCarouselItem itemId="2">
-                    <MDBView>
-                      {/* Dummy */}
-                      <h5>Kategori 3</h5>
-                      <MDBTable striped>
-                        <MDBTableHead>
-                          <tr>
-                            <th>#</th>
-                            <th>First</th>
-                            <th>Last</th>
-                            <th>Handle</th>
-                          </tr>
-                        </MDBTableHead>
-                        <MDBTableBody>
-                          <tr>
-                            <td>1</td>
-                            <td>res</td>
-                            <td>adad</td>
-                            <td>@m1qqq</td>
-                          </tr>
-                          <tr>
-                            <td>2</td>
-                            <td>cccccc</td>
-                            <td>aaaaa</td>
-                            <td>@aaaaa</td>
-                          </tr>
-                        </MDBTableBody>
-                      </MDBTable>
-                      <h5>Kategori 4</h5>
-                      <MDBTable striped>
-                        <MDBTableHead>
-                          <tr>
-                            <th>#</th>
-                            <th>First</th>
-                            <th>Last</th>
-                            <th>Handle</th>
-                          </tr>
-                        </MDBTableHead>
-                        <MDBTableBody>
-                          <tr>
-                            <td>1</td>
-                            <td>res</td>
-                            <td>adad</td>
-                            <td>@m1qqq</td>
-                          </tr>
-                          <tr>
-                            <td>2</td>
-                            <td>cccccc</td>
-                            <td>aaaaa</td>
-                            <td>@aaaaa</td>
-                          </tr>
-                        </MDBTableBody>
-                      </MDBTable>
-                      {/* Dummy */}
-                    </MDBView>
-                  </MDBCarouselItem>
-                </MDBCarouselInner>
-              </MDBCarousel>
+              <Carousel2
+                data={[
+                  <MDBView>
+                    <h5>Kategori</h5>
+                    <TabelMatches />
+                    <h5>Kategori 2</h5>
+                    <TabelMatches />
+                  </MDBView>,
+                  <MDBView>
+                    <h5>Kategori 3</h5>
+                    <TabelMatches />
+                    <h5>Kategori 4</h5>
+                    <TabelMatches />
+                  </MDBView>,
+                ]}
+                activeItem={1}
+                length={2}
+                interval={2000}
+                onHoverStop={false}
+                showControls={false}
+                showIndicators={false}
+                slide
+              />
             </MDBCol>
           </MDBCardGroup>
         </MDBAnimation>
@@ -273,184 +147,53 @@ const Home2 = () => {
         </MDBAnimation>
         <MDBAnimation reveal type="fadeInUp">
           <MDBContainer fluid>
-            <MDBCarousel activeItem={1} length={2} interval={2000} onHoverStop={false} showControls={false} showIndicators={false} slide>
-              <MDBCarouselInner>
-                <MDBCarouselItem itemId="1">
-                  <MDBView>
-                    <MDBRow>
-                      <MDBCol lg="5">
-                        {/* Dummy */}
-                        <h5>Kategori</h5>
-                        <MDBTable>
-                          <MDBTableHead color="primary-color" textWhite>
-                            {/* Dummy */}
-                            <tr>
-                              <th>#</th>
-                              <th>First</th>
-                              <th>Last</th>
-                              <th>Handle</th>
-                            </tr>
-                          </MDBTableHead>
-                          <MDBTableBody>
-                            <tr>
-                              <td>1</td>
-                              <td>Mark</td>
-                              <td>Otto</td>
-                              <td>@mdo</td>
-                            </tr>
-                            <tr>
-                              <td>2</td>
-                              <td>Jacob</td>
-                              <td>Thornton</td>
-                              <td>@fat</td>
-                            </tr>
-                            {/* Dummy */}
-                          </MDBTableBody>
-                        </MDBTable>
-                        <h5>Kategori 2</h5>
-                        <MDBTable striped>
-                          <MDBTableHead>
-                            <tr>
-                              <th>#</th>
-                              <th>First</th>
-                              <th>Last</th>
-                              <th>Handle</th>
-                            </tr>
-                          </MDBTableHead>
-                          <MDBTableBody>
-                            <tr>
-                              <td>1</td>
-                              <td>res</td>
-                              <td>adad</td>
-                              <td>@m1qqq</td>
-                            </tr>
-                            <tr>
-                              <td>2</td>
-                              <td>cccccc</td>
-                              <td>aaaaa</td>
-                              <td>@aaaaa</td>
-                            </tr>
-                          </MDBTableBody>
-                        </MDBTable>
-                        {/* Dummy */}
-                      </MDBCol>
-                      <MDBCol lg="5">
-                        {/* Dummy */}
-                        <h5>Kategori</h5>
-                        <MDBTable>
-                          <MDBTableHead color="primary-color" textWhite>
-                            {/* Dummy */}
-                            <tr>
-                              <th>#</th>
-                              <th>First</th>
-                              <th>Last</th>
-                              <th>Handle</th>
-                            </tr>
-                          </MDBTableHead>
-                          <MDBTableBody>
-                            <tr>
-                              <td>1</td>
-                              <td>Mark</td>
-                              <td>Otto</td>
-                              <td>@mdo</td>
-                            </tr>
-                            <tr>
-                              <td>2</td>
-                              <td>Jacob</td>
-                              <td>Thornton</td>
-                              <td>@fat</td>
-                            </tr>
-                            {/* Dummy */}
-                          </MDBTableBody>
-                        </MDBTable>
-                        <h5>Kategori 2</h5>
-                        <MDBTable striped>
-                          <MDBTableHead>
-                            <tr>
-                              <th>#</th>
-                              <th>First</th>
-                              <th>Last</th>
-                              <th>Handle</th>
-                            </tr>
-                          </MDBTableHead>
-                          <MDBTableBody>
-                            <tr>
-                              <td>1</td>
-                              <td>res</td>
-                              <td>adad</td>
-                              <td>@m1qqq</td>
-                            </tr>
-                            <tr>
-                              <td>2</td>
-                              <td>cccccc</td>
-                              <td>aaaaa</td>
-                              <td>@aaaaa</td>
-                            </tr>
-                          </MDBTableBody>
-                        </MDBTable>
-                        {/* Dummy */}
-                      </MDBCol>
-                    </MDBRow>
-                  </MDBView>
-                </MDBCarouselItem>
-                <MDBCarouselItem itemId="2">
-                  <MDBView>
-                    {/* Dummy */}
-                    <h5>Kategori 3</h5>
-                    <MDBTable striped>
-                      <MDBTableHead>
-                        <tr>
-                          <th>#</th>
-                          <th>First</th>
-                          <th>Last</th>
-                          <th>Handle</th>
-                        </tr>
-                      </MDBTableHead>
-                      <MDBTableBody>
-                        <tr>
-                          <td>1</td>
-                          <td>res</td>
-                          <td>adad</td>
-                          <td>@m1qqq</td>
-                        </tr>
-                        <tr>
-                          <td>2</td>
-                          <td>cccccc</td>
-                          <td>aaaaa</td>
-                          <td>@aaaaa</td>
-                        </tr>
-                      </MDBTableBody>
-                    </MDBTable>
-                    <h5>Kategori 4</h5>
-                    <MDBTable striped>
-                      <MDBTableHead>
-                        <tr>
-                          <th>#</th>
-                          <th>First</th>
-                          <th>Last</th>
-                          <th>Handle</th>
-                        </tr>
-                      </MDBTableHead>
-                      <MDBTableBody>
-                        <tr>
-                          <td>1</td>
-                          <td>res</td>
-                          <td>adad</td>
-                          <td>@m1qqq</td>
-                        </tr>
-                        <tr>
-                          <td>2</td>
-                          <td>cccccc</td>
-                          <td>aaaaa</td>
-                          <td>@aaaaa</td>
-                        </tr>
-                      </MDBTableBody>
-                    </MDBTable>
-                    {/* Dummy */}
-                  </MDBView>
-                </MDBCarouselItem>
-              </MDBCarouselInner>
-            </MDBCarousel>
+            <Carousel2
+              data={[
+                <MDBView>
+                  <MDBRow className="d-flex justify-content-around">
+                    <MDBCol style={{ maxWidth: "45vw" }} sm="12">
+                      <h5>Kategori</h5>
+                      <TabelMatches />
+
+                      <h5>Kategori 2</h5>
+                      <TabelMatches />
+                    </MDBCol>
+                    <MDBCol style={{ maxWidth: "45vw" }} sm="12">
+                      <h5>Kategori 3</h5>
+                      <TabelMatches />
+
+                      <h5>Kategori 4</h5>
+                      <TabelMatches />
+                    </MDBCol>
+                  </MDBRow>
+                </MDBView>,
+                <MDBView>
+                  <MDBRow className="d-flex justify-content-around">
+                    <MDBCol style={{ maxWidth: "45vw" }} sm="12">
+                      <h5>Kategori 5</h5>
+                      <TabelMatches />
+
+                      <h5>Kategori 6</h5>
+                      <TabelMatches />
+                    </MDBCol>
+                    <MDBCol style={{ maxWidth: "45vw" }} sm="12">
+                      <h5>Kategori 7</h5>
+                      <TabelMatches />
+
+                      <h5>Kategori 8</h5>
+                      <TabelMatches />
+                    </MDBCol>
+                  </MDBRow>
+                </MDBView>,
+              ]}
+              activeItem={1}
+              length={2}
+              interval={2000}
+              onHoverStop={false}
+              showControls={false}
+              showIndicators={false}
+              slide
+            />
           </MDBContainer>
         </MDBAnimation>
 
@@ -461,48 +204,56 @@ const Home2 = () => {
           </p>
         </MDBAnimation>
         <MDBAnimation reveal type="fadeInUp">
-          <MDBCardGroup className="d-flex justify-content-around mb-5">
-            <MDBCol style={{ maxWidth: "38rem" }}>
+          <MDBCardGroup className="d-lg-flex  justify-content-around  mb-5">
+            <MDBCol lg="5" sm="12">
               <Link to="/">
                 <MDBView hover zoom>
-                  <MDBCarousel interval={3000} activeItem={1} length={3} showControls={false} onHoverStop={false} showIndicators={false} className="z-depth-1" slide>
-                    <MDBCarouselInner>
-                      <MDBCarouselItem itemId="1">
-                        <MDBView hover>
-                          <img className="d-block w-100 img-fluid" src="https://mdbootstrap.com/img/Photos/Slides/img%20(35).jpg" alt="First slide" />
-                        </MDBView>
-                        <MDBMask className="flex-center" overlay="black-light">
-                          <p className="white-text">Zoom effect</p>
-                        </MDBMask>
-                      </MDBCarouselItem>
-                      <MDBCarouselItem itemId="2">
-                        <MDBView hover>
-                          <img className="d-block w-100 img-fluid" src="https://mdbootstrap.com/img/Photos/Slides/img%20(33).jpg" alt="Second slide" />
-                        </MDBView>
-                        <MDBMask className="flex-center" overlay="black-light">
-                          <p className="white-text">Zoom effect</p>
-                        </MDBMask>
-                      </MDBCarouselItem>
-                      <MDBCarouselItem itemId="3">
-                        <MDBView hover>
-                          <img className="d-block w-100 img-fluid" src="https://mdbootstrap.com/img/Photos/Slides/img%20(31).jpg" alt="Third slide" />
-                        </MDBView>
-                        <MDBMask className="flex-center" overlay="black-light">
-                          <p className="white-text">Zoom effect</p>
-                        </MDBMask>
-                      </MDBCarouselItem>
-                    </MDBCarouselInner>
-                  </MDBCarousel>
+                  <Carousel2
+                    data={[
+                      <MDBView>
+                        <Image image="https://images.unsplash.com/photo-1585537884142-512d204373d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" className="d-block w-100 img-fluid" alt="First slide" height="50vh" objectFit="contain" />{" "}
+                      </MDBView>,
+                      <MDBView>
+                        <Image image="https://images.unsplash.com/photo-1542937307-6eeb0267cbab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" className="d-block w-100 img-fluid" alt="Second slide" height="50vh" objectFit="contain" />{" "}
+                      </MDBView>,
+                      <MDBView>
+                        <Image image="https://images.unsplash.com/photo-1555597408-26bc8e548a46?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=796&q=80" className="d-block w-100 img-fluid" alt="Third slide" height="50vh" objectFit="contain" />
+                      </MDBView>,
+                    ]}
+                    interval={2001}
+                    onHoverStop={false}
+                    showControls={false}
+                    showIndicators={false}
+                    className="z-depth-1"
+                    slide
+                  />
                 </MDBView>
               </Link>
             </MDBCol>
-            <MDBCol style={{ maxWidth: "38rem" }}>
-              <MDBView hover zoom>
-                <img src="https://mdbootstrap.com/img/Others/documentation/img%20(131)-mini.jpg" className="img-fluid" alt="" />
-                <MDBMask className="flex-center" overlay="black-light">
-                  <p className="white-text">Zoom effect</p>
-                </MDBMask>
-              </MDBView>
+            <MDBCol lg="5" sm="12">
+              <Link to="/">
+                <MDBView hover zoom>
+                  <Carousel2
+                    data={[
+                      <MDBView>
+                        <Image image="https://images.unsplash.com/photo-1585537884142-512d204373d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" className="d-block w-100 img-fluid" alt="First slide" height="50vh" objectFit="contain" />{" "}
+                      </MDBView>,
+                      <MDBView>
+                        <Image image="https://images.unsplash.com/photo-1576149146095-caa19d4de102?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80" className="d-block w-100 img-fluid" alt="Second slide" height="50vh" objectFit="contain" />
+                      </MDBView>,
+                      <MDBView>
+                        <Image image="https://images.unsplash.com/photo-1585511543150-dc91145bbc77?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" className="d-block w-100 img-fluid" alt="Third slide" height="50vh" objectFit="contain" />{" "}
+                      </MDBView>,
+                    ]}
+                    interval={3001}
+                    onHoverStop={false}
+                    showControls={false}
+                    showIndicators={false}
+                    className="z-depth-1"
+                    slide
+                  />
+                </MDBView>
+              </Link>
             </MDBCol>
           </MDBCardGroup>
         </MDBAnimation>
