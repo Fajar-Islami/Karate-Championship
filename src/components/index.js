@@ -21,6 +21,7 @@ import TabelStatistics from "./TabelStatistics";
 import TabelMedals from "./TabelMedals";
 import TabelMatches from "./TabelMatches";
 import Carousel2 from "./Carousel2";
+import HeaderJudul from "./HeaderJudul";
 
 export { Footer, ForgetPw, Header, Header2, Header3, Modal, Sidebar, Card, TabelCategories, IsiTabs, Dropdown, RadioButton, Carousel, Input, Image };
-export { TabelBracket, TabelTeams, TabelStatistics, TabelMedals, TabelMatches, Carousel2 };
+export { TabelBracket, TabelTeams, TabelStatistics, TabelMedals, TabelMatches, Carousel2, HeaderJudul };
