@@ -3,8 +3,8 @@ import { MDBTable, MDBTableBody, MDBTableHead } from "mdbreact";
 
 const TabelStatistics = ({ data = [], tableTitle, ...rest }) => {
   const [dataEntries, setDataEntries] = useState(data);
-  console.log(dataEntries);
-  console.log(data);
+  // console.log(dataEntries);
+  // console.log(data);
 
   return (
     <Fragment>

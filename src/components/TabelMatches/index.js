@@ -1,32 +1,56 @@
-import React from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import { MDBTable, MDBTableHead, MDBTableBody } from "mdbreact";
 
-const TabelMatches = () => {
+const TabelMatches = ({ data = [], upcomingM = "false", ...rest }) => {
+  const [dataEntries, setDataEntries] = useState(data);
+
+  useEffect(() => {
+    console.log(dataEntries);
+    console.log(dataEntries[0]);
+    console.log(dataEntries[1]);
+  }, []);
   return (
-    <MDBTable striped>
-      <MDBTableHead color="primary-color" textWhite>
-        <tr>
-          <th>#</th>
-          <th>First</th>
-          <th>Last</th>
-          <th>Handle</th>
-        </tr>
-      </MDBTableHead>
-      <MDBTableBody>
-        <tr>
-          <td>1</td>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-      </MDBTableBody>
-    </MDBTable>
+    <Fragment>
+      {dataEntries.map((data, i) => {
+        return (
+          <>
+            {upcomingM === "false" ? (
+              <>
+                <h6>{data.date}</h6>
+                <MDBTable striped responsive bordered {...rest}>
+                  <MDBTableBody>
+                    <tr>
+                      <td style={{ textAlign: "center" }}>{data.team1}</td>
+                      <td style={{ textAlign: "center" }}>{data.team1_result}</td>
+                    </tr>
+                    <tr>
+                      <td style={{ textAlign: "center" }}>{data.team2}</td>
+                      <td style={{ textAlign: "center" }}>{data.team2_result}</td>
+                    </tr>
+                  </MDBTableBody>
+                </MDBTable>
+              </>
+            ) : (
+              <>
+                <MDBTable striped responsive bordered {...rest}>
+                  <MDBTableBody>
+                    <tr>
+                      <td style={{ textAlign: "center" }}>{data.team1}</td>
+                      <td style={{ textAlign: "center", verticalAlign: "middle", backgroundColor: "white", width: "20%" }} rowSpan={2}>
+                        {data.date}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style={{ textAlign: "center" }}>{data.team2}</td>
+                    </tr>
+                  </MDBTableBody>
+                </MDBTable>
+              </>
+            )}
+          </>
+        );
+      })}
+    </Fragment>
   );
 };
 

@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { MDBTableHead, MDBTable, MDBTableBody } from "mdbreact";
 import { ICGoldM, ICSilverM, ICBronzeM } from "../../assets";
 import Image from "../Image";
 import "./style.scss";
 
-const TabelMedals = () => {
+const TabelMedals = ({ data = [], ...rest }) => {
+  const [dataEntries, setDataEntries] = useState(data);
+  // console.log(data);
   return (
-    <MDBTable className="table-medals" striped>
+    <MDBTable className="table-medals" striped responsive>
       <MDBTableHead color=" green accent-3" textWhite>
         <tr>
-          <th className="font-weight-bold" style={{ width: "7%" }}>
+          <th className="font-weight-bold" style={{ width: "7%", textAlign: "center" }}>
             No
           </th>
           <th className="font-weight-bold">Team</th>
@@ -25,41 +27,19 @@ const TabelMedals = () => {
         </tr>
       </MDBTableHead>
       <MDBTableBody>
-        <tr>
-          <td>1</td>
-          <td>Mark</td>
-          <td>100</td>
-          <td>100</td>
-          <td>110</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Jacob</td>
-          <td>100</td>
-          <td>100</td>
-          <td>110</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>Larry</td>
-          <td>100</td>
-          <td>100</td>
-          <td>110</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>Larry</td>
-          <td>100</td>
-          <td>100</td>
-          <td>110</td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>Larry</td>
-          <td>100</td>
-          <td>100</td>
-          <td>110</td>
-        </tr>
+        {dataEntries.map((data, i) => {
+          return (
+            <tr key={i}>
+              <td style={{ textAlign: "center" }}>{i + 1}</td>
+              <td className="pl-3" style={{ textAlign: "left" }}>
+                {data.team}
+              </td>
+              <td style={{ textAlign: "center" }}>{data.gold}</td>
+              <td style={{ textAlign: "center" }}>{data.silver}</td>
+              <td style={{ textAlign: "center" }}>{data.bronze}</td>
+            </tr>
+          );
+        })}
       </MDBTableBody>
     </MDBTable>
   );

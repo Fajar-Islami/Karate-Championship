@@ -5,8 +5,6 @@ const Carousel2 = ({ data = [], ...rest }) => {
   const [dataEntries, setDataEntries] = useState(data);
 
   const lenghtC = dataEntries.length;
-  console.log(dataEntries);
-  // console.log(...rest);
   return (
     // <MDBCarousel activeItem={1} length={lenghtC} interval={2000} onHoverStop={false} showControls={false} showIndicators={false} slide>
     <MDBCarousel activeItem={1} length={lenghtC} {...rest}>
