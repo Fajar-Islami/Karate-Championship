@@ -56,6 +56,16 @@ const Burger = () => {
             Teams
           </Link>
         </li>
+        <li className="hiddenn">
+          <Link to="/photos" onClick={() => setOpen(!open)}>
+            Photos
+          </Link>
+        </li>
+        <li className="hiddenn">
+          <Link to="/videos" onClick={() => setOpen(!open)}>
+            Videos
+          </Link>
+        </li>
         <li>
           <Link
             to="/guidance"
@@ -76,7 +86,7 @@ const Burger = () => {
             Registration
           </Link>
         </li>
-        <li>
+        {/* <li>
           <MDBDropdown>
             <MDBDropdownToggle color="info-color" nav caret>
               Gallery
@@ -101,7 +111,7 @@ const Burger = () => {
               </MDBDropdownItem>
             </MDBDropdownMenu>
           </MDBDropdown>
-        </li>
+        </li> */}
         <li>
           <a
             href="/signin"
@@ -113,7 +123,7 @@ const Burger = () => {
           </a>
         </li>
         <li>
-          <div style={{ cursor: "pointer" }} className="StyledBurgerFull" onClick={() => setOpenSide(!openSide)}>
+          <div style={{ cursor: "pointer" }} className="StyledBurgerFull ml-2" onClick={() => setOpenSide(!openSide)}>
             <div className={openSide ? "active-Burger" : ""} />
             <div className={openSide ? "active-Burger" : ""} />
             <div className={openSide ? "active-Burger" : ""} />
@@ -148,6 +158,16 @@ const Burger = () => {
             <li className="">
               <Link to="/teams" onClick={() => setOpenSide(!openSide)}>
                 Teams
+              </Link>
+            </li>
+            <li className="">
+              <Link to="/photos" onClick={() => setOpen(!open)}>
+                Photos
+              </Link>
+            </li>
+            <li className="">
+              <Link to="/videos" onClick={() => setOpen(!open)}>
+                Videos
               </Link>
             </li>
           </ul>

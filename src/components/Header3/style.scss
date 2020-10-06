@@ -10,8 +10,8 @@
     // padding: 0 20px;
     display: flex;
     justify-content: space-between;
-    background: black;
-    position: sticky;
+    background: transparent;
+    position: fixed;
     align-items: center;
     transition: 0.6s;
     padding: 40px 30px;
@@ -20,26 +20,33 @@
   }
 
   .sticky {
-    .kiri img {
-      height: 50px;
-      transition: 0.6s;
+    .kiri {
+      span {
+        font-size: 2.5rem;
+      }
+      img {
+        height: 50px;
+      }
     }
+
     position: fixed;
 
     padding: 10px 40px;
     background: white;
+    opacity: 0.95;
+
     box-shadow: 0 0 15px 0px #000;
 
     .kiri,
     a {
       color: #000000;
+      transition: all 0.6s;
     }
     a:hover {
+      padding: 10px;
       color: white;
       background-color: #000;
-    }
-    .active-side {
-      background-color: #fff;
+      border-bottom: none;
     }
     ul {
       li {
@@ -53,14 +60,16 @@
       div {
         background-color: #333;
       }
-      :hover {
-        background-color: #333;
+    }
+
+    .StyledBurgerFull:hover {
+      div {
+        background-color: #000;
       }
     }
 
     .active-sidefull {
       transition: 0.6s;
-
       box-shadow: 0 0 15px 0px #000;
       background: white;
       color: #000000;
@@ -74,13 +83,14 @@
 
   .kiri {
     // padding: 15px 0;
-    color: white;
+    color: #000;
     position: relative;
     font-weight: 700;
     text-decoration: none;
-    font-size: 2rem;
-    letter-spacing: 2px;
-    transition: 0.6s;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     img {
       height: 65px;
       margin-left: 5vh;
@@ -90,6 +100,8 @@
     span {
       margin-left: 0px;
       font-family: "Oswald", sans-serif;
+      transition: 0.6s;
+      font-size: 3rem;
     }
   }
 
@@ -98,11 +110,8 @@
     list-style: none;
     display: flex;
     flex-flow: row nowrap;
-    padding-top: 4vh;
-    // justify-content: center;
-    // align-items: center;
+    padding-top: 4.5vh;
     li {
-      // padding: 10px 10px;
       position: relative;
       list-style: none;
       margin-bottom: 10px;
@@ -117,42 +126,18 @@
         font-weight: 200;
         padding-top: 10vh;
         color: white;
-        background-color: #000000;
-      }
-      ul {
-        li {
-          transition: 0.6s;
-          a {
-            // border: 1px solid wheat;
-            // width: 10vh;
-            margin-left: 2vh;
-          }
-        }
-        li {
-          a:hover {
-            // padding: 5px;
-            // padding-left: 2vh;
-            background-color: white;
-            // color: black;
-            cursor: pointer;
-            // padding: 10px;
-          }
-        }
+        // background-color: #000000;
       }
       a:hover {
-        font-weight: 600;
-        padding: 10px;
-        background-color: #fff;
-        color: black;
+        border-bottom: 3px solid #000;
       }
       a {
         position: relative;
-        margin: 0 15px;
+        margin: 0 10px;
         text-decoration: none;
-        color: white;
+        color: #000;
         letter-spacing: 2px;
-        font-weight: 500px;
-        transition: 0.6s;
+        transition: 0.1s;
       }
     }
     .hiddenn {
@@ -173,13 +158,14 @@
     div {
       width: 2rem;
       height: 0.25rem;
-      background-color: #ccc;
+      background-color: black;
       border-radius: 10px;
       transform-origin: 1px;
       transition: all 0.3s linear;
     }
     .active-Burger {
       background-color: #333;
+      transition: 0.2s;
       &:nth-child(1) {
         transform: rotate(45deg);
       }
@@ -194,10 +180,6 @@
   }
 
   .StyledBurgerFull {
-    :hover {
-      cursor: pointer;
-      background-color: white;
-    }
     width: 2rem;
     height: 2rem;
     position: sticky;
@@ -214,7 +196,7 @@
     div {
       width: 2rem;
       height: 0.25rem;
-      background-color: #fff;
+      background-color: #000;
       border-radius: 10px;
       transform-origin: 1px;
       transition: all 0.1s linear;
@@ -233,35 +215,73 @@
       }
     }
   }
+
+  .StyledBurgerFull:hover {
+    background-color: transparent;
+  }
   .sidefull {
     // margin-top: 0vh;
     position: fixed;
     top: 0;
     transform: translateX(100%);
     right: 0;
-    transition: all 0.6 ease;
   }
 
   .active-sidefull {
     height: 100vh;
     width: 20vw;
-    background: black;
+    background: #91e199;
     position: fixed;
     display: block;
     top: 0;
     right: 0;
     padding: 0;
     padding-top: 10vh;
-    transition: transform 0.2s ease-in-out;
+    transition: all 0.6s ease-in-out;
     color: white;
-    // transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 15px 0px #91e199;
+
+    a {
+      transition: 0.6s;
+      margin-left: 30px;
+      font-weight: 500;
+      transition: 0.2s ease-in-out;
+    }
+    a:hover {
+      background-color: #fff;
+      color: #000000;
+      border-bottom: none;
+      padding: 10px;
+    }
+
+    ul {
+      li {
+        a {
+          // border: 1px solid wheat;
+          // width: 10vh;
+          margin-left: 2vh;
+          // color: white;
+        }
+      }
+      li {
+        a:hover {
+          // padding: 5px;
+          // padding-left: 2vh;
+          // background-color: yellow;
+          color: black;
+          cursor: pointer;
+          // padding: 10px;
+        }
+      }
+    }
   }
 
   @media (max-width: 1100px) {
     ul {
       // margin-top: 0vh;
       flex-flow: column nowrap;
-      background-color: black;
+      background-color: #91e199;
+
       position: fixed;
       top: 0;
       transform: translateX(100%);
@@ -273,8 +293,17 @@
       padding-left: 0px;
       transition: transform 0.3s ease-in-out;
       li {
-        vertical-align: middle;
-        margin-bottom: 3vh;
+        margin-bottom: 2vh;
+        a:hover {
+          border-bottom: none;
+          background-color: #fff;
+          color: #000000;
+          border-bottom: none;
+          padding: 10px;
+        }
+        a {
+          transition: 0.3s;
+        }
       }
       .hiddenn {
         display: block;
@@ -282,9 +311,11 @@
     }
     .active-side {
       // margin-top: 4vh;
+      // background-color: #91e199;
       transform: translateX(0);
-      transition: all 0.6 ease;
+      transition: all 0.6s ease;
     }
+
     .StyledBurger {
       display: flex;
       justify-content: space-around;
@@ -296,19 +327,61 @@
     .StyledBurgerFull {
       display: none;
     }
+    .sticky {
+      ul {
+        background: #fff;
+        padding-top: 2vh;
+      }
+    }
   }
-  @media (max-width: 500px) {
+  @media (max-width: 650px) {
+    .kiri {
+      img {
+        margin-left: 0;
+      }
+      span {
+        font-size: 6.5vw;
+        margin-right: 5vh;
+      }
+    }
     ul {
       width: 100vw;
       margin-top: 0;
       padding-left: 5vw;
       padding-top: 5vh;
+      li {
+        margin-bottom: 2vh;
+        a:hover {
+          border-bottom: none;
+          background-color: #fff;
+          color: #000000;
+          border-bottom: none;
+          padding: 10px;
+        }
+        a {
+          transition: 0.3s;
+        }
+      }
     }
     .active-side {
       // margin-top: 4vh;
       transform: translateX(0);
-      height: 70vh;
-      transition: all 0.6 ease;
+      height: 100vh;
+      transition: all 0.4s ease;
+    }
+
+    .nav-f {
+      padding: 40px 10px;
+    }
+
+    .sticky {
+      padding: 30px 20px;
+
+      .kiri {
+        span {
+          font-size: 6vw;
+        }
+      }
     }
   }
 }

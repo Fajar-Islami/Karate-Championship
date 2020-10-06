@@ -6,15 +6,16 @@
     color: #000000;
     h1 {
       position: absolute;
-      margin-top: 5vh;
+      margin-top: 20vh;
       margin-left: 6vw;
 
       font-style: normal;
-      font-weight: 500;
+      font-weight: 700;
       font-size: 72px;
       line-height: 95px;
 
       border-bottom: 5px solid #000;
+      // text-decoration: underline;
     }
     .top-kiri {
       flex: 1;
@@ -25,10 +26,10 @@
 
       h3 {
         // border: 2px solid black;
-        margin-top: 30vh;
+        margin-top: 45vh;
         margin-left: 6vw;
         margin-right: 6vw;
-        margin-bottom: 10vh;
+        margin-bottom: 8vh;
 
         font-style: normal;
         font-weight: 500;
@@ -92,5 +93,11 @@
 
   .view {
     cursor: pointer;
+  }
+
+  @media (max-width: 650px) {
+    .bar-title {
+      font-size: 4vh;
+    }
   }
 }
