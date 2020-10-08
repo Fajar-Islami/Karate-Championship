@@ -42,6 +42,11 @@ const Burger = () => {
           </Link>
         </li>
         <li className="hiddenn">
+          <Link to="/news" onClick={() => setOpen(!open)}>
+            News
+          </Link>
+        </li>
+        <li className="hiddenn">
           <Link to="/schedulesResult" onClick={() => setOpen(!open)}>
             Schedules & Result
           </Link>
@@ -86,32 +91,6 @@ const Burger = () => {
             Registration
           </Link>
         </li>
-        {/* <li>
-          <MDBDropdown>
-            <MDBDropdownToggle color="info-color" nav caret>
-              Gallery
-            </MDBDropdownToggle>
-            <MDBDropdownMenu
-              basic
-              onClick={() => {
-                setOpen(!open);
-                setOpenSide(false);
-              }}>
-              <MDBDropdownItem className="pl-0 pt-3 pb-3 hoverable " fixed="true">
-                <Link to="/photos">
-                  <MDBIcon icon="camera" className="mr-2" />
-                  Photos
-                </Link>
-              </MDBDropdownItem>
-              <MDBDropdownItem className="pl-0 pt-3 pb-3 hoverable" fixed="true">
-                <Link to="/videos">
-                  <MDBIcon icon="play" className="mr-2" />
-                  Videos
-                </Link>
-              </MDBDropdownItem>
-            </MDBDropdownMenu>
-          </MDBDropdown>
-        </li> */}
         <li>
           <a
             href="/signin"
@@ -139,10 +118,14 @@ const Burger = () => {
                 Categories
               </Link>
             </li>
-
             <li className="">
               <Link to="/medals" onClick={() => setOpenSide(!openSide)}>
                 Medals
+              </Link>
+            </li>
+            <li className="">
+              <Link to="/news" onClick={() => setOpenSide(!openSide)}>
+                News
               </Link>
             </li>
             <li className="">
