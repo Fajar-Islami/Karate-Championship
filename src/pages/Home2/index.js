@@ -4,7 +4,7 @@ import { useHistory } from "react-router";
 import "./style.scss";
 import { MDBBtn, MDBCardImage, MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardGroup, MDBCol, MDBView, MDBContainer, MDBAnimation } from "mdbreact";
 import { Link } from "react-router-dom";
-import { Image, TabelMedals, TabelMatches, Carousel2 } from "../../components";
+import { Image, TabelMedals, TabelMatches, Carousel2, Card } from "../../components";
 import { ICNews, ICMatches, ICUpcoming, ICPhoto, ICVideo } from "../../assets";
 import { MedalMatches, LastestMatch, UpcomingMatch } from "./data";
 
@@ -39,34 +39,13 @@ const Home2 = () => {
         <MDBAnimation reveal type="fadeInUp">
           <MDBCardGroup className="d-lg-flex  justify-content-around">
             <MDBCol lg="4" sm="12" className="mb-lg-0 mb-4 ">
-              <MDBCard>
-                <MDBCardImage className="img-fluid" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" waves />
-                <MDBCardBody>
-                  <MDBCardTitle>Card title</MDBCardTitle>
-                  <MDBCardText>Some quick example text to build on the card title and make up the bulk of the card's content.</MDBCardText>
-                  <MDBBtn href="#">Click</MDBBtn>
-                </MDBCardBody>
-              </MDBCard>
+              <Card />
             </MDBCol>
             <MDBCol lg="4" sm="12" className="mb-lg-0 mb-4">
-              <MDBCard>
-                <MDBCardImage className="img-fluid" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" waves />
-                <MDBCardBody>
-                  <MDBCardTitle>Card title</MDBCardTitle>
-                  <MDBCardText>Some quick example text to build on the card title and make up the bulk of the card's content.</MDBCardText>
-                  <MDBBtn href="#">Click</MDBBtn>
-                </MDBCardBody>
-              </MDBCard>
+              <Card />
             </MDBCol>
             <MDBCol lg="4" sm="12" className="mb-lg-0 mb-4">
-              <MDBCard>
-                <MDBCardImage className="img-fluid" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" waves />
-                <MDBCardBody>
-                  <MDBCardTitle>Card title</MDBCardTitle>
-                  <MDBCardText>Some quick example text to build on the card title and make up the bulk of the card's content.</MDBCardText>
-                  <MDBBtn href="#">Click</MDBBtn>
-                </MDBCardBody>
-              </MDBCard>
+              <Card />
             </MDBCol>
           </MDBCardGroup>
         </MDBAnimation>

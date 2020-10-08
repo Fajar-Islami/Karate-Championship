@@ -161,12 +161,12 @@ const Burger = () => {
               </Link>
             </li>
             <li className="">
-              <Link to="/photos" onClick={() => setOpen(!open)}>
+              <Link to="/photos" onClick={() => setOpenSide(!openSide)}>
                 Photos
               </Link>
             </li>
             <li className="">
-              <Link to="/videos" onClick={() => setOpen(!open)}>
+              <Link to="/videos" onClick={() => setOpenSide(!openSide)}>
                 Videos
               </Link>
             </li>

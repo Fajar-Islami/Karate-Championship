@@ -34,7 +34,7 @@ const SignIn = () => {
                   <MDBInput label="Type your password" icon="lock" group type="password" validate />
                 </div>
                 <div className="text-center">
-                  <MDBBtn type="button" className="button-signIn rounded-pill" alt="Sign In">
+                  <MDBBtn type="button" className="mt-0 button-signIn rounded-pill" alt="Sign In">
                     Sign in
                   </MDBBtn>
                 </div>
@@ -42,10 +42,15 @@ const SignIn = () => {
               <Link to="/forgotpassword" className="font-small pt-4 grey-text d-flex justify-content-center t-muted">
                 Forgot Password ?
               </Link>
-              <span className="font-small pt-4 pb-5 grey-text d-flex justify-content-center">
+              <span className="font-small pt-4 grey-text d-flex justify-content-center">
                 Dont have account?{" "}
                 <Link to="/registration" className="ml-1 grey-text t-muted">
                   Register Here
+                </Link>
+              </span>
+              <span className="font-small pb-4  grey-text d-flex justify-content-center">
+                <Link to="/" className="ml-1 grey-text t-muted">
+                  Back to home
                 </Link>
               </span>
             </MDBCol>
