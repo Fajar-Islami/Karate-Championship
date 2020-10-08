@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Bracket, Categories, Guidance, Medals, SchedulesResult, Statistic, Teams, Home, DetailDummy, Dummy, Registration, Tes, Home2 } from "../../pages";
+import { Bracket, Categories, Guidance, Medals, SchedulesResult, Statistic, Teams, Home, Registration, Tes, Home2, News2, DetailNews } from "../../pages";
 import { Photos, Video } from "../../pages/Gallery";
 import { HeaderJudul } from "../../components";
 
@@ -47,12 +47,13 @@ const Routes = () => {
         <HeaderJudul judul="REGISTRATION" />
         <Registration />
       </Route>
-      <Route path="/dummy/">
-        <Dummy />
+      <Route path="/news/">
+        <HeaderJudul judul="NEWS" />
+        <News2 />
       </Route>
-      <Route path="/detail-dummy/:id">
-        <DetailDummy />
-      </Route>
+      {/* <Route path="/detail-news/:id">
+        <DetailNews />
+      </Route> */}
       <Route path="/tes">
         <Tes />
       </Route>

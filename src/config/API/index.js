@@ -1,6 +1,6 @@
 import Axios from "axios";
 
-const urlPhotos = "http://www.omdbapi.com/?apikey=36a49aae&s=avenger";
+const urlPhotos = "http://www.omdbapi.com/?apikey=36a49aae&s=war";
 const getPhoto = async () => {
   try {
     const {

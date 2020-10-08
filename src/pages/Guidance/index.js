@@ -39,9 +39,9 @@ const Guidance = () => {
         <div className="block-example border border-dark p-3">
           <MDBTabContent activeItem={activeItem}>
             <MDBTabPane tabId="1" role="tabpanel">
-              <Worker workerUrl="https://unpkg.com/pdfjs-dist@2.5.207/build/pdf.worker.min.js">
-                <Viewer fileUrl="https://arxiv.org/pdf/quant-ph/0410100.pdf " />
-              </Worker>
+              {/* <Worker workerUrl="https://unpkg.com/pdfjs-dist@2.5.207/build/pdf.worker.min.js">
+              <Viewer fileUrl="https://arxiv.org/pdf/quant-ph/0410100.pdf " />
+              </Worker> */}
             </MDBTabPane>
 
             <MDBTabPane tabId="2" role="tabpanel">
