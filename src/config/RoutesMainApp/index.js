@@ -1,74 +1,76 @@
-import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Bracket, Categories, Guidance, Medals, SchedulesResult, Statistic, Teams, Home, Registration, Tes, Home2, News2, DetailNews } from "../../pages";
-import { Photos, Video } from "../../pages/Gallery";
-import { HeaderJudul } from "../../components";
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
+import {
+  Bracket,
+  Categories,
+  Guidance,
+  Medals,
+  SchedulesResult,
+  Statistic,
+  Teams,
+  Registration,
+  Home,
+  News2,
+  DetailNews,
+} from '../../pages';
+import { Photos, Video } from '../../pages/Gallery';
+import { HeaderJudul } from '../../components';
 
 const Routes = () => {
   return (
     <Switch>
-      <Route path="/bracket">
-        <HeaderJudul judul="BRACKET" />
+      <Route path='/bracket'>
+        <HeaderJudul judul='BRACKET' />
         <Bracket />
       </Route>
-      <Route path="/categories">
-        <HeaderJudul judul="CATEGORIES" />
+      <Route path='/categories'>
+        <HeaderJudul judul='CATEGORIES' />
         <Categories />
       </Route>
-      <Route path="/guidance">
-        <HeaderJudul judul="GUIDANCE" />
+      <Route path='/guidance'>
+        <HeaderJudul judul='GUIDANCE' />
         <Guidance />
       </Route>
-      <Route path="/medals">
-        <HeaderJudul judul="MEDALS" />
+      <Route path='/medals'>
+        <HeaderJudul judul='MEDALS' />
         <Medals />
       </Route>
-      <Route path="/schedulesResult">
-        <HeaderJudul judul="SCHEDULES & RESULTS" />
+      <Route path='/schedulesResult'>
+        <HeaderJudul judul='SCHEDULES & RESULTS' />
         <SchedulesResult />
       </Route>
-      <Route path="/statistic">
-        <HeaderJudul judul="STATISTICS" />
+      <Route path='/statistic'>
+        <HeaderJudul judul='STATISTICS' />
         <Statistic />
       </Route>
-      <Route path="/teams">
-        <HeaderJudul judul="TEAMS" />
+      <Route path='/teams'>
+        <HeaderJudul judul='TEAMS' />
         <Teams />
       </Route>
-      <Route path="/photos">
-        <HeaderJudul judul="PHOTOS" />
+      <Route path='/photos'>
+        <HeaderJudul judul='PHOTOS' />
         <Photos />
       </Route>
-      <Route path="/videos">
-        <HeaderJudul judul="VIDEOS" />
+      <Route path='/videos'>
+        <HeaderJudul judul='VIDEOS' />
         <Video />
       </Route>
-      <Route path="/registration">
-        <HeaderJudul judul="REGISTRATION" />
+      <Route path='/registration'>
+        <HeaderJudul judul='REGISTRATION' />
         <Registration />
       </Route>
-      <Route path="/news/">
-        <HeaderJudul judul="NEWS" />
+      <Route path='/news/'>
+        <HeaderJudul judul='NEWS' />
         <News2 />
       </Route>
       {/* <Route path="/detail-news/:id">
         <DetailNews />
       </Route> */}
-      <Route path="/tes">
-        <Tes />
-      </Route>
-
-      {/* <Route path="/home">
+      <Route path='/home'>
         <Home />
       </Route>
-      <Route path="/" exact>
+      <Route path='/' exact>
         <Home />
-      </Route> */}
-      <Route path="/home">
-        <Home2 />
-      </Route>
-      <Route path="/" exact>
-        <Home2 />
       </Route>
     </Switch>
   );

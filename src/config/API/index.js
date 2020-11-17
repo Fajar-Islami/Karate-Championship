@@ -1,6 +1,6 @@
-import Axios from "axios";
+import Axios from 'axios';
 
-const urlPhotos = "http://www.omdbapi.com/?apikey=36a49aae&s=war";
+const urlPhotos = 'http://www.omdbapi.com/?apikey=36a49aae&s=war';
 const getPhoto = async () => {
   try {
     const {
@@ -18,14 +18,5 @@ const getPhoto = async () => {
     console.log(error);
   }
 };
-
-const urlVideos = "https://www.scorebat.com/video-api/v1/";
-// const getVideos= asyn()=>{
-//   try {
-
-//   } catch (error) {
-
-//   }
-// }
 
 export { getPhoto };

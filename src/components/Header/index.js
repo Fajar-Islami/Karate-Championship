@@ -1,188 +1,35 @@
-import React, { useState, Fragment } from "react";
-import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBIcon, MDBBtn, MDBContainer, MDBListGroupItem } from "mdbreact";
-import { useHistory } from "react-router-dom";
-import { Lemkari } from "../../assets";
-import { Image } from "..";
+import React, { useState } from "react";
 import "./style.scss";
+import Burger from "./Burger";
+import { Lemkari } from "../../assets";
+import { useHistory } from "react-router-dom";
 
 const Header = () => {
-	const history = useHistory();
+  const history = useHistory();
+  const [navbar, setNavbar] = useState(false);
 
-	const [dropD, setdropD] = useState(false);
-	const handleToggle = () => {
-		setdropD((dropD) => !dropD);
-	};
+  const changeBackground = () => {
+    // console.log(window.scrollY);
+    if (window.scrollY > 0) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  };
 
-	return (
-		<Fragment>
-			{/* <MDBNavbar color="info-color" dark expand="lg" scrolling fixed="top"> */}
-			<MDBNavbar color="blue-gradient" dark expand="lg" className="py-0" fixed="top">
-				<div className="jajar ml-5">
-					<div className="isi-jajar">
-						<MDBNavbarBrand>
-							<Image image={Lemkari} alt="" className="ml-4 rounded-circle hoverable" height="65px" cursor="pointer" onClick={() => history.push("/")} title="Lemakri" />
-						</MDBNavbarBrand>
-						<div className="teks mt-2">
-							<span>
-								<span className="judul">Kerjunas Lemkari 2019</span>
-								<br /> Jakarta, September 2019{" "}
-							</span>
-						</div>
-					</div>
-				</div>
-				<MDBNavbarToggler onClick={handleToggle} />
-				<MDBCollapse id="navbarCollapse3" isOpen={dropD} navbar>
-					{/* <MDBNavbarNav left>
-						<MDBNavItem active>
-							<MDBNavLink to="/">Home</MDBNavLink>
-						</MDBNavItem>
-						<MDBNavItem>
-							<MDBNavLink to="/bracket">Bracket</MDBNavLink>
-						</MDBNavItem>
-						<MDBNavItem>
-							<MDBNavLink to="/categories">Categories</MDBNavLink>
-						</MDBNavItem>
-						<MDBNavItem>
-							<MDBNavLink to="/medals">Medals</MDBNavLink>
-						</MDBNavItem>
-						<MDBNavItem>
-							<MDBNavLink to="/schedulesResult">SchedulesResult</MDBNavLink>
-						</MDBNavItem>
-						<MDBNavItem>
-							<MDBNavLink to="/statistic">Statistic</MDBNavLink>
-						</MDBNavItem>
-						<MDBNavItem>
-							<MDBNavLink to="/teams">Teams</MDBNavLink>
-						</MDBNavItem>
-						<MDBNavItem>
-							<MDBNavLink to="/dummy">Dummy</MDBNavLink>
-						</MDBNavItem>
-						<MDBNavItem>
-							<MDBDropdown>
-								<MDBDropdownToggle color="info-color" nav caret>
-									AAAA
-								</MDBDropdownToggle>
-								<MDBDropdownMenu basic>
-									<MDBDropdownItem className="pl-0 pt-3 pb-3 hoverable " active fixed="true">
-										<Link to="/">
-											<MDBIcon icon="user" className="mr-2" />
-											Home
-										</Link>
-									</MDBDropdownItem>
-									<MDBDropdownItem className="pl-0 pt-3 pb-3 hoverable" fixed="true">
-										<Link to="/bracket">
-											<MDBIcon icon="user" className="mr-2" />
-											Bracket
-										</Link>
-									</MDBDropdownItem>
-									<MDBDropdownItem className="pl-0 pt-3 pb-3 hoverable">
-										<Link to="/categories">
-											<MDBIcon icon="user" className="mr-2" />
-											Categories
-										</Link>
-									</MDBDropdownItem>
-									<MDBDropdownItem className="pl-0 pt-3 pb-3 hoverable">
-										<Link to="/guidance">
-											<MDBIcon icon="user" className="mr-2" /> Guidance
-										</Link>
-									</MDBDropdownItem>
-									<MDBDropdownItem className="pl-0 pt-3 pb-3 hoverable">
-										<Link to="/medals">
-											<MDBIcon icon="user" className="mr-2" /> Medals
-										</Link>
-									</MDBDropdownItem>
-									<MDBDropdownItem className="pl-0 pt-3 pb-3 hoverable">
-										<Link to="/schedulesResult">
-											<MDBIcon icon="user" className="mr-2" />
-											schedulesResult
-										</Link>
-									</MDBDropdownItem>
-									<MDBDropdownItem className="pl-0 pt-3 pb-3 hoverable">
-										<Link to="/statistic">
-											<MDBIcon icon="user" className="mr-2" />
-											statistic
-										</Link>
-									</MDBDropdownItem>
-									<MDBDropdownItem className="pl-0 pt-3 pb-3 hoverable">
-										<Link to="/teams">
-											<MDBIcon icon="user" className="mr-2" />
-											Teams
-										</Link>
-									</MDBDropdownItem>
-									<MDBDropdownItem className="pl-0 pt-3 pb-3 hoverable">
-										<Link to="/dummy">
-											<MDBIcon icon="user" className="mr-2" />
-											Dummy
-										</Link>
-									</MDBDropdownItem>
-								</MDBDropdownMenu>
-							</MDBDropdown>
-						</MDBNavItem>
-						<MDBNavItem>
-							<MDBDropdown>
-								<MDBDropdownToggle color="info-color" nav caret>
-									Gallery
-								</MDBDropdownToggle>
-								<MDBDropdownMenu className="dropdown-default ">
-									<MDBDropdownItem className="pl-0 pt-3 pb-3 hoverable " active fixed="true">
-										<Link to="/photos">
-											<MDBIcon icon="image" className="mr-2" />
-											Photos
-										</Link>
-									</MDBDropdownItem>
-									<MDBDropdownItem className="pl-0 pt-3 pb-3 hoverable" fixed="true">
-										<Link to="/videos">
-											<MDBIcon icon="video" className="mr-2" />
-											Videos
-										</Link>
-									</MDBDropdownItem>
-								</MDBDropdownMenu>
-							</MDBDropdown>
-						</MDBNavItem>
-					</MDBNavbarNav> */}
+  window.addEventListener("scroll", changeBackground);
 
-					<MDBNavbarNav right>
-						<MDBNavItem className="pt-2 ">
-							<MDBNavLink className="waves-effect waves-light" to="/guidance">
-								<MDBIcon icon="info-circle" /> Guidance
-							</MDBNavLink>
-						</MDBNavItem>
-						<MDBNavItem className="pt-2 ">
-							<MDBNavLink className="waves-effect waves-light " to="/registration">
-								<MDBIcon icon="plus-circle" /> Registration
-							</MDBNavLink>
-						</MDBNavItem>
-						<MDBNavItem className="pt-2 ">
-							<MDBDropdown>
-								<MDBDropdownToggle nav caret>
-									<MDBIcon icon="user" /> User
-								</MDBDropdownToggle>
-								<MDBDropdownMenu className="dropdown-default">
-									<MDBDropdownItem href="#!" className="m-auto hoverable ">
-										My Profile
-									</MDBDropdownItem>
-									<MDBDropdownItem href="#!" className="m-auto hoverable ">
-										Setting
-									</MDBDropdownItem>
-									<MDBDropdownItem href="#!" className="m-auto hoverable ">
-										Something else here
-									</MDBDropdownItem>
-									<MDBDropdownItem href="#!" className="m-auto hoverable ">
-										Logout
-									</MDBDropdownItem>
-								</MDBDropdownMenu>
-							</MDBDropdown>
-						</MDBNavItem>
-						<MDBNavItem>
-							<MDBBtn outline color="white" href="/login" className="rounded mb-0">
-								Sign In
-							</MDBBtn>
-						</MDBNavItem>
-					</MDBNavbarNav>
-				</MDBCollapse>
-			</MDBNavbar>
-		</Fragment>
-	);
+  return (
+    <>
+      <div className={navbar ? "nav-f sticky" : "nav-f"}>
+        <div className="kiri" style={{ cursor: "pointer" }} onClick={() => history.push("/")} title="Lemakri">
+          <img src={Lemkari} alt="Lemkari" />
+          <span> Lemkari Kerjunas 2019</span>
+        </div>
+        <Burger />
+      </div>
+    </>
+  );
 };
 
 export default Header;
