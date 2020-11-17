@@ -10,7 +10,7 @@ import {
 } from 'mdbreact';
 import './style.scss';
 
-import { SignIn2 } from '../../assets';
+import { IMGSignIn } from '../../assets';
 import { Link } from 'react-router-dom';
 
 const SignIn = () => {
@@ -23,22 +23,26 @@ const SignIn = () => {
     };
   }, []);
   return (
-    <MDBContainer fluid className='card-sign'>
+    <MDBContainer fluid className='card-auth'>
       <MDBRow center>
         <MDBCol lg='11'>
           <MDBCard>
-            <MDBCol lg='7'>
+            <MDBCol lg='7' className='d-flex align-items-center'>
               <MDBCardImage
                 className='img-fluid'
-                src={SignIn2}
+                src={IMGSignIn}
                 waves
                 alt='Sign In'
               />
             </MDBCol>
             <MDBCol lg='5'>
               <form>
-                <h1 className=' text-center mb-4 title'>Sign in</h1>
-                <h2 className=' text-center mb-4 '>to Manage Your Athletes</h2>
+                <div className='title'>
+                  <h1 className=' text-center'>Sign in</h1>
+                  <h2 className=' text-center mb-4 '>
+                    to Manage Your Athletes
+                  </h2>
+                </div>
 
                 <div className='mt-5 grey-text col-lg-10 mx-auto'>
                   <MDBInput
@@ -69,16 +73,16 @@ const SignIn = () => {
               </form>
               <Link
                 to='/forgotpassword'
-                className='font-small pt-4 grey-text d-flex justify-content-center t-muted'>
+                className='font-small mt-4 grey-text d-flex justify-content-center t-muted'>
                 Forgot Password ?
               </Link>
-              <span className='font-small pt-4 grey-text d-flex justify-content-center'>
+              <span className='font-small mt-4 grey-text d-flex justify-content-center'>
                 Dont have account?{' '}
                 <Link to='/registration' className='ml-1 grey-text t-muted'>
                   Register Here
                 </Link>
               </span>
-              <span className='font-small pb-4  grey-text d-flex justify-content-center'>
+              <span className='font-small mb-4  grey-text d-flex justify-content-center'>
                 <Link to='/' className='ml-1 grey-text t-muted'>
                   Back to home
                 </Link>

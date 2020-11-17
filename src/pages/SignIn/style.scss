@@ -3,7 +3,7 @@
   position: relative;
 }
 
-.card-sign {
+.card-auth {
   .card {
     border-radius: 25px;
     flex-direction: row;
@@ -11,7 +11,7 @@
     div {
       form {
         .title {
-          font-family: "Oswald", sans-serif;
+          font-family: 'Oswald', sans-serif;
           font-style: normal;
           font-weight: normal;
         }
@@ -19,6 +19,7 @@
           font-size: 48px;
           line-height: 71.14px;
           margin-top: 4vh;
+          margin-bottom: 0;
         }
         h2 {
           font-size: 36px;

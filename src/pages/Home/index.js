@@ -4,11 +4,6 @@ import { useHistory } from 'react-router';
 import './style.scss';
 import {
   MDBBtn,
-  MDBCardImage,
-  MDBCard,
-  MDBCardBody,
-  MDBCardTitle,
-  MDBCardText,
   MDBCardGroup,
   MDBCol,
   MDBView,
@@ -26,7 +21,7 @@ import {
 import { ICNews, ICMatches, ICUpcoming, ICPhoto, ICVideo } from '../../assets';
 import { MedalMatches, LastestMatch, UpcomingMatch } from './data';
 
-const Home = () => {
+const Home2 = () => {
   const history = useHistory();
 
   // Lifecycle React Hooks
@@ -55,7 +50,11 @@ const Home = () => {
           <p
             className='my-sm-3 my-lg-5 bar-title py-2'
             style={{ backgroundColor: 'rgba(102, 199, 235, 0.52)' }}>
-            <Image image={ICNews} height='10vh' className='mr-3' />
+            <img
+              src={ICNews}
+              style={{ height: '10vh' }}
+              className='mr-3 img-fluid'
+            />
             Lastest News
           </p>
         </MDBAnimation>
@@ -360,4 +359,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Home2;
