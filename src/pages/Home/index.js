@@ -28,6 +28,16 @@ const Home2 = () => {
   useEffect(() => {
     document.title = `Home`;
   });
+  const ImgHeader = (img) => {
+    return (
+      <img
+        src={img}
+        style={{ height: '10vh' }}
+        className='mr-3 img-fluid'
+        alt='Lastest Matches'
+      />
+    );
+  };
 
   return (
     <Fragment>
@@ -50,11 +60,7 @@ const Home2 = () => {
           <p
             className='my-sm-3 my-lg-5 bar-title py-2'
             style={{ backgroundColor: 'rgba(102, 199, 235, 0.52)' }}>
-            <img
-              src={ICNews}
-              style={{ height: '10vh' }}
-              className='mr-3 img-fluid'
-            />
+            {ImgHeader(ICNews)}
             Lastest News
           </p>
         </MDBAnimation>
@@ -76,7 +82,7 @@ const Home2 = () => {
           <p
             className='my-sm-3 my-lg-5 bar-title py-2'
             style={{ backgroundColor: 'rgba(253, 9, 0, 0.38)' }}>
-            <Image image={ICVideo} height='10vh' className='mr-3' />
+            {ImgHeader(ICVideo)}
             Video's
           </p>
         </MDBAnimation>
@@ -121,7 +127,7 @@ const Home2 = () => {
           <p
             className='my-sm-5 my-lg-5 bar-title py-2'
             style={{ backgroundColor: 'rgba(253, 197, 0, 0.38)' }}>
-            <Image image={ICMatches} height='10vh' className='mr-3' />
+            {ImgHeader(ICMatches)}
             Lastest Matches
           </p>
         </MDBAnimation>
@@ -182,7 +188,7 @@ const Home2 = () => {
           <p
             className='my-sm-3 my-lg-5 bar-title py-2'
             style={{ backgroundColor: 'rgba(81, 253, 0, 0.38)' }}>
-            <Image image={ICUpcoming} height='10vh' className='mr-3' />
+            {ImgHeader(ICUpcoming)}
             Upcoming Match
           </p>
         </MDBAnimation>
@@ -260,7 +266,7 @@ const Home2 = () => {
           <p
             className='my-sm-3 my-lg-5 bar-title py-2'
             style={{ backgroundColor: '#AFE2F5' }}>
-            <Image image={ICPhoto} height='10vh' className='mr-3' />
+            {ImgHeader(ICPhoto)}
             Photo Galleries
           </p>
         </MDBAnimation>

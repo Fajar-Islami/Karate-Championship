@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView, MDBRow, MDBCol } from "mdbreact";
+import React, { useState } from 'react';
+import { MDBCarousel, MDBCarouselInner, MDBCarouselItem } from 'mdbreact';
 
 const Carousel2 = ({ data = [], ...rest }) => {
-  const [dataEntries, setDataEntries] = useState(data);
+  const [dataEntries] = useState(data);
 
   const lenghtC = dataEntries.length;
   return (

@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
-import { MDBTable, MDBTableBody, MDBTableHead } from "mdbreact";
-import { Image } from "../index";
+import React, { useEffect, useState } from 'react';
+import { MDBTable, MDBTableBody, MDBTableHead } from 'mdbreact';
+import { Image } from '../index';
 
-const TabelTeams = ({ data, alignText = "right", ...rest }) => {
-  const [dataEntries, setDataEntries] = useState(data.rows);
+const TabelTeams = ({ data, alignText = 'right', ...rest }) => {
+  const [dataEntries] = useState(data.rows);
 
   const [totalMale, setTotalMale] = useState(0);
   const [totalFemale, setTotalFemale] = useState(0);
@@ -43,13 +43,20 @@ const TabelTeams = ({ data, alignText = "right", ...rest }) => {
   // console.log(row);
   console.log(dataEntries);
   return (
-    <MDBTable responsive hover className="tabel-biru" {...rest}>
+    <MDBTable responsive hover className='tabel-biru' {...rest}>
       {/* <MDBTableHead columns={data.columns} /> */}
       <MDBTableHead>
         <tr>
           {column.map((heading, i) => (
             // console.log(heading.label),
-            <th key={i} className={heading.pl} style={{ width: heading.width, textAlign: heading.textAlign, verticalAlign: "middle" }}>
+            <th
+              key={i}
+              className={heading.pl}
+              style={{
+                width: heading.width,
+                textAlign: heading.textAlign,
+                verticalAlign: 'middle',
+              }}>
               {heading.label}
             </th>
           ))}
@@ -62,14 +69,21 @@ const TabelTeams = ({ data, alignText = "right", ...rest }) => {
             <tr key={i}>
               <td style={{ textAlign: alignText[0] }}>{i + 1}</td>
               <td style={{ textAlign: alignText[1] }}>
-                <Image image={data.flag} width="25px" height="25px" title={data.contingent} />
+                <Image
+                  image={data.flag}
+                  width='25px'
+                  height='25px'
+                  title={data.contingent}
+                />
               </td>
-              <td className="pl-3 " style={{ textAlign: alignText[2] }}>
+              <td className='pl-3 ' style={{ textAlign: alignText[2] }}>
                 {data.contingent}
               </td>
               <td style={{ textAlign: alignText[3] }}>{data.maleE}</td>
               <td style={{ textAlign: alignText[4] }}>{data.femaleE}</td>
-              <td style={{ textAlign: alignText[5] }}>{angka(data.femaleE) + angka(data.maleE)}</td>
+              <td style={{ textAlign: alignText[5] }}>
+                {angka(data.femaleE) + angka(data.maleE)}
+              </td>
 
               {/* <td style={{ textAlign: alignText[5] }}>{data.totalE}</td> */}
               <td style={{ textAlign: alignText[6] }}>{data.totalA}</td>
@@ -80,13 +94,13 @@ const TabelTeams = ({ data, alignText = "right", ...rest }) => {
 
       <tfoot>
         <tr>
-          <td style={{ textAlign: "center" }} colSpan="3">
+          <td style={{ textAlign: 'center' }} colSpan='3'>
             Total
           </td>
-          <td style={{ textAlign: "center" }}>{totalMale}</td>
-          <td style={{ textAlign: "center" }}>{totalFemale}</td>
-          <td style={{ textAlign: "center" }}>{totalEntries}</td>
-          <td style={{ textAlign: "center" }}>{totalAthletes}</td>
+          <td style={{ textAlign: 'center' }}>{totalMale}</td>
+          <td style={{ textAlign: 'center' }}>{totalFemale}</td>
+          <td style={{ textAlign: 'center' }}>{totalEntries}</td>
+          <td style={{ textAlign: 'center' }}>{totalAthletes}</td>
         </tr>
       </tfoot>
     </MDBTable>

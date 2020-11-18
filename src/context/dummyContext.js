@@ -1,6 +1,6 @@
 import React, { createContext, useReducer } from 'react';
 import { dummyReducer } from '../reducers/dummyReducer';
-import axios from 'axios';
+// import axios from 'axios';
 
 export const DummyContext = createContext();
 
