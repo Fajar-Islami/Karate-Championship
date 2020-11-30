@@ -67,13 +67,25 @@ const Home2 = () => {
         <MDBAnimation reveal type='fadeInUp'>
           <MDBCardGroup className='d-lg-flex  justify-content-around'>
             <MDBCol lg='4' sm='12' className='mb-lg-0 mb-4 '>
-              <Card />
+              <Card
+                title='Berita 1'
+                body='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tortor est, fringilla. '
+                img='https://images.unsplash.com/photo-1576149146095-caa19d4de102?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80'
+              />
             </MDBCol>
             <MDBCol lg='4' sm='12' className='mb-lg-0 mb-4'>
-              <Card />
+              <Card
+                title='Berita 2'
+                body='Sed pharetra vestibulum porttitor. Vivamus vitae dui eu quam vehicula faucibus. Curabitur.  '
+                img='https://images.unsplash.com/photo-1585537884142-512d204373d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
+              />
             </MDBCol>
             <MDBCol lg='4' sm='12' className='mb-lg-0 mb-4'>
-              <Card />
+              <Card
+                title='Berita 3'
+                body='Ut ullamcorper orci tortor, et tincidunt eros placerat placerat. Morbi bibendum egestas.'
+                img='https://images.unsplash.com/photo-1555597408-26bc8e548a46?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=796&q=80'
+              />
             </MDBCol>
           </MDBCardGroup>
         </MDBAnimation>
@@ -97,11 +109,11 @@ const Home2 = () => {
                   title='Embeds Page'
                   width='560'
                   height='315'
+                  src='https://www.youtube.com/embed/w9kxtJpRmw4'
+                  frameborder='0'
                   className='embed-responsive-item'
-                  src='https://www.youtube.com/embed/DDU-rZs-Ic4'
-                  frameBorder='0'
                   allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-                  allowFullScreen></iframe>
+                  allowfullscreen></iframe>
               </div>
             </MDBCol>
             <MDBCol lg='6' sm='12'>
