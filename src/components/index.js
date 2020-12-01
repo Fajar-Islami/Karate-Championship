@@ -15,7 +15,7 @@ import TabelBracket from './TabelBracket';
 import TabelTeams from './TabelTeams';
 import TabelStatistics from './TabelStatistics';
 import TabelMedals from './TabelMedals';
-import TabelMatches from './TabelMatches';
+import TabelMatchesHome from './TabelMatchesHome';
 import Carousel2 from './Carousel2';
 import HeaderJudul from './HeaderJudul';
 
@@ -38,7 +38,7 @@ export {
   TabelTeams,
   TabelStatistics,
   TabelMedals,
-  TabelMatches,
+  TabelMatchesHome,
   Carousel2,
   HeaderJudul,
 };

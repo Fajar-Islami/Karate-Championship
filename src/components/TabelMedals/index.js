@@ -8,7 +8,7 @@ const TabelMedals = ({ data = [], ...rest }) => {
   const [dataEntries] = useState(data);
   // console.log(data);
   return (
-    <MDBTable className='table-medals' striped responsive>
+    <MDBTable className='table-medals' striped responsive small>
       <MDBTableHead color=' green accent-3' textWhite>
         <tr>
           <th
@@ -17,13 +17,13 @@ const TabelMedals = ({ data = [], ...rest }) => {
             No
           </th>
           <th className='font-weight-bold'>Team</th>
-          <th style={{ width: '10%', textAlign: 'center' }}>
+          <th style={{ width: '15%', textAlign: 'center' }}>
             <Image image={ICGoldM} height='30px' />
           </th>
-          <th style={{ width: '10%', textAlign: 'center' }}>
+          <th style={{ width: '15%', textAlign: 'center' }}>
             <Image image={ICSilverM} height='30px' />
           </th>
-          <th style={{ width: '10%', textAlign: 'center' }}>
+          <th style={{ width: '15%', textAlign: 'center' }}>
             <Image image={ICBronzeM} height='30px' />
           </th>
         </tr>
