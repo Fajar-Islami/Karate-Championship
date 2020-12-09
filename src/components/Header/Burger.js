@@ -60,16 +60,16 @@ const Burger = () => {
             Teams
           </Link>
         </li>
-        <li className='hiddenn'>
+        {/* <li className='hiddenn'>
           <Link to='/photos' onClick={() => setOpen(!open)}>
             Photos
           </Link>
-        </li>
-        <li className='hiddenn'>
+        </li> */}
+        {/* <li className='hiddenn'>
           <Link to='/videos' onClick={() => setOpen(!open)}>
             Videos
           </Link>
-        </li>
+        </li> */}
         <li>
           <Link
             to='/guidance'
@@ -147,16 +147,16 @@ const Burger = () => {
                 Teams
               </Link>
             </li>
-            <li className=''>
+            {/* <li className=''>
               <Link to='/photos' onClick={() => setOpenSide(!openSide)}>
                 Photos
               </Link>
-            </li>
-            <li className=''>
+            </li> */}
+            {/* <li className=''>
               <Link to='/videos' onClick={() => setOpenSide(!openSide)}>
                 Videos
               </Link>
-            </li>
+            </li> */}
           </ul>
         </li>
       </ul>

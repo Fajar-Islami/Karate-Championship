@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { MDBTable, MDBTableBody, MDBTableHead } from 'mdbreact';
-import { Image } from '../index';
 
 const TabelTeams = ({ data, alignText = 'right', ...rest }) => {
   const [dataEntries] = useState(data.rows);
@@ -69,11 +68,11 @@ const TabelTeams = ({ data, alignText = 'right', ...rest }) => {
             <tr key={i}>
               <td style={{ textAlign: alignText[0] }}>{i + 1}</td>
               <td style={{ textAlign: alignText[1] }}>
-                <Image
-                  image={data.flag}
-                  width='25px'
-                  height='25px'
+                <img
+                  src={data.flag}
+                  style={{ width: '25px', height: '25px' }}
                   title={data.contingent}
+                  alt={data.contingent}
                 />
               </td>
               <td className='pl-3 ' style={{ textAlign: alignText[2] }}>

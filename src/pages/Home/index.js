@@ -6,23 +6,16 @@ import {
   MDBBtn,
   MDBCardGroup,
   MDBCol,
-  MDBView,
   MDBContainer,
   MDBAnimation,
   MDBRow,
-  MDBCarousel,
-  MDBCarouselCaption,
-  MDBCarouselInner,
-  MDBCarouselItem,
-  MDBMask,
 } from 'mdbreact';
 import { Link } from 'react-router-dom';
 import {
-  Image,
-  TabelMedals,
+  TabelMedalsHome,
   TabelMatchesHome,
-  Carousel2,
   Card,
+  Carousel,
 } from '../../components';
 import { ICNews, ICMatches, ICUpcoming, ICPhoto, ICVideo } from '../../assets';
 import { MedalMatches, LastestMatch, UpcomingMatch } from './data';
@@ -66,7 +59,7 @@ const Home2 = () => {
           <MDBRow>
             <MDBCol md='3'>
               <MDBCardGroup className='d-lg-flex  justify-content-around mt-5 bar-title'>
-                <TabelMedals data={MedalMatches} />
+                <TabelMedalsHome data={MedalMatches} />
                 <div className='text-center mb-3'>
                   <MDBBtn
                     type='button'
@@ -171,7 +164,31 @@ const Home2 = () => {
 
               <MDBAnimation reveal type='fadeInUp'>
                 <p
-                  className='my-sm-3 my-lg-5 bar-title py-2'
+                  className='my-3 bar-title py-2'
+                  style={{ backgroundColor: 'rgba(102, 199, 235, 0.52)' }}>
+                  {ImgHeader(ICPhoto)}
+                  Photo Galleries
+                </p>
+              </MDBAnimation>
+              <MDBAnimation reveal type='fadeInUp'>
+                <MDBCardGroup className='d-lg-flex  justify-content-around  mb-5'>
+                  <Carousel
+                    img={[
+                      'https://images.unsplash.com/photo-1555597408-26bc8e548a46?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=796&q=80',
+                      'https://images.unsplash.com/photo-1542937307-6eeb0267cbab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80',
+                    ]}
+                    alt='Carousel Photo'
+                    style={{
+                      height: '600px',
+                      width: '1100px',
+                    }}
+                  />
+                </MDBCardGroup>
+              </MDBAnimation>
+
+              <MDBAnimation reveal type='fadeInUp'>
+                <p
+                  className='my-3 bar-title py-2'
                   style={{ backgroundColor: 'rgba(102, 199, 235, 0.52)' }}>
                   {ImgHeader(ICVideo)}
                   Video's
@@ -189,10 +206,10 @@ const Home2 = () => {
                         width='560'
                         height='315'
                         src='https://www.youtube.com/embed/w9kxtJpRmw4'
-                        frameborder='0'
+                        frameBorder='0'
                         className='embed-responsive-item'
                         allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-                        allowfullscreen></iframe>
+                        allowFullScreen></iframe>
                     </div>
                   </MDBCol>
                   <MDBCol lg='6' sm='12'>
@@ -213,65 +230,7 @@ const Home2 = () => {
                   </MDBCol>
                 </MDBCardGroup>
               </MDBAnimation>
-
-              <MDBAnimation reveal type='fadeInUp'>
-                <p
-                  className='my-sm-3 my-lg-5 bar-title py-2'
-                  style={{ backgroundColor: 'rgba(102, 199, 235, 0.52)' }}>
-                  {ImgHeader(ICPhoto)}
-                  Photo Galleries
-                </p>
-              </MDBAnimation>
-              <MDBAnimation reveal type='fadeInUp'>
-                <MDBCardGroup className='d-lg-flex  justify-content-around  mb-5'>
-                  <MDBCarousel
-                    activeItem={1}
-                    length={2}
-                    showControls={true}
-                    showIndicators={true}
-                    className='z-depth-1'>
-                    <MDBCarouselInner>
-                      <MDBCarouselItem itemId='1'>
-                        <MDBView>
-                          <img
-                            className='d-block '
-                            src='https://images.unsplash.com/photo-1555597408-26bc8e548a46?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=796&q=80'
-                            alt='First slide'
-                            style={{
-                              height: '600px',
-                              width: '1100px',
-                              objectFit: 'cover',
-                            }}
-                          />
-                          <MDBMask overlay='black-light' />
-                        </MDBView>
-                        <MDBCarouselCaption>
-                          <h3 className='h3-responsive'>Light mask</h3>
-                          <p>First text</p>
-                        </MDBCarouselCaption>
-                      </MDBCarouselItem>
-                      <MDBCarouselItem itemId='2'>
-                        <MDBView>
-                          <img
-                            className='d-block '
-                            src='https://images.unsplash.com/photo-1542937307-6eeb0267cbab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80'
-                            alt='Second slide'
-                            style={{
-                              height: '600px',
-                              width: '1100px',
-                              objectFit: 'cover',
-                            }}
-                          />
-                          <MDBMask overlay='black-strong' />
-                        </MDBView>
-                        <MDBCarouselCaption>
-                          <h3 className='h3-responsive'>Strong mask</h3>
-                          <p>Second text</p>
-                        </MDBCarouselCaption>
-                      </MDBCarouselItem>
-                    </MDBCarouselInner>
-                  </MDBCarousel>
-                  {/* <MDBCol lg='6' sm='12'>
+              {/* <MDBCol lg='6' sm='12'>
                     <Link to='/'>
                       <MDBView hover zoom>
                         <Carousel2
@@ -357,8 +316,6 @@ const Home2 = () => {
                       </MDBView>
                     </Link>
                   </MDBCol> */}
-                </MDBCardGroup>
-              </MDBAnimation>
             </MDBCol>
           </MDBRow>
         </MDBContainer>

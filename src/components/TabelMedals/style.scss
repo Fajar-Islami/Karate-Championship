@@ -1,11 +1,26 @@
-.table-medals {
-  th {
-    font-size: large;
-    vertical-align: middle !important;
-    // padding-bottom: 0.75rem !important;
-    // padding-top: 0.75rem !important;
+.tabel-medals {
+  thead {
+    color: white;
+    tr {
+      th {
+        font-weight: bold;
+        text-align: center;
+      }
+    }
   }
-  td {
-    font-family: 'Poppins', sans-serif;
+  tbody {
+    tr:nth-child(odd) {
+      background-color: #e9f0fb;
+    }
+    td {
+      text-align: center;
+    }
+    td:nth-child(3) {
+      text-align: left;
+    }
+  }
+
+  tbody + thead {
+    display: none;
   }
 }

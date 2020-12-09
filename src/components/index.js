@@ -9,14 +9,13 @@ import Dropdown from './Dropdown';
 import RadioButton from './RadioButton';
 import Carousel from './Carousel';
 import Input from './Input';
-import Image from './Image';
 
 import TabelBracket from './TabelBracket';
 import TabelTeams from './TabelTeams';
 import TabelStatistics from './TabelStatistics';
 import TabelMedals from './TabelMedals';
+import TabelMedalsHome from './TabelMedalsHome';
 import TabelMatchesHome from './TabelMatchesHome';
-import Carousel2 from './Carousel2';
 import HeaderJudul from './HeaderJudul';
 
 export {
@@ -31,14 +30,13 @@ export {
   RadioButton,
   Carousel,
   Input,
-  Image,
 };
 export {
   TabelBracket,
   TabelTeams,
   TabelStatistics,
   TabelMedals,
+  TabelMedalsHome,
   TabelMatchesHome,
-  Carousel2,
   HeaderJudul,
 };

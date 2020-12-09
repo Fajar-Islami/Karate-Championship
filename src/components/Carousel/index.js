@@ -1,89 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
-  MDBCarouselInner,
   MDBCarousel,
+  MDBCarouselInner,
   MDBCarouselItem,
   MDBView,
-  MDBMask,
-  MDBCarouselCaption,
-  MDBCol,
-  MDBCardTitle,
-  MDBIcon,
-  MDBBtn,
+  MDBContainer,
 } from 'mdbreact';
-import { IMGKarate1, IMGKarate2 } from '../../assets';
 
-const caption = () => {
+const Carousel = ({ img = [], ...rest }) => {
+  // const [images] = useState(img);
   return (
-    <MDBCol className='py-3'>
-      <MDBCardTitle className='h1-responsive pt-3 m-5 font-bold'>
-        Create your beautiful website with MDBootstrap
-      </MDBCardTitle>
-      <p className='mx-5 mb-5'>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat
-        fugiat, laboriosam, voluptatem, optio vero odio nam sit officia
-        accusamus minus error nisi architecto nulla ipsum dignissimos. Odit sed
-        qui, dolorum!
-      </p>
-      <MDBBtn outline color='white' className='mb-5'>
-        <MDBIcon icon='clone' className='mr-2'></MDBIcon> View project
-      </MDBBtn>
-    </MDBCol>
-  );
-};
-
-// const tinggi = () => {
-// 	return height:'100vh'
-// }
-
-const Carousel = ({ full = '' }) => {
-  return (
-    <MDBCarousel
-      activeItem={1}
-      length={3}
-      showControls={true}
-      showIndicators={true}
-      style={{ height: full }}
-      className='z-depth-1'>
-      <MDBCarouselInner>
-        <MDBCarouselItem itemId='1'>
-          <MDBView>
-            <img
-              style={{ height: full }}
-              className='d-block w-100'
-              src={IMGKarate1}
-              alt='First slide'
-            />
-            <MDBMask overlay='black-light' />
-          </MDBView>
-          <MDBCarouselCaption>{caption()}</MDBCarouselCaption>
-        </MDBCarouselItem>
-        <MDBCarouselItem itemId='2'>
-          <MDBView>
-            <img
-              style={{ height: full }}
-              className='d-block w-100'
-              src={IMGKarate2}
-              alt='Second slide'
-            />
-            <MDBMask overlay='black-strong' />
-          </MDBView>
-          <MDBCarouselCaption>{caption()}</MDBCarouselCaption>
-        </MDBCarouselItem>
-        <MDBCarouselItem itemId='3'>
-          <MDBView>
-            <img
-              style={{ height: full }}
-              className='d-block w-100'
-              src='https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg'
-              alt='Third slide'
-            />
-            <MDBMask overlay='black-slight' />
-          </MDBView>
-          <MDBCarouselCaption>{caption()}</MDBCarouselCaption>
-        </MDBCarouselItem>
-      </MDBCarouselInner>
-    </MDBCarousel>
+    <MDBContainer>
+      <MDBCarousel
+        activeItem={1}
+        length={img.length}
+        showControls={true}
+        showIndicators={true}
+        className='z-depth-1'>
+        <MDBCarouselInner>
+          {img.map((image, i) => {
+            return (
+              <MDBCarouselItem itemId={i + 1} key={i + 1}>
+                <MDBView>
+                  <img className='d-block' src={image} {...rest} />
+                </MDBView>
+              </MDBCarouselItem>
+            );
+          })}
+        </MDBCarouselInner>
+      </MDBCarousel>
+    </MDBContainer>
   );
 };
 

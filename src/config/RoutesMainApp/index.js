@@ -47,14 +47,14 @@ const Routes = () => {
         <HeaderJudul judul='TEAMS' />
         <Teams />
       </Route>
-      <Route path='/photos'>
+      {/* <Route path='/photos'>
         <HeaderJudul judul='PHOTOS' />
         <Photos />
-      </Route>
-      <Route path='/videos'>
+      </Route> */}
+      {/* <Route path='/videos'>
         <HeaderJudul judul='VIDEOS' />
         <Video />
-      </Route>
+      </Route> */}
       <Route path='/registration'>
         <HeaderJudul judul='REGISTRATION' />
         <Registration />

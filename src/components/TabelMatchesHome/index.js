@@ -12,8 +12,8 @@ const TabelMatchesHome = ({ data = [], upcomingM = false, ...rest }) => {
             return (
               <>
                 {upcomingM ? (
-                  <>
-                    <tr key={i} style={{ border: '3px solid' }}>
+                  <Fragment key={i}>
+                    <tr style={{ border: '3px solid' }}>
                       <td style={{ textAlign: 'center', width: '80%' }}>
                         {data.team1}
                       </td>
@@ -29,7 +29,7 @@ const TabelMatchesHome = ({ data = [], upcomingM = false, ...rest }) => {
                         {data.team2_result}
                       </td>
                     </tr>
-                  </>
+                  </Fragment>
                 ) : (
                   <tr key={i} style={{ border: '3px solid' }}>
                     <td style={{ textAlign: 'center', width: '48%' }}>

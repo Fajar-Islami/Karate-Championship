@@ -8,7 +8,6 @@ import {
 } from 'mdbreact';
 import { IMGBSP, IMGForki } from '../../assets';
 import { Link } from 'react-router-dom';
-import { Image } from '..';
 import './index.scss';
 
 const Footer = () => {
@@ -18,8 +17,20 @@ const Footer = () => {
         <h4 className='d-flex justify-content-center pt-3'>Official Partner</h4>
         <hr />
         <div className='d-flex justify-content-center'>
-          <Image image={IMGBSP} height='60px' title='BSP' className='mr-3' />
-          <Image image={IMGForki} height='65px' title='Forki' />
+          <img
+            src={IMGBSP}
+            className='mr-3'
+            alt='BSP'
+            title='BSP'
+            style={{ height: '60px' }}
+          />
+          <img
+            src={IMGForki}
+            className='mr-3'
+            alt='Forki'
+            title='Forki'
+            style={{ height: '65px' }}
+          />
         </div>
 
         <MDBFooter className='footer-color font-small pt-4 mt-4'>

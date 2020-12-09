@@ -8,7 +8,6 @@ const SchedulesResult = () => {
   const handleToggle = (tab) => (e) => {
     console.log(tab);
     if (activeItem !== tab) {
-      console.log('beda');
       setActiveItem((activeItem) => tab);
     }
   };
@@ -21,25 +20,13 @@ const SchedulesResult = () => {
       <h1 className='pt-3'> Halaman Schedules dan Result</h1>
       <hr />
       <MDBBtnGroup className='ml-1 mb-3' alt='150x75'>
-        <MDBBtn
-          link
-          to='#'
-          active={activeItem === '1'}
-          onClick={handleToggle('1')}>
+        <MDBBtn active={activeItem === '1'} onClick={handleToggle('1')}>
           Full Schedules
         </MDBBtn>
-        <MDBBtn
-          link
-          to='#'
-          active={activeItem === '2'}
-          onClick={handleToggle('2')}>
+        <MDBBtn active={activeItem === '2'} onClick={handleToggle('2')}>
           Daily Schedule
         </MDBBtn>
-        <MDBBtn
-          link
-          to='#'
-          active={activeItem === '3'}
-          onClick={handleToggle('3')}>
+        <MDBBtn active={activeItem === '3'} onClick={handleToggle('3')}>
           Results
         </MDBBtn>
       </MDBBtnGroup>
@@ -50,14 +37,17 @@ const SchedulesResult = () => {
         {/* Content */}
         <MDBTabContent activeItem={activeItem}>
           <MDBTabPane tabId='1' role='tabpanel'>
+            <h1>aaaaa</h1>
             {/* <Tabel /> */}
           </MDBTabPane>
 
           <MDBTabPane tabId='2' role='tabpanel'>
+            <h1>qqqqqq</h1>
             {/* <Tabel /> */}
           </MDBTabPane>
 
           <MDBTabPane tabId='3' role='tabpanel'>
+            <h1>zzzzzz</h1>
             {/* <Tabel /> */}
           </MDBTabPane>
         </MDBTabContent>
