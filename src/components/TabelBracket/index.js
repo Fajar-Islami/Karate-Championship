@@ -51,7 +51,6 @@ console.log(dataMale[0]);
             {dataMale.map((data, i) => {
               return (
                 <tr key={i}>
-                  
                   <td style={{ textAlign: 'left' }}>{data.label}</td>
                   <td style={{ textAlign: 'center' }}>
                     {' '}

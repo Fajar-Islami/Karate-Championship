@@ -9,7 +9,6 @@ import {
   MDBAnimation,
   MDBDataTable,
 } from 'mdbreact';
-
 import { IsiTabs, TabelStatistics } from '../../components';
 import { Male_UsiaDini } from './data';
 
@@ -32,7 +31,6 @@ const Statistic = () => {
 
   return (
     <MDBContainer fluid>
-     
       <MDBAnimation reveal type='fadeInUp'>
         <hr className='my-4' />
       </MDBAnimation>
