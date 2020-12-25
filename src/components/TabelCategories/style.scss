@@ -1,0 +1,25 @@
+.tabel-biru {
+	thead {
+		background-color: #0061ff;
+		color: white;
+		tr {
+			th {
+				font-weight: bold;
+			}
+		}
+	}
+	tbody {
+		tr:nth-child(odd) {
+			background-color: #e9f0fb;
+		}
+	}
+	tfoot {
+		background-color: #014ecb;
+		color: white;
+		tr {
+			td {
+				font-weight: bold;
+			}
+		}
+	}
+}

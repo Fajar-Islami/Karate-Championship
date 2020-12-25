@@ -1,0 +1,26 @@
+.tabel-medals {
+  thead {
+    color: white;
+    tr {
+      th {
+        font-weight: bold;
+        text-align: center;
+      }
+    }
+  }
+  tbody {
+    tr:nth-child(odd) {
+      background-color: #e9f0fb;
+    }
+    td {
+      text-align: center;
+    }
+    td:nth-child(3) {
+      text-align: left;
+    }
+  }
+
+  tbody + thead {
+    display: none;
+  }
+}

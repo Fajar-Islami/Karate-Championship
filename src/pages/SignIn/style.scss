@@ -1,0 +1,55 @@
+.bg-sign {
+  background-color: #78a77c;
+  position: relative;
+}
+
+.card-auth {
+  .card {
+    border-radius: 25px;
+    flex-direction: row;
+    top: 7vh;
+    div {
+      form {
+        .title {
+          font-family: 'Oswald', sans-serif;
+          font-style: normal;
+          font-weight: normal;
+        }
+        h1 {
+          font-size: 48px;
+          line-height: 71.14px;
+          margin-top: 4vh;
+          margin-bottom: 0;
+        }
+        h2 {
+          font-size: 36px;
+          line-height: 53.35px;
+        }
+        .text-center {
+          .button-signIn {
+            background: #91e199 !important;
+
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 18px;
+            color: #fff;
+
+            box-shadow: none;
+          }
+          .button-signIn:hover {
+            background: white !important;
+            color: #91e199;
+            border: 1px solid #91e199;
+            // margin-bottom: 0;
+          }
+        }
+      }
+    }
+    .t-muted:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+}
