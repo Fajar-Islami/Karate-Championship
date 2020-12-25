@@ -7,7 +7,6 @@ import {
   MDBNavLink,
   MDBContainer,
   MDBAnimation,
-  MDBDataTable,
 } from 'mdbreact';
 import { IsiTabs, TabelStatistics } from '../../components';
 import { Male_UsiaDini } from './data';
@@ -73,16 +72,6 @@ const Statistic = () => {
           {/* Content */}
           <MDBTabContent activeItem={activeItem}>
             <MDBTabPane tabId='1' role='tabpanel'>
-              <MDBDataTable
-                responsive
-                hover
-                className='tabel-biru'
-                striped
-                bordered
-                small
-                order={['age', 'asc']}
-                data={Male_UsiaDini.data_KataIndividual}
-              />
               <IsiTabs
                 label='Male Usia Dini'
                 tableType={[
@@ -92,11 +81,11 @@ const Statistic = () => {
                     tableTitle='KATA INDIVIDUAL'
                   />,
                   <TabelStatistics
-                    data={Male_UsiaDini.data_KataIndividual}
+                    data={Male_UsiaDini.data_KumiteMin30}
                     tableTitle='KUMITE -30 KG'
                   />,
                   <TabelStatistics
-                    data={Male_UsiaDini.data_KataIndividual}
+                    data={Male_UsiaDini.data_KumitePlus30}
                     tableTitle='KUMITE +30 KG'
                   />,
                 ]}

@@ -1,0 +1,7 @@
+.accordion__button {
+  background-color: #fb3;
+  transition: 0.5s all;
+  &:hover {
+    background-color: rgba($color: #ffbb33, $alpha: 0.5);
+  }
+}
