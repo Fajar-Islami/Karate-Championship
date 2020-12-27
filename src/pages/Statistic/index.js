@@ -85,7 +85,7 @@ const Statistic = () => {
                     tableTitle='KUMITE -30 KG'
                   />,
                   <TabelStatistics
-                    data={Male_UsiaDini.data_KumitePlus30}
+                    data={Male_UsiaDini.data_KumitePlus30 }
                     tableTitle='KUMITE +30 KG'
                   />,
                 ]}

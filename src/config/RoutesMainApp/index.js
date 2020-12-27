@@ -1,5 +1,5 @@
-import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import React from "react";
+import { Switch, Route } from "react-router-dom";
 import {
   Bracket,
   Categories,
@@ -10,63 +10,64 @@ import {
   Teams,
   Registration,
   Home,
-  News2,
+  News,
   DetailNews,
-} from '../../pages';
-import { Photos, Video } from '../../pages/Gallery';
-import { HeaderJudul } from '../../components';
+} from "../../pages";
+import { Photos, Video } from "../../pages/Gallery";
+import { HeaderJudul } from "../../components";
 
 const Routes = () => {
   return (
     <Switch>
-      <Route path='/bracket'>
+      <Route path='/bracket' exact>
         <HeaderJudul judul='BRACKET' />
         <Bracket />
       </Route>
-      <Route path='/categories'>
+      <Route path='/categories' exact>
         <HeaderJudul judul='CATEGORIES' />
         <Categories />
       </Route>
-      <Route path='/guidance'>
+      <Route path='/guidance' exact>
         <HeaderJudul judul='GUIDANCE' />
         <Guidance />
       </Route>
-      <Route path='/medals'>
+      <Route path='/medals' exact>
         <HeaderJudul judul='MEDALS' />
         <Medals />
       </Route>
-      <Route path='/schedulesResult'>
+      <Route path='/schedulesResult' exact>
         <HeaderJudul judul='SCHEDULES & RESULTS' />
         <SchedulesResult />
       </Route>
-      <Route path='/statistic'>
+      <Route path='/statistic' exact>
         <HeaderJudul judul='STATISTICS' />
         <Statistic />
       </Route>
-      <Route path='/teams'>
+      <Route path='/teams' exact>
         <HeaderJudul judul='TEAMS' />
         <Teams />
       </Route>
-      {/* <Route path='/photos'>
+      {/* <Route path='/photos' exact>
         <HeaderJudul judul='PHOTOS' />
         <Photos />
       </Route> */}
-      {/* <Route path='/videos'>
+      {/* <Route path='/videos' exact>
         <HeaderJudul judul='VIDEOS' />
         <Video />
       </Route> */}
-      <Route path='/registration'>
+      <Route path='/registration' exact>
         <HeaderJudul judul='REGISTRATION' />
         <Registration />
       </Route>
-      <Route path='/news/'>
+      <Route path='/news/detailnews/:id' exact>
         <HeaderJudul judul='NEWS' />
-        <News2 />
-      </Route>
-      {/* <Route path="/detail-news/:id">
         <DetailNews />
-      </Route> */}
-      <Route path='/home'>
+      </Route>
+      <Route path='/news/' exact>
+        <HeaderJudul judul='NEWS' />
+        <News />
+      </Route>
+      <Route path='/home' exact>
         <Home />
       </Route>
       <Route path='/' exact>

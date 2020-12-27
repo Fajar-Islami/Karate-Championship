@@ -1,14 +1,6 @@
-import React from 'react';
-import {
-  MDBCard,
-  MDBCardBody,
-  MDBCardImage,
-  MDBCardTitle,
-  MDBCardText,
-  MDBBtn,
-} from 'mdbreact';
-import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBBtn } from "mdbreact";
+import { Link } from "react-router-dom";
 
 const Card = ({ title, body, img }) => {
   return (
@@ -22,7 +14,7 @@ const Card = ({ title, body, img }) => {
       /> */}
       <MDBCardImage
         src={img}
-        style={{ height: '240px', objectFit: 'cover' }}
+        style={{ height: "240px", objectFit: "cover" }}
         alt={title}
         waves
         top
@@ -39,10 +31,10 @@ const Card = ({ title, body, img }) => {
 };
 
 Card.defaultProps = {
-  title: 'Card title',
+  title: "Card title",
   body:
     "Some quick example text to build on the card title and make up the bulk of the card's content.",
-  img: 'https://placeimg.com/640/480/any',
+  img: "https://placeimg.com/640/480/any",
 };
 
 export default Card;
