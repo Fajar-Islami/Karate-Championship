@@ -5,7 +5,6 @@ import { data_news } from "./data";
 
 const DetailNews = () => {
   let { id } = useParams();
-  const isi = data_news.findIndex((x) => x.id == id).isi;
 
   return (
     <MDBContainer fluid className='a'>
