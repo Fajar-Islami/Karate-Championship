@@ -5,12 +5,8 @@ import { data_news } from "./data";
 
 const DetailNews = () => {
   let { id } = useParams();
-  console.log(id);
   const isi = data_news.findIndex((x) => x.id == id).isi;
 
-  //  const isi = data_news.filter((x) => x.id == id).isi;
-
-  console.log("isi", isi);
   return (
     <MDBContainer fluid className='a'>
       {data_news.map((post, i) => (
@@ -25,7 +21,8 @@ const DetailNews = () => {
               </div>
 
               <small className='grey-text t-muted'>
-                {post.penulis}, {post.tanggal}
+                Oleh: {post.penulis} <br />
+                Jakarta, {post.tanggal}
               </small>
               <img
                 src={post.gambar}
