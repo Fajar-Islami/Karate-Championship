@@ -1,24 +1,16 @@
-import React, { useState, useEffect, Fragment } from 'react';
-import {
-  MDBTabPane,
-  MDBTabContent,
-  MDBBtnGroup,
-  MDBBtn,
-  MDBBadge,
-  MDBTable,
-  MDBTableBody,
-} from 'mdbreact';
-import { IsiTabs, Dropdown, TabelMedals } from '../../components';
-import { medalsFull } from './data';
+import React, { useState, useEffect, Fragment } from "react";
+import { MDBBadge, MDBTable, MDBTableBody } from "mdbreact";
+import { Dropdown, TabelMedals } from "../../components";
+import { medalsFull } from "./data";
 
 const Medals = () => {
-  const [activeItem, setActiveItem] = useState('1');
-  const [activeBadge, setActiveBadge] = useState('Overall');
+  const [activeItem, setActiveItem] = useState("1");
+  const [activeBadge, setActiveBadge] = useState("Overall");
 
   const handleToggle = (tab) => (e) => {
     console.log(tab);
     if (activeItem !== tab) {
-      console.log('beda');
+      console.log("beda");
       setActiveItem((activeItem) => tab);
     }
   };
@@ -82,14 +74,14 @@ const Medals = () => {
               label='Age Categories'
               selected='--ALL--'
               option={[
-                'Usia Dini',
-                'Pra Pemula',
-                'Pemula',
-                'Cadet',
-                'Junior',
-                'Senior',
-                'Under 21',
-                'Veteran',
+                "Usia Dini",
+                "Pra Pemula",
+                "Pemula",
+                "Cadet",
+                "Junior",
+                "Senior",
+                "Under 21",
+                "Veteran",
               ]}
             />
             <tr>
@@ -98,34 +90,38 @@ const Medals = () => {
               <th className='pt-2'>
                 <MDBBadge
                   pill
-                  color={activeBadge === '1' ? 'default' : 'dark'}
-                  onClick={() => setActiveBadge('1')}
+                  color={activeBadge === "1" ? "default" : "dark"}
+                  onClick={() => setActiveBadge("1")}
                   className='my-2 py-2 mr-3 '
-                  style={{ cursor: 'pointer' }}>
+                  style={{ cursor: "pointer" }}
+                >
                   Day 1
                 </MDBBadge>
                 <MDBBadge
                   pill
-                  color={activeBadge === '2' ? 'default' : 'dark'}
-                  onClick={() => setActiveBadge('2')}
+                  color={activeBadge === "2" ? "default" : "dark"}
+                  onClick={() => setActiveBadge("2")}
                   className='my-2 py-2 mr-3'
-                  style={{ cursor: 'pointer' }}>
+                  style={{ cursor: "pointer" }}
+                >
                   Day 2
                 </MDBBadge>
                 <MDBBadge
                   pill
-                  color={activeBadge === '3' ? 'default' : 'dark'}
-                  onClick={() => setActiveBadge('3')}
+                  color={activeBadge === "3" ? "default" : "dark"}
+                  onClick={() => setActiveBadge("3")}
                   className='my-2 py-2 mr-3'
-                  style={{ cursor: 'pointer' }}>
+                  style={{ cursor: "pointer" }}
+                >
                   Day 3
                 </MDBBadge>
                 <MDBBadge
                   pill
-                  color={activeBadge === 'Overall' ? 'default' : 'dark'}
-                  onClick={() => setActiveBadge('Overall')}
+                  color={activeBadge === "Overall" ? "default" : "dark"}
+                  onClick={() => setActiveBadge("Overall")}
                   className='my-2 py-2 mr-3'
-                  style={{ cursor: 'pointer' }}>
+                  style={{ cursor: "pointer" }}
+                >
                   Overall
                 </MDBBadge>
               </th>

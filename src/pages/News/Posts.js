@@ -1,18 +1,7 @@
 import React from "react";
 
-import {
-  MDBCardGroup,
-  MDBCol,
-  MDBCard,
-  MDBCardBody,
-  MDBCardTitle,
-  MDBCardText,
-  MDBBtn,
-  MDBCardImage,
-  MDBTypography,
-} from "mdbreact";
+import { MDBCardGroup, MDBCol, MDBCard, MDBCardBody, MDBCardImage } from "mdbreact";
 import { Link } from "react-router-dom";
-import { IMGKarate1 } from "../../assets";
 const Posts = ({ posts }) => {
   console.log("posts: ", posts);
   return (
@@ -41,7 +30,6 @@ const Posts = ({ posts }) => {
               <Link className='btn-default btn Ripple-parent' to={`/news/detailnews/${post.id}`}>
                 Read More
               </Link>
-              {/* </MDBBtn> */}
             </MDBCard>
           </MDBCol>
         ))}

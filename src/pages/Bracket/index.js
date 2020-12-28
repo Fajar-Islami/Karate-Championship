@@ -12,7 +12,7 @@ const Bracket = () => {
   useEffect(() => {
     document.title = `Bracket`;
     // console.log(ageCategories);
-  }, [ageCategories]);
+  }, []);
   // useEffect(() => {
   //   console.log(gender);
   // },[gender]);
