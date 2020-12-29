@@ -1,24 +1,12 @@
-import React, { useEffect, Fragment } from 'react';
-import { useHistory } from 'react-router';
+import React, { useEffect, Fragment } from "react";
+import { useHistory } from "react-router";
 
-import './style.scss';
-import {
-  MDBBtn,
-  MDBCardGroup,
-  MDBCol,
-  MDBContainer,
-  MDBAnimation,
-  MDBRow,
-} from 'mdbreact';
-import { Link } from 'react-router-dom';
-import {
-  TabelMedalsHome,
-  TabelMatchesHome,
-  Card,
-  Carousel,
-} from '../../components';
-import { ICNews, ICMatches, ICUpcoming, ICPhoto, ICVideo } from '../../assets';
-import { MedalMatches, LastestMatch, UpcomingMatch } from './data';
+import "./style.scss";
+import { MDBBtn, MDBCardGroup, MDBCol, MDBContainer, MDBAnimation, MDBRow } from "mdbreact";
+import { Link } from "react-router-dom";
+import { TabelMedalsHome, TabelMatchesHome, Card, Carousel } from "../../components";
+import { ICNews, ICMatches, ICUpcoming, ICPhoto, ICVideo } from "../../assets";
+import { MedalMatches, LastestMatch, UpcomingMatch } from "./data";
 
 const Home2 = () => {
   const history = useHistory();
@@ -27,14 +15,9 @@ const Home2 = () => {
   useEffect(() => {
     document.title = `Home`;
   });
-  const ImgHeader = (img, tinggi = '70px') => {
+  const ImgHeader = (img, tinggi = "70px") => {
     return (
-      <img
-        src={img}
-        style={{ height: tinggi }}
-        className='mr-1 img-fluid'
-        alt='Lastest Matches'
-      />
+      <img src={img} style={{ height: tinggi }} className='mr-1 img-fluid' alt='Lastest Matches' />
     );
   };
 
@@ -45,8 +28,8 @@ const Home2 = () => {
           <h1>Buka Kerjunas Lemkari 2019</h1>
           <div className='top-kiri'>
             <h3>
-              Menpora Harap Ajang ini Digelar Rutin untuk Mencari Bibit Atlet
-              Berprestasi. Segera Daftarkan Atlet-atlet Anda
+              Menpora Harap Ajang ini Digelar Rutin untuk Mencari Bibit Atlet Berprestasi. Segera
+              Daftarkan Atlet-atlet Anda
             </h3>
             <Link className='btn-regis pb-1 px-3  ' to='/registration'>
               <span>Registration</span>
@@ -66,7 +49,8 @@ const Home2 = () => {
                     color='cyan'
                     className='rounded-pill'
                     alt='150x75'
-                    onClick={() => history.push('/medals')}>
+                    onClick={() => history.push("/medals")}
+                  >
                     View Full List
                   </MDBBtn>
                 </div>
@@ -76,31 +60,27 @@ const Home2 = () => {
                 <div
                   className='mt-1 mb-3 bar-title py-2'
                   style={{
-                    backgroundColor: 'rgba(81, 253, 0, 0.38)',
-                    fontSize: '28px',
-                  }}>
-                  {ImgHeader(ICMatches, '50px')}
+                    backgroundColor: "rgba(81, 253, 0, 0.38)",
+                    fontSize: "27px",
+                  }}
+                >
+                  {ImgHeader(ICMatches, "50px")}
                   <span>Lastest Matches</span>
                 </div>
 
-                <h4 style={{ fontWeight: '600' }}> Selasa, 3 September 2019</h4>
+                <h4 style={{ fontWeight: "600" }}> Selasa, 3 September 2019</h4>
                 <p>Tatami 1 : Tahap 1 - Male, kumite -61 kg junior</p>
-                <TabelMatchesHome
-                  data={LastestMatch.kategori_1}
-                  upcomingM={true}
-                />
+                <TabelMatchesHome data={LastestMatch.kategori_1} upcomingM={true} />
                 <p>Tatami 2 : Tahap 1 - Male, kumite -68 kg junior</p>
-                <TabelMatchesHome
-                  data={LastestMatch.kategori_2}
-                  upcomingM={true}
-                />
+                <TabelMatchesHome data={LastestMatch.kategori_2} upcomingM={true} />
                 <div className='text-center mb-3'>
                   <MDBBtn
                     type='button'
                     color='cyan'
                     className='rounded-pill'
                     alt='150x75'
-                    onClick={() => history.push('/schedulesResult')}>
+                    onClick={() => history.push("/schedulesResult")}
+                  >
                     View Full List
                   </MDBBtn>
                 </div>
@@ -110,13 +90,14 @@ const Home2 = () => {
                 <div
                   className='mt-1 mb-3 bar-title py-2'
                   style={{
-                    backgroundColor: 'rgba(81, 253, 0, 0.38)',
-                    fontSize: '28px',
-                  }}>
-                  {ImgHeader(ICUpcoming, '50px')}
+                    backgroundColor: "rgba(81, 253, 0, 0.38)",
+                    fontSize: "27px",
+                  }}
+                >
+                  {ImgHeader(ICUpcoming, "50px")}
                   <span>Upcoming Match</span>
                 </div>
-                <h4 style={{ fontWeight: '600' }}> Selasa, 4 September 2019</h4>
+                <h4 style={{ fontWeight: "600" }}> Selasa, 4 September 2019</h4>
                 <p>Tatami 1 : Tahap 1 - Male, kumite -61 kg junior</p>
                 <TabelMatchesHome data={UpcomingMatch.kategori_1} />
                 <p>Tatami 2 : Tahap 1 - Male, kumite -68 kg junior</p>
@@ -127,7 +108,8 @@ const Home2 = () => {
                     color='cyan'
                     className='rounded-pill'
                     alt='150x75'
-                    onClick={() => history.push('/schedulesResult')}>
+                    onClick={() => history.push("/schedulesResult")}
+                  >
                     View Full List
                   </MDBBtn>
                 </div>
@@ -138,7 +120,8 @@ const Home2 = () => {
               <MDBAnimation reveal type='fadeInUp'>
                 <p
                   className='my-sm-3 my-lg-5 bar-title py-2'
-                  style={{ backgroundColor: 'rgba(102, 199, 235, 0.52)' }}>
+                  style={{ backgroundColor: "rgba(102, 199, 235, 0.52)" }}
+                >
                   {ImgHeader(ICNews)}
                   Lastest News
                 </p>
@@ -165,7 +148,8 @@ const Home2 = () => {
               <MDBAnimation reveal type='fadeInUp'>
                 <p
                   className='my-3 bar-title py-2'
-                  style={{ backgroundColor: 'rgba(102, 199, 235, 0.52)' }}>
+                  style={{ backgroundColor: "rgba(102, 199, 235, 0.52)" }}
+                >
                   {ImgHeader(ICPhoto)}
                   Photo Galleries
                 </p>
@@ -174,13 +158,13 @@ const Home2 = () => {
                 <MDBCardGroup className='d-lg-flex  justify-content-around  mb-5'>
                   <Carousel
                     img={[
-                      'https://images.unsplash.com/photo-1555597408-26bc8e548a46?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=796&q=80',
-                      'https://images.unsplash.com/photo-1542937307-6eeb0267cbab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80',
+                      "https://images.unsplash.com/photo-1555597408-26bc8e548a46?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=796&q=80",
+                      "https://images.unsplash.com/photo-1542937307-6eeb0267cbab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
                     ]}
                     alt='Carousel Photo'
                     style={{
-                      height: '600px',
-                      width: '1100px',
+                      height: "600px",
+                      width: "1100px",
                     }}
                   />
                 </MDBCardGroup>
@@ -189,7 +173,8 @@ const Home2 = () => {
               <MDBAnimation reveal type='fadeInUp'>
                 <p
                   className='my-3 bar-title py-2'
-                  style={{ backgroundColor: 'rgba(102, 199, 235, 0.52)' }}>
+                  style={{ backgroundColor: "rgba(102, 199, 235, 0.52)" }}
+                >
                   {ImgHeader(ICVideo)}
                   Video's
                 </p>
@@ -197,9 +182,7 @@ const Home2 = () => {
               <MDBAnimation reveal type='fadeInUp'>
                 <MDBCardGroup className='d-lg-flex  justify-content-around '>
                   <MDBCol lg='6' sm='12'>
-                    <h1 style={{ fontFamily: 'Poppins, sans-serif' }}>
-                      Live Stream Now !!
-                    </h1>
+                    <h1 style={{ fontFamily: "Poppins, sans-serif" }}>Live Stream Now !!</h1>
                     <div className='embed-responsive embed-responsive-16by9'>
                       <iframe
                         title='Embeds Page'
@@ -209,13 +192,12 @@ const Home2 = () => {
                         frameBorder='0'
                         className='embed-responsive-item'
                         allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-                        allowFullScreen></iframe>
+                        allowFullScreen
+                      ></iframe>
                     </div>
                   </MDBCol>
                   <MDBCol lg='6' sm='12'>
-                    <h1 style={{ fontFamily: 'Poppins, sans-serif' }}>
-                      Lastest Video
-                    </h1>
+                    <h1 style={{ fontFamily: "Poppins, sans-serif" }}>Lastest Video</h1>
                     <div className='embed-responsive embed-responsive-16by9'>
                       <iframe
                         title='Embeds Page'
@@ -225,7 +207,8 @@ const Home2 = () => {
                         src='https://www.youtube.com/embed/sa4gVB5ZcSQ'
                         frameBorder='0'
                         allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-                        allowFullScreen></iframe>
+                        allowFullScreen
+                      ></iframe>
                     </div>
                   </MDBCol>
                 </MDBCardGroup>

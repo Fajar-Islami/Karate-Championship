@@ -90,6 +90,7 @@ const Guidance = (props) => {
                       <MDBBtn
                         color='primary'
                         size='sm'
+                        disabled={pageNumber === 1 ? true : false}
                         style={{ padding: "revert" }}
                         onClick={() => setPageNumber(pageNumber - 1)}
                       >
@@ -101,6 +102,7 @@ const Guidance = (props) => {
                       <MDBBtn
                         color='primary'
                         size='sm'
+                        disabled={pageNumber === numPages ? true : false}
                         style={{ padding: "revert" }}
                         onClick={() => setPageNumber(pageNumber + 1)}
                       >
@@ -146,6 +148,7 @@ const Guidance = (props) => {
                       <MDBBtn
                         color='primary'
                         size='sm'
+                        disabled={pageNumber === 1 ? true : false}
                         style={{ padding: "revert" }}
                         onClick={() => setPageNumber(pageNumber - 1)}
                       >
@@ -157,6 +160,7 @@ const Guidance = (props) => {
                       <MDBBtn
                         color='primary'
                         size='sm'
+                        disabled={pageNumber === numPages ? true : false}
                         style={{ padding: "revert" }}
                         onClick={() => setPageNumber(pageNumber + 1)}
                       >
