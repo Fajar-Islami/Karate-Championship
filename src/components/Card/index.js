@@ -22,7 +22,7 @@ const Card = ({ title, body, img }) => {
       <MDBCardBody>
         <MDBCardTitle> {title} </MDBCardTitle>
         <MDBCardText> {body} </MDBCardText>
-        <Link to='/'>
+        <Link to='/news'>
           <MDBBtn color='info'>Click</MDBBtn>
         </Link>
       </MDBCardBody>
